@@ -71,6 +71,22 @@
   .empty, .error{color:var(--muted);font-size:0.9rem;text-align:center;padding:40px 0;}
   .section-title{font-size:0.85rem;color:var(--muted);margin:24px 0 10px;font-weight:600;}
   footer{color:var(--muted);font-size:0.8rem;text-align:center;margin-top:30px;line-height:1.6;}
+
+  .status-badge{
+    display:inline-block;font-size:0.75rem;padding:2px 9px;border-radius:999px;
+    font-weight:600;margin-bottom:8px;margin-right:6px;
+    background:var(--accent-soft);color:var(--accent);
+  }
+  .coming-soon-list{
+    background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;
+  }
+  .coming-soon-row{
+    padding:12px 20px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    border-bottom:1px solid var(--border);
+  }
+  .coming-soon-row:last-child{border-bottom:none;}
+  .coming-soon-name{font-size:0.92rem;}
+  .coming-soon-date{font-size:0.8rem;color:var(--muted);white-space:nowrap;}
 </style>
 </head>
 <body>
@@ -142,8 +158,41 @@ function renderMatchCard(m, ev, q) {
   return card;
 }
 
-function renderEventOverviewCard(ev) {
+function parseEventRange(ev) {
+  // 回傳 {start, end}（Date物件），抓不到日期就回傳 null
+  if (!ev.date_start) return null;
+  const start = new Date(ev.date_start + 'T00:00:00');
+  const end = new Date((ev.date_end || ev.date_start) + 'T23:59:59');
+  if (isNaN(start.getTime())) return null;
+  return {start, end};
+}
+
+function eventDistanceMs(ev, now) {
+  // 用來排序「離現在最近」：進行中=0，未開打=距開打的時間，已結束=距結束的時間，
+  // 完全沒日期資料的排到最後面(Infinity)。
+  const range = parseEventRange(ev);
+  if (!range) return Infinity;
+  if (now >= range.start && now <= range.end) return 0;
+  if (now < range.start) return range.start - now;
+  return now - range.end;
+}
+
+function statusLabel(ev, now) {
+  const range = parseEventRange(ev);
+  if (!range) return null;
+  if (now >= range.start && now <= range.end) return '🔴 進行中';
+  if (now < range.start) {
+    const days = Math.ceil((range.start - now) / 86400000);
+    return days <= 0 ? '即將開打' : `${days} 天後開打`;
+  }
+  const days = Math.floor((now - range.end) / 86400000);
+  return days <= 0 ? '剛結束' : `${days} 天前結束`;
+}
+
+function renderEventOverviewCard(ev, opts = {}) {
   const card = el('div', {class: 'card'});
+  const label = statusLabel(ev, opts.now || new Date());
+  if (label) card.appendChild(el('span', {class: 'status-badge', text: label}));
   if (ev.organizer) card.appendChild(el('span', {class: 'badge', text: ev.organizer + ' 主辦'}));
   card.appendChild(el('h2', {text: ev.name || '(未命名賽事)'}));
 
@@ -169,6 +218,16 @@ function renderEventOverviewCard(ev) {
   return card;
 }
 
+function renderComingSoonRow(ev, now) {
+  const row = el('div', {class: 'coming-soon-row'});
+  row.appendChild(el('div', {class: 'coming-soon-name', text: ev.name || '(未命名賽事)'}));
+  const dateText = ev.date_note
+    || [ev.date_start, ev.date_end].filter(Boolean).join(' ~ ')
+    || (statusLabel(ev, now) || '日期未定');
+  row.appendChild(el('div', {class: 'coming-soon-date', text: dateText}));
+  return row;
+}
+
 let ALL_EVENTS = [];
 
 function renderResults(query) {
@@ -177,12 +236,31 @@ function renderResults(query) {
   const q = query.trim().toLowerCase();
 
   if (!q) {
-    container.appendChild(el('div', {class: 'section-title', text: '目前追蹤的賽事'}));
     if (!ALL_EVENTS.length) {
+      container.appendChild(el('div', {class: 'section-title', text: '目前追蹤的賽事'}));
       container.appendChild(el('div', {class: 'empty', text: '目前沒有賽事資料'}));
       return;
     }
-    ALL_EVENTS.forEach(ev => container.appendChild(renderEventOverviewCard(ev)));
+
+    // 只把「離現在最近」的一筆賽事完整顯示出來(進行中優先，其次是最快開打的，
+    // 都沒有的話退而求其次挑最近剛結束的)，其餘賽事簡化成一行列表，標成
+    // Coming Soon，不用每筆都佔一大張卡片。
+    const now = new Date();
+    const ranked = ALL_EVENTS
+      .map(ev => ({ev, dist: eventDistanceMs(ev, now)}))
+      .sort((a, b) => a.dist - b.dist);
+    const featured = ranked[0].ev;
+    const rest = ranked.slice(1).map(r => r.ev);
+
+    container.appendChild(el('div', {class: 'section-title', text: '最近賽事'}));
+    container.appendChild(renderEventOverviewCard(featured, {now}));
+
+    if (rest.length) {
+      container.appendChild(el('div', {class: 'section-title', text: '即將登場・Coming Soon'}));
+      const list = el('div', {class: 'coming-soon-list'});
+      rest.forEach(ev => list.appendChild(renderComingSoonRow(ev, now)));
+      container.appendChild(list);
+    }
     return;
   }
 
