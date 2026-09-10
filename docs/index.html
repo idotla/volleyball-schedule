@@ -96,6 +96,9 @@
   .gender-heading{
     font-size:0.82rem;font-weight:700;color:var(--accent);margin:16px 0 8px;
   }
+  .date-heading{
+    font-size:0.8rem;font-weight:600;color:var(--muted);margin:12px 0 6px 4px;
+  }
   .tournament-meta{
     display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;
     font-size:0.85rem;color:var(--muted);margin-bottom:10px;
@@ -176,7 +179,10 @@ function renderMatchCard(m, ev, q, opts = {}) {
 
   const meta = el('div', {class: 'match-meta'});
   const items = [
-    m.date ? `📅 ${m.date}` : (m.day ? `📅 第${m.day}天` : null),
+    // 2026-09-10 使用者要求男排/女排底下改成依日期分組顯示(見下方
+    // renderMatchesGroupedByDate)，日期已經變成分組標題了，卡片本身就
+    // 不用重複顯示日期，除非呼叫端沒有分組(opts.hideDate !== true)。
+    (!opts.hideDate && (m.date ? `📅 ${m.date}` : (m.day ? `📅 第${m.day}天` : null))),
     m.time ? `⏰ ${m.time}` : null,
     m.venue ? `📍 ${m.venue}` : null,
   ].filter(Boolean);
@@ -188,6 +194,42 @@ function renderMatchCard(m, ev, q, opts = {}) {
   card.appendChild(meta);
 
   return card;
+}
+
+function formatDateHeading(dateStr) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dateStr || '');
+  if (!m) return dateStr;
+  const d = new Date(dateStr + 'T00:00:00');
+  const week = ['日', '一', '二', '三', '四', '五', '六'][d.getDay()];
+  return `${parseInt(m[2], 10)}月${parseInt(m[3], 10)}日（星期${week}）`;
+}
+
+function groupMatchesByDate(matches) {
+  // 依日期分組，抓不到日期的用「第X天」退而求其次，兩者都沒有的歸到
+  // 「日期未定」；分組本身依日期先後排序(有精確日期的優先，同樣沒日期
+  // 的再依day數字排序)。
+  const groups = new Map();
+  matches.forEach(m => {
+    const key = m.date || (m.day ? `第${m.day}天` : '日期未定');
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(m);
+  });
+  return Array.from(groups.entries())
+    .map(([key, list]) => ({key, list}))
+    .sort((a, b) => {
+      const da = a.list[0], db = b.list[0];
+      if (da.date && db.date) return da.date < db.date ? -1 : da.date > db.date ? 1 : 0;
+      if (da.date) return -1;
+      if (db.date) return 1;
+      return (da.day || 0) - (db.day || 0);
+    });
+}
+
+function renderMatchesGroupedByDate(container, matches, ev, q) {
+  groupMatchesByDate(matches).forEach(({key, list}) => {
+    container.appendChild(el('div', {class: 'date-heading', text: formatDateHeading(key)}));
+    list.forEach(m => container.appendChild(renderMatchCard(m, ev, q, {showEvent: false, hideDate: true})));
+  });
 }
 
 function renderAttachmentsList(ev) {
@@ -367,7 +409,7 @@ function renderResults(query) {
       const list = byGender[label];
       if (!list.length) return;
       container.appendChild(el('div', {class: 'gender-heading', text: label}));
-      list.forEach(m => container.appendChild(renderMatchCard(m, ev, q, {showEvent: false})));
+      renderMatchesGroupedByDate(container, list, ev, q);
     });
   });
 
