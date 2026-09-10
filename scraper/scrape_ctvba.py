@@ -40,6 +40,7 @@ import sys
 import time
 import unicodedata
 from dataclasses import dataclass, field, asdict
+from datetime import date, datetime
 from pathlib import Path
 from typing import Optional
 from urllib.parse import urljoin
@@ -94,6 +95,7 @@ class EventInfo:
     contact_email: Optional[str] = None
     attachments: list[Attachment] = field(default_factory=list)
     raw_text_excerpt: Optional[str] = None
+    last_modified: Optional[str] = None  # 官網文章頁底部「修改日期」，ISO格式(YYYY-MM-DD)
 
 
 # --------------------------------------------------------------------------
@@ -180,6 +182,11 @@ DATE_RANGE_RE = re.compile(
     r"(?:\s*[\(（][^)）]*[\)）])?"
 )
 SINGLE_DATE_RE = re.compile(r"(\d{2,3})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日")
+
+# 文章頁最下面通常有「修改日期：2026/08/28 12:27」這種西元格式的時間戳，
+# 用來判斷這篇文章是不是「最近才更新過」的。跟上面比賽日期用民國年不同，
+# 這裡官網本身就是西元年，不用轉換。
+LAST_MODIFIED_RE = re.compile(r"修改日期[：:]\s*(\d{4})[/-](\d{1,2})[/-](\d{1,2})")
 
 
 def roc_to_gregorian(roc_year: str, month: str, day: str) -> str:
@@ -275,6 +282,12 @@ def parse_event_page(event_id: str, url: str) -> EventInfo:
     email_m = re.search(r"[\w.+-]+@[\w-]+\.[\w.-]+", text)
     if email_m:
         info.contact_email = email_m.group(0)
+
+    # 修改日期(西元年)，用來判斷文章是不是最近才更新的
+    mod_m = LAST_MODIFIED_RE.search(text)
+    if mod_m:
+        y, mo, d = mod_m.groups()
+        info.last_modified = f"{int(y):04d}-{int(mo):02d}-{int(d):02d}"
 
     # 附件 (通常在 /files/articleAttr/ 路徑下)
     for a in soup.select("a[href*='/files/']"):
@@ -400,6 +413,16 @@ def main():
              "傳空字串 --tournaments \"\" 表示不篩選、抓全部賽事。"
              "用 --event-id 直接指定單一賽事時不受此篩選影響。",
     )
+    parser.add_argument(
+        "--updated-within-days",
+        type=int,
+        default=10,
+        help="只保留文章「修改日期」在最近N天內的賽事(預設10天)，避免抓一堆"
+             "很久沒更新、內容應該已經穩定不變的舊公告。設為0表示不篩選、"
+             "不管修改日期多舊都抓。文章頁抓不到修改日期時，保守起見還是會"
+             "保留(無法判斷新舊，不代表它是舊的)。"
+             "用 --event-id 直接指定單一賽事時不受此篩選影響。",
+    )
     args = parser.parse_args()
 
     out_path = Path(args.out)
@@ -429,6 +452,18 @@ def main():
         except Exception as exc:  # noqa: BLE001
             print(f"  失敗：{exc}", file=sys.stderr)
             continue
+
+        if (
+            not args.event_id
+            and args.updated_within_days > 0
+            and info.last_modified
+        ):
+            modified = datetime.strptime(info.last_modified, "%Y-%m-%d").date()
+            age_days = (date.today() - modified).days
+            if age_days > args.updated_within_days:
+                print(f"  略過(修改日期 {info.last_modified}，{age_days} 天前，"
+                      f"超過 {args.updated_within_days} 天門檻)")
+                continue
 
         result = asdict(info)
 
