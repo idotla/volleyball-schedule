@@ -191,16 +191,15 @@ function renderMatchCard(m, ev, q, opts = {}) {
 }
 
 function renderAttachmentsList(ev) {
-  // 相關文件下載連結：優先連本地repo裡的檔案(local_path，不會失效)，
-  // 沒有local_path的(例如附件太大、超過GitHub單檔100MB上限沒被下載進repo)
-  // 就退回去連協會官網的原始連結。
+  // 相關文件下載連結：2026-09-10 使用者要求簡化，一律直接連協會官網的原始
+  // 連結(att.url)，不使用repo本地檔案(local_path)。
   const atts = ev.attachments || [];
   if (!atts.length) return null;
   const wrap = el('div', {class: 'attachments'});
   wrap.appendChild(el('div', {class: 'attachments-title', text: '📎 相關文件'}));
   const list = el('div', {class: 'attachments-list'});
   atts.forEach(a => {
-    const href = a.local_path || a.url;
+    const href = a.url;
     if (!href) return;
     list.appendChild(el('a', {
       href, target: '_blank', rel: 'noopener', class: 'attachment-link', text: a.name || '附件',
