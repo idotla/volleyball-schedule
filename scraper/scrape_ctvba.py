@@ -160,6 +160,32 @@ def filter_events_by_keywords(events: list[dict], keywords: list[str]) -> list[d
     return [e for e in events if any(k in e["name"] for k in keywords)]
 
 
+# 標題裡的年度標記，用來避免把不同屆/不同年的舊公告誤合併在一起。
+# CTVBA標題幾乎都會在最前面標年度，但有的用民國年(3碼，例如「115年」)、
+# 有的用西元年(4碼、20開頭，例如「2026年」)，要各自抓、再統一換算成西元年
+# 比較。(?<!\d) 是為了避免「2026年」被 3碼regex 誤吃成「026年」→誤判成
+# 民國26年這種離譜結果。
+ROC_YEAR_IN_TITLE_RE = re.compile(r"(?<!\d)(\d{3})年")
+GREGORIAN_YEAR_IN_TITLE_RE = re.compile(r"(?<!\d)(20\d{2})年")
+
+
+def _extract_title_year(name: str) -> Optional[int]:
+    """從賽事標題抓出「這篇公告屬於西元哪一年」，抓不到回傳None。"""
+    candidates = []
+    m_roc = ROC_YEAR_IN_TITLE_RE.search(name)
+    if m_roc:
+        candidates.append((m_roc.start(), int(m_roc.group(1)) + 1911))
+    m_ad = GREGORIAN_YEAR_IN_TITLE_RE.search(name)
+    if m_ad:
+        candidates.append((m_ad.start(), int(m_ad.group(1))))
+    if not candidates:
+        return None
+    # 標題裡如果兩種年份標記都出現，用「先出現」的那個，比較符合標題語意
+    # (年度通常寫在標題最前面)。
+    candidates.sort(key=lambda c: c[0])
+    return candidates[0][1]
+
+
 def merge_events_by_tournament(results: list[dict], keywords: list[str]) -> list[dict]:
     """
     把同一個盃賽底下抓到的多篇公告文章合併成一筆賽事資料。
@@ -169,14 +195,25 @@ def merge_events_by_tournament(results: list[dict], keywords: list[str]) -> list
     把「不相關的其他賽事」濾掉，同一個盃賽底下這些文章本身還是各自一筆，
     直接輸出到events.json的話，網頁上的「Coming Soon」清單一個盃賽會重複
     出現好幾行，使用者要看的其實是「這個盃賽」而不是「這篇公告」。
-    (2026-09-10 使用者要求：Coming Soon清單也要乾淨，只顯示這幾個盃賽本身
-    的資訊，其餘不用。)
+
+    **重要(2026-09-10 修過的bug)**：同一個關鍵字(例如「華宗」)底下，不只
+    有「今年這一屆」的公告，官網列表也會留著「去年那一屆已經打完」的舊公告
+    (成績一覽表、即時成績、舊賽程表...)。原本的合併邏輯只看關鍵字、不看
+    年度/屆數，結果把「115年第47屆華宗盃競賽規程」(今年、還沒開打、也還
+    沒有總賽程表附件)跟「114年第46屆華宗盃...」(去年、已經打完的舊公告，
+    其中一篇有一份真的總賽程表PDF附件)合併成同一筆，導致解析出587場「去年
+    的」比賽場次、卻顯示在「今年」這筆賽事底下，看起來像是今年已經有完整
+    賽程一樣——這是使用者直接發現並回報的錯誤資料。
+    修法：合併前先用 `_extract_title_year()` 抓出每篇文章標題裡的年度，
+    同一個關鍵字底下再依年度細分；每個關鍵字最後只保留「年度最新」的那一組
+    來合併，年度較舊的公告不會被合併進來、也不會另外顯示成一筆(反正使用者
+    要的是「這幾個盃賽最新一屆」的資訊，不是歷屆舊資料)。抓不到年度的文章
+    視為最舊、優先度最低。
 
     只有在有指定關鍵字篩選時才合併——沒有 --tournaments 篩選(要看全部賽事
     原始清單)的情況下不合併，避免在關鍵字不明確時把不相關的賽事誤合併。
 
-    合併規則：
-    - 用跟篩選一樣的關鍵字子字串比對，把同一個關鍵字底下的所有文章分成一組。
+    合併規則(同一個關鍵字+同一年度那組內)：
     - 每組挑一篇「主要文章」代表這個盃賽的name/url/日期/地點等metadata：
       優先選標題含「競賽規程」的(通常是最完整、最正式的官方公告，賽事全名、
       日期、地點、報名費都寫得最清楚)，其次選有解析出matches的，都沒有就
@@ -198,17 +235,23 @@ def merge_events_by_tournament(results: list[dict], keywords: list[str]) -> list
     if not keywords:
         return results
 
-    groups: dict[str, list[dict]] = {}
+    by_kw_year: dict[str, dict[Optional[int], list[dict]]] = {}
     unmatched: list[dict] = []
     for r in results:
         matched_kw = next((k for k in keywords if k in (r.get("name") or "")), None)
         if matched_kw is None:
             unmatched.append(r)
             continue
-        groups.setdefault(matched_kw, []).append(r)
+        year = _extract_title_year(r.get("name") or "")
+        by_kw_year.setdefault(matched_kw, {}).setdefault(year, []).append(r)
 
     merged: list[dict] = []
-    for group in groups.values():
+    for year_groups in by_kw_year.values():
+        # 同一個關鍵字底下可能混到不同年度的舊公告，只留「年度最新」的
+        # 那一組合併；年度是None(抓不到)的視為最舊、優先度最低。
+        best_year = max(year_groups.keys(), key=lambda y: (y is not None, y or 0))
+        group = year_groups[best_year]
+
         primary = (
             next((r for r in group if "競賽規程" in (r.get("name") or "")), None)
             or next((r for r in group if r.get("matches")), None)
@@ -316,7 +359,7 @@ SINGLE_DATE_RE = re.compile(r"(\d{2,3})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*�
 PDF_HEADER_DATE_RE = re.compile(r"(\d{3})(\d{2})(\d{2})\(")
 
 # 文章頁最下面通常有「修改日期：2026/08/28 12:27」這種西元格式的時間戳，
-# 用來判斷這篇文章是不是最近才更新的。跟上面比賽日期用民國年不同，
+# 用來判斷這篇文章是不是「最近才更新過」的。跟上面比賽日期用民國年不同，
 # 這裡官網本身就是西元年，不用轉換。
 LAST_MODIFIED_RE = re.compile(r"修改日期[：:]\s*(\d{4})[/-](\d{1,2})[/-](\d{1,2})")
 
@@ -460,7 +503,7 @@ def find_schedule_attachment(info: EventInfo) -> Optional[Attachment]:
 
 # 表格cell裡場次標籤的格式是「組別 輪次 M數字」，例如「社男 ⼩組賽D M1」，
 # 數字前面的M是場次編號，用來把「組別/輪次」跟「場次編號」拆開存。
-MATCH_LABEL_RE = re.compile(r"^(.*?)(?:\s+(M\d+))?$")
+MATCH_LABEL_RE = re.compile(r"^(.*?)(?:\s+(M\.?\d+))?$")
 
 # 總賽程表PDF的內嵌字型有些字會被錯誤對應到「部首」符號而不是正常漢字
 # (例如「三民國中」被抽出來變成「三⺠國中」，「長春國小」變成「⻑春國小」)，
