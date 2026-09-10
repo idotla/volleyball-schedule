@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>排球協會國內賽事查詢</title>
+<style>
+  :root{
+    color-scheme: light dark;
+    --bg:#f7f7f5; --card:#ffffff; --ink:#1c1c1c; --muted:#6b6b6b;
+    --accent:#c0392b; --accent-soft:#fdecea; --border:#e5e2dc;
+    --warn-bg:#fff7e0; --warn-border:#e8c766;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#15151a; --card:#1f1f26; --ink:#eceae6; --muted:#9a9a9a;
+      --accent:#e0776b; --accent-soft:#3a2321; --border:#33333c;
+      --warn-bg:#332a10; --warn-border:#8a6d1f;
+    }
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Microsoft JhengHei",sans-serif;
+    padding-block:32px;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding-inline:20px;}
+  header h1{font-size:1.5rem;margin:0 0 4px;}
+  header .sub{color:var(--muted);font-size:0.9rem;margin-bottom:24px;}
+
+  .search-box{margin-bottom:28px;}
+  .search-box input{
+    width:100%;padding:14px 16px;font-size:1.05rem;border:1px solid var(--border);
+    border-radius:12px;background:var(--card);color:var(--ink);
+  }
+  .search-box input:focus{outline:2px solid var(--accent);outline-offset:1px;}
+  .search-hint{color:var(--muted);font-size:0.82rem;margin-top:6px;}
+
+  .card{
+    background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:18px 20px;margin-bottom:14px;
+  }
+  .card h2{margin:0 0 8px;font-size:1.05rem;}
+  .badge{
+    display:inline-block;background:var(--accent-soft);color:var(--accent);
+    font-size:0.75rem;padding:2px 9px;border-radius:999px;font-weight:600;margin-bottom:8px;
+  }
+  .meta-grid{display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:0.88rem;}
+  .meta-grid dt{color:var(--muted);white-space:nowrap;}
+  .meta-grid dd{margin:0;}
+
+  .match-card{
+    background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:16px 20px;margin-bottom:12px;
+  }
+  .match-event{color:var(--muted);font-size:0.78rem;margin-bottom:6px;}
+  .match-teams{font-size:1.05rem;font-weight:700;margin-bottom:8px;}
+  .match-teams .vs{color:var(--muted);font-weight:400;margin:0 6px;}
+  .match-teams .hit{color:var(--accent);}
+  .match-meta{display:flex;flex-wrap:wrap;gap:14px;font-size:0.85rem;color:var(--muted);}
+  .match-meta span{white-space:nowrap;}
+  .group-tag{
+    display:inline-block;font-size:0.72rem;padding:1px 8px;border-radius:6px;
+    background:var(--accent-soft);color:var(--accent);
+  }
+
+  .notice{
+    background:var(--warn-bg);border:1px solid var(--warn-border);border-radius:10px;
+    padding:10px 12px;font-size:0.82rem;line-height:1.6;margin-top:8px;
+  }
+  .empty, .error{color:var(--muted);font-size:0.9rem;text-align:center;padding:40px 0;}
+  .section-title{font-size:0.85rem;color:var(--muted);margin:24px 0 10px;font-weight:600;}
+  footer{color:var(--muted);font-size:0.8rem;text-align:center;margin-top:30px;line-height:1.6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🏐 排球協會國內賽事查詢</h1>
+    <div class="sub">資料來源：中華民國排球協會官網，每日自動更新</div>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="search" placeholder="輸入學校或隊伍名稱，查詢該隊的比賽賽程...">
+    <div class="search-hint">例如：輸入「豐原高商」會列出所有找得到豐原高商比賽的賽事場次</div>
+  </div>
+
+  <div id="results"></div>
+
+  <footer>
+    資料來源：<a href="https://www.ctvba.org.tw/article/front/inGame" target="_blank" rel="noopener">中華民國排球協會官網</a>
+  </footer>
+</div>
+
+<script>
+function el(tag, opts = {}, children = []) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(opts)) {
+    if (k === 'text') e.textContent = v;
+    else if (k === 'html') e.innerHTML = v;
+    else e.setAttribute(k, v);
+  }
+  children.forEach(c => e.appendChild(c));
+  return e;
+}
+
+function highlight(name, q) {
+  if (!q) return el('span', {text: name});
+  const i = name.toLowerCase().indexOf(q);
+  if (i === -1) return el('span', {text: name});
+  const before = name.slice(0, i), hit = name.slice(i, i + q.length), after = name.slice(i + q.length);
+  const span = el('span');
+  span.appendChild(document.createTextNode(before));
+  span.appendChild(el('span', {class: 'hit', text: hit}));
+  span.appendChild(document.createTextNode(after));
+  return span;
+}
+
+function renderMatchCard(m, ev, q) {
+  const card = el('div', {class: 'match-card'});
+  card.appendChild(el('div', {class: 'match-event', text: ev.name || ''}));
+
+  const teams = el('div', {class: 'match-teams'});
+  teams.appendChild(highlight(m.team_a || '', q));
+  teams.appendChild(el('span', {class: 'vs', text: 'vs'}));
+  teams.appendChild(highlight(m.team_b || '', q));
+  card.appendChild(teams);
+
+  const meta = el('div', {class: 'match-meta'});
+  const items = [
+    m.date ? `📅 ${m.date}` : (m.day ? `📅 第${m.day}天` : null),
+    m.time ? `⏰ ${m.time}` : null,
+    m.venue ? `📍 ${m.venue}` : null,
+  ].filter(Boolean);
+  items.forEach(t => meta.appendChild(el('span', {text: t})));
+  if (m.group) {
+    const g = el('span', {class: 'group-tag', text: m.group + (m.match_no ? ' ' + m.match_no : '')});
+    meta.appendChild(g);
+  }
+  card.appendChild(meta);
+
+  return card;
+}
+
+function renderEventOverviewCard(ev) {
+  const card = el('div', {class: 'card'});
+  if (ev.organizer) card.appendChild(el('span', {class: 'badge', text: ev.organizer + ' 主辦'}));
+  card.appendChild(el('h2', {text: ev.name || '(未命名賽事)'}));
+
+  const dl = el('dl', {class: 'meta-grid'});
+  const rows = [
+    ['比賽日期', ev.date_note || [ev.date_start, ev.date_end].filter(Boolean).join(' ~ ')],
+    ['比賽地點', ev.venue],
+  ];
+  rows.forEach(([k, v]) => {
+    if (!v) return;
+    dl.appendChild(el('dt', {text: k}));
+    dl.appendChild(el('dd', {text: v}));
+  });
+  if (dl.children.length) card.appendChild(dl);
+
+  if (!ev.matches || !ev.matches.length) {
+    const msg = (ev.parse_warnings && ev.parse_warnings.length)
+      ? ev.parse_warnings.join('；')
+      : '目前還沒有這個賽事的場次資料。';
+    card.appendChild(el('div', {class: 'notice', text: 'ℹ️ ' + msg}));
+  }
+
+  return card;
+}
+
+let ALL_EVENTS = [];
+
+function renderResults(query) {
+  const container = document.getElementById('results');
+  container.innerHTML = '';
+  const q = query.trim().toLowerCase();
+
+  if (!q) {
+    container.appendChild(el('div', {class: 'section-title', text: '目前追蹤的賽事'}));
+    if (!ALL_EVENTS.length) {
+      container.appendChild(el('div', {class: 'empty', text: '目前沒有賽事資料'}));
+      return;
+    }
+    ALL_EVENTS.forEach(ev => container.appendChild(renderEventOverviewCard(ev)));
+    return;
+  }
+
+  const hits = [];
+  ALL_EVENTS.forEach(ev => {
+    (ev.matches || []).forEach(m => {
+      const a = (m.team_a || '').toLowerCase();
+      const b = (m.team_b || '').toLowerCase();
+      if (a.includes(q) || b.includes(q)) hits.push({m, ev});
+    });
+  });
+
+  if (!hits.length) {
+    container.appendChild(el('div', {class: 'empty', text: `找不到「${query}」的比賽場次，可能是這個賽事的賽程還沒解析出來，或名稱寫法不同，可以換個關鍵字試試看。`}));
+    return;
+  }
+
+  container.appendChild(el('div', {class: 'section-title', text: `找到 ${hits.length} 場比賽`}));
+  hits.forEach(({m, ev}) => container.appendChild(renderMatchCard(m, ev, q)));
+}
+
+document.getElementById('search').addEventListener('input', (e) => renderResults(e.target.value));
+
+fetch('data/events.json')
+  .then(r => {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  })
+  .then(data => {
+    ALL_EVENTS = data;
+    renderResults('');
+  })
+  .catch(err => {
+    document.getElementById('results').innerHTML = '';
+    document.getElementById('results').appendChild(
+      el('div', {class: 'error', text: '資料載入失敗：' + err.message + '（可能是排程還沒跑過第一次）'})
+    );
+  });
+</script>
+</body>
+</html>
