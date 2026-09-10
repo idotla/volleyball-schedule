@@ -88,9 +88,11 @@ class Attachment:
     name: str
     url: str
     # 附件PDF下載到repo後的相對路徑(相對於 docs/ 目錄，例如
-    # "data/attachments/1950/xxx.pdf")，讓網頁可以直接連結本地檔案下載，
-    # 不用依賴協會官網的原始連結(連結未來可能失效，或檔案被置換)。
-    # 下載失敗、或執行時加了 --skip-download 的話會維持 None。
+    # "data/attachments/1950/xxx.pdf")。
+    # 2026-09-10 使用者要求簡化：網頁上的附件連結一律直接連協會官網原始連結
+    # (att.url)，不使用這個欄位。預設不下載附件(要加 --download-attachments
+    # 才會下載)，所以這個欄位正常情況下會維持 None，保留只是為了未來如果
+    # 又想改回「下載進repo」時可以直接復用。
     local_path: Optional[str] = None
 
 
@@ -832,8 +834,13 @@ def main():
                               "GitHub Pages 才能直接讀到）")
     parser.add_argument("--skip-pdf", action="store_true",
                          help="跳過總賽程表PDF解析，只抓賽事基本資訊(比較快)")
-    parser.add_argument("--skip-download", action="store_true",
-                         help="跳過附件PDF下載(只記錄協會官網的原始連結，不存進repo)")
+    parser.add_argument("--download-attachments", action="store_true",
+                         help="把附件PDF實際下載進repo(docs/data/attachments/)。"
+                              "預設不下載，網頁的附件連結一律直接連協會官網原始連結"
+                              "(2026-09-10 使用者要求簡化成這樣：一來avoid附件太大"
+                              "(曾經遇過402MB的PDF超過GitHub單檔100MB上限導致push"
+                              "失敗)，二來官網連結本身也夠用，不需要repo多存一份)。"
+                              "這個選項保留給未來如果又想改回「下載進repo」時用。")
     parser.add_argument("--no-cache", action="store_true",
                          help="不使用/更新變更偵測快取，每篇公告都強制重新抓取"
                               "(除錯或想確保拿到最新資料時用)")
@@ -910,7 +917,7 @@ def main():
                 print(f"  失敗：{exc}", file=sys.stderr)
                 continue
 
-            if not args.skip_download:
+            if args.download_attachments:
                 download_attachments(info, attachments_dir)
 
             result = asdict(info)
