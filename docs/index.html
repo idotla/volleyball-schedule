@@ -49,16 +49,21 @@
   .meta-grid dt{color:var(--muted);white-space:nowrap;}
   .meta-grid dd{margin:0;}
 
-  .match-card{
+  .match-day-card{
     background:var(--card);border:1px solid var(--border);border-radius:14px;
-    padding:16px 20px;margin-bottom:12px;
+    overflow:hidden;margin-bottom:12px;
   }
-  .match-event{color:var(--muted);font-size:0.78rem;margin-bottom:6px;}
-  .match-teams{font-size:1.05rem;font-weight:700;margin-bottom:8px;}
+  .match-row{padding:14px 20px;border-bottom:1px solid var(--border);}
+  .match-row:last-child{border-bottom:none;}
+  .match-row-main{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+  .match-time{color:var(--accent);font-weight:700;font-size:0.95rem;white-space:nowrap;}
+  .match-teams{font-size:1.05rem;font-weight:700;}
   .match-teams .vs{color:var(--muted);font-weight:400;margin:0 6px;}
   .match-teams .hit{color:var(--accent);}
-  .match-meta{display:flex;flex-wrap:wrap;gap:14px;font-size:0.85rem;color:var(--muted);}
-  .match-meta span{white-space:nowrap;}
+  .match-row-meta{
+    display:flex;flex-wrap:wrap;gap:14px;font-size:0.85rem;color:var(--muted);margin-top:6px;
+  }
+  .match-row-meta span{white-space:nowrap;}
   .group-tag{
     display:inline-block;font-size:0.72rem;padding:1px 8px;border-radius:6px;
     background:var(--accent-soft);color:var(--accent);
@@ -174,35 +179,30 @@ function genderOf(m) {
   return '其他';
 }
 
-function renderMatchCard(m, ev, q, opts = {}) {
-  const card = el('div', {class: 'match-card'});
-  if (opts.showEvent !== false) {
-    card.appendChild(el('div', {class: 'match-event', text: ev.name || ''}));
-  }
+function renderMatchRow(m, q) {
+  // 2026-09-10 使用者要求：同一天的比賽擺在同一個方框裡面(見下方
+  // renderMatchesGroupedByDate，一個日期分組對應一個 .match-day-card)，
+  // 且比賽時間要擺在對戰隊伍「前面」。日期本身已經是分組標題了，這裡
+  // (每一場比賽的row)就不重複顯示日期。
+  const row = el('div', {class: 'match-row'});
 
-  const teams = el('div', {class: 'match-teams'});
+  const main = el('div', {class: 'match-row-main'});
+  if (m.time) main.appendChild(el('span', {class: 'match-time', text: '⏰ ' + m.time}));
+  const teams = el('span', {class: 'match-teams'});
   teams.appendChild(highlight(m.team_a || '', q));
   teams.appendChild(el('span', {class: 'vs', text: 'vs'}));
   teams.appendChild(highlight(m.team_b || '', q));
-  card.appendChild(teams);
+  main.appendChild(teams);
+  row.appendChild(main);
 
-  const meta = el('div', {class: 'match-meta'});
-  const items = [
-    // 2026-09-10 使用者要求男排/女排底下改成依日期分組顯示(見下方
-    // renderMatchesGroupedByDate)，日期已經變成分組標題了，卡片本身就
-    // 不用重複顯示日期，除非呼叫端沒有分組(opts.hideDate !== true)。
-    (!opts.hideDate && (m.date ? `📅 ${m.date}` : (m.day ? `📅 第${m.day}天` : null))),
-    m.time ? `⏰ ${m.time}` : null,
-    m.venue ? `📍 ${m.venue}` : null,
-  ].filter(Boolean);
-  items.forEach(t => meta.appendChild(el('span', {text: t})));
+  const meta = el('div', {class: 'match-row-meta'});
+  if (m.venue) meta.appendChild(el('span', {text: `📍 ${m.venue}`}));
   if (m.group) {
-    const g = el('span', {class: 'group-tag', text: m.group + (m.match_no ? ' ' + m.match_no : '')});
-    meta.appendChild(g);
+    meta.appendChild(el('span', {class: 'group-tag', text: m.group + (m.match_no ? ' ' + m.match_no : '')}));
   }
-  card.appendChild(meta);
+  if (meta.children.length) row.appendChild(meta);
 
-  return card;
+  return row;
 }
 
 function formatDateHeading(dateStr) {
@@ -237,7 +237,9 @@ function groupMatchesByDate(matches) {
 function renderMatchesGroupedByDate(container, matches, ev, q) {
   groupMatchesByDate(matches).forEach(({key, list}) => {
     container.appendChild(el('div', {class: 'date-heading', text: formatDateHeading(key)}));
-    list.forEach(m => container.appendChild(renderMatchCard(m, ev, q, {showEvent: false, hideDate: true})));
+    const box = el('div', {class: 'match-day-card'});
+    list.forEach(m => box.appendChild(renderMatchRow(m, q)));
+    container.appendChild(box);
   });
 }
 
