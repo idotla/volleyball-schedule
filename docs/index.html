@@ -120,7 +120,7 @@
 <div class="wrap">
   <header>
     <h1>🏐 排球協會國內賽事查詢</h1>
-    <div class="sub">資料來源：中華民國排球協會官網，每日自動更新</div>
+    <div class="sub">資料來源：中華民國排球協會官網・更新時間：<span id="updated-at">載入中...</span></div>
   </header>
 
   <div class="search-box">
@@ -465,6 +465,20 @@ fetch('data/events.json')
     document.getElementById('results').appendChild(
       el('div', {class: 'error', text: '資料載入失敗：' + err.message + '（可能是排程還沒跑過第一次）'})
     );
+  });
+
+// 2026-09-10 使用者要求拿掉寫死的「每日自動更新」字樣，改顯示實際更新時間。
+// 跟主要賽事資料(events.json)分開抓，這一段失敗也不影響上面賽程查詢的功能，
+// 只是「更新時間」那格會停在「載入中...」。
+fetch('data/last_updated.json')
+  .then(r => (r.ok ? r.json() : null))
+  .then(data => {
+    const el2 = document.getElementById('updated-at');
+    if (el2) el2.textContent = (data && data.updated_at) ? data.updated_at : '未知';
+  })
+  .catch(() => {
+    const el2 = document.getElementById('updated-at');
+    if (el2) el2.textContent = '未知';
   });
 </script>
 </body>
