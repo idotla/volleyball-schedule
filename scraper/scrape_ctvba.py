@@ -11,6 +11,11 @@
   3. 嘗試下載「總賽程表」PDF 並用 pdfplumber 解析表格，抓出場次資料。
      （賽程表格式因賽事而異，解析結果不保證完整，抓不到的會標記為
      needs_manual_review，讓使用者自己點附件連結查看。）
+  4. 把每篇文章的附件PDF下載到repo裡(docs/data/attachments/)，網頁可以直接
+     連結本地檔案下載，不用依賴協會官網的原始連結。
+  5. 用「標題文字有沒有變」當作變更偵測：跟上次抓到的標題一樣就直接沿用
+     上次的完整結果(docs/data/scrape_cache.json)，不用重新抓文章內文、也
+     不用重新下載附件PDF，避免每天對官網重複做一樣的抓取。
 
 執行環境需求：
   - 這支程式需要「一般網際網路存取」(能連到 www.ctvba.org.tw)。
@@ -77,6 +82,11 @@ DEFAULT_TOURNAMENT_KEYWORDS = ["永信", "媽祖", "華宗", "和家"]
 class Attachment:
     name: str
     url: str
+    # 附件PDF下載到repo後的相對路徑(相對於 docs/ 目錄，例如
+    # "data/attachments/1950/xxx.pdf")，讓網頁可以直接連結本地檔案下載，
+    # 不用依賴協會官網的原始連結(連結未來可能失效，或檔案被置換)。
+    # 下載失敗、或執行時加了 --skip-download 的話會維持 None。
+    local_path: Optional[str] = None
 
 
 @dataclass
@@ -476,6 +486,68 @@ def parse_event_page(event_id: str, url: str) -> EventInfo:
 
 
 # --------------------------------------------------------------------------
+# Step 2.5：把附件PDF下載到repo裡，並記錄相對路徑
+# --------------------------------------------------------------------------
+
+def _sanitize_attachment_filename(name: str) -> str:
+    """把附件原始檔名清成安全的檔案系統路徑片段。
+
+    官網附件檔名本身通常已經是正常檔名(例如「115_53rd永信杯競賽規程0701.pdf」)，
+    這裡只是防呆：拿掉路徑分隔符號(避免不小心跳出目標資料夾)、拿掉控制字元，
+    檔名太長就截斷(保留副檔名)，抓不到檔名就給預設值。
+    """
+    name = (name or "").replace("/", "_").replace("\\", "_").strip()
+    name = re.sub(r"[\x00-\x1f]", "", name)
+    name = name.lstrip(".")  # 避免變成隱藏檔或 ".."
+    if not name:
+        name = "attachment"
+    if len(name) > 150:
+        if "." in name:
+            stem, ext = name.rsplit(".", 1)
+            name = stem[:140] + "." + ext
+        else:
+            name = name[:150]
+    return name
+
+
+def download_attachments(info: EventInfo, attachments_dir: Path) -> None:
+    """把這個賽事所有附件PDF下載到本地repo裡(attachments_dir/賽事id/檔名)，
+    並把下載後的相對路徑寫回每個 Attachment.local_path(相對於 docs/ 目錄，
+    例如 "data/attachments/1950/xxx.pdf")。
+
+    背景(2026-09-10 使用者要求)：原本網頁上完全沒有附件下載連結，使用者要看
+    競賽規程/總賽程表這些PDF只能自己去協會官網找，體驗不好，而且協會官網的
+    連結未來也可能失效或被置換。改成爬蟲直接把PDF抓下來存進repo、網頁直接
+    連本地檔案。
+
+    已經下載過、檔案存在且大小 > 0 的附件不會重新下載——公告發布後附件內容
+    幾乎不會再變(如果真的置換了新檔案，官網那篇文章的檔名通常也會跟著換，
+    此時會被當成新檔名重新下載，不會沿用舊內容)，這樣可以避免每天重複下載
+    同樣的檔案，節省網路流量跟執行時間。
+    """
+    event_dir = attachments_dir / info.id
+    for att in info.attachments:
+        safe_name = _sanitize_attachment_filename(att.name)
+        dest = event_dir / safe_name
+        rel_path = f"data/attachments/{info.id}/{safe_name}"
+        if dest.exists() and dest.stat().st_size > 0:
+            att.local_path = rel_path
+            continue
+        try:
+            content = fetch_bytes(att.url)
+        except Exception as exc:  # noqa: BLE001
+            print(f"    附件下載失敗：{att.name} ({exc})", file=sys.stderr)
+            continue
+        if not content:
+            continue
+        event_dir.mkdir(parents=True, exist_ok=True)
+        dest.write_bytes(content)
+        att.local_path = rel_path
+        print(f"    已下載附件：{att.name} ({len(content)} bytes)")
+        time.sleep(REQUEST_DELAY_SEC)
+
+
+# --------------------------------------------------------------------------
 # Step 3：嘗試解析「總賽程表」PDF
 # --------------------------------------------------------------------------
 
@@ -647,6 +719,33 @@ def parse_schedule_pdf(pdf_bytes: bytes) -> tuple[list[Match], list[str]]:
 
 
 # --------------------------------------------------------------------------
+# 變更偵測快取：標題沒變就沿用上次抓到的完整結果，不用重新抓文章+附件
+# --------------------------------------------------------------------------
+
+# 2026-09-10 使用者要求：避免每天重複抓取同樣的資料。CTVBA官網公告文章如果
+# 內容有更新，標題通常會自己補上「幾月幾號更新」(例如本來叫「115年第53屆
+# 「永信杯」全國排球錦標賽 競賽規程」，加了分組表之後標題變成「...競賽規程
+# (8/２８更新分組賽製圖及總賽程表)」)，所以「標題文字有沒有變」是判斷「這篇
+# 公告內容是不是更新過」很好用的訊號，比較文章列表頁的標題比重新抓文章內文
+# 再比對修改日期簡單、成本也低(只需要抓一次列表頁，不用每篇都進去)。
+# 快取檔存在 docs/data/scrape_cache.json，跟events.json一起commit回repo。
+def load_cache(cache_path: Path) -> dict:
+    if not cache_path.exists():
+        return {}
+    try:
+        return json.loads(cache_path.read_text(encoding="utf-8"))
+    except Exception as exc:  # noqa: BLE001
+        print(f"讀取快取檔失敗，當作沒有快取繼續跑：{exc}", file=sys.stderr)
+        return {}
+
+
+def save_cache(cache_path: Path, cache: dict) -> None:
+    cache_path.write_text(
+        json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+
+# --------------------------------------------------------------------------
 # 主程式
 # --------------------------------------------------------------------------
 
@@ -658,6 +757,11 @@ def main():
                               "GitHub Pages 才能直接讀到）")
     parser.add_argument("--skip-pdf", action="store_true",
                          help="跳過總賽程表PDF解析，只抓賽事基本資訊(比較快)")
+    parser.add_argument("--skip-download", action="store_true",
+                         help="跳過附件PDF下載(只記錄協會官網的原始連結，不存進repo)")
+    parser.add_argument("--no-cache", action="store_true",
+                         help="不使用/更新變更偵測快取，每篇公告都強制重新抓取"
+                              "(除錯或想確保拿到最新資料時用)")
     parser.add_argument(
         "--tournaments",
         default=",".join(DEFAULT_TOURNAMENT_KEYWORDS),
@@ -688,6 +792,8 @@ def main():
 
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
+    attachments_dir = out_path.parent / "attachments"
+    cache_path = out_path.parent / "scrape_cache.json"
 
     keywords: list[str] = []
     if args.event_id:
@@ -706,44 +812,65 @@ def main():
             events = filter_events_by_keywords(events, keywords)
             print(f"依關鍵字 {keywords} 篩選後剩 {len(events)} 個賽事")
 
+    cache: dict = {} if (args.event_id or args.no_cache) else load_cache(cache_path)
+    new_cache: dict = {}
+
     results = []
     for e in events:
-        print(f"抓取賽事：{e['name'] or e['id']} ({e['url']})")
-        try:
-            info = parse_event_page(e["id"], e["url"])
-        except Exception as exc:  # noqa: BLE001
-            print(f"  失敗：{exc}", file=sys.stderr)
-            continue
-
-        if not args.event_id and info.date_end:
-            comp_end = datetime.strptime(info.date_end, "%Y-%m-%d").date()
-            days_since_end = (date.today() - comp_end).days
-            if days_since_end > args.hide_past_days:
-                print(f"  略過(比賽日期 {info.date_end} 已結束，{days_since_end} "
-                      f"天前，超過 {args.hide_past_days} 天門檻)")
+        cached = cache.get(e["id"])
+        if cached and cached.get("name") == e["name"]:
+            # 標題跟上次抓到的一模一樣，視為內容沒更新，直接沿用快取的完整
+            # 結果(已經含matches、附件local_path等)，不用重新抓文章內文、
+            # 也不用重新下載附件PDF。
+            print(f"  標題未變，沿用快取：{e['name'] or e['id']}")
+            result = cached
+        else:
+            print(f"抓取賽事：{e['name'] or e['id']} ({e['url']})")
+            try:
+                info = parse_event_page(e["id"], e["url"])
+            except Exception as exc:  # noqa: BLE001
+                print(f"  失敗：{exc}", file=sys.stderr)
                 continue
 
-        result = asdict(info)
+            if not args.skip_download:
+                download_attachments(info, attachments_dir)
 
-        if not args.skip_pdf:
-            sched_att = find_schedule_attachment(info)
-            if sched_att:
-                print(f"  找到賽程表附件：{sched_att.name}，嘗試下載解析...")
-                try:
-                    pdf_bytes = fetch_bytes(sched_att.url)
-                    matches, warnings = parse_schedule_pdf(pdf_bytes)
-                    result["matches"] = [asdict(m) for m in matches]
-                    result["parse_warnings"] = warnings
-                    print(f"  解析出 {len(matches)} 場比賽，{len(warnings)} 則警告")
-                except Exception as exc:  # noqa: BLE001
+            result = asdict(info)
+
+            if not args.skip_pdf:
+                sched_att = find_schedule_attachment(info)
+                if sched_att:
+                    print(f"  找到賽程表附件：{sched_att.name}，嘗試下載解析...")
+                    try:
+                        pdf_bytes = fetch_bytes(sched_att.url)
+                        matches, warnings = parse_schedule_pdf(pdf_bytes)
+                        result["matches"] = [asdict(m) for m in matches]
+                        result["parse_warnings"] = warnings
+                        print(f"  解析出 {len(matches)} 場比賽，{len(warnings)} 則警告")
+                    except Exception as exc:  # noqa: BLE001
+                        result["matches"] = []
+                        result["parse_warnings"] = [f"下載或解析失敗：{exc}"]
+                else:
                     result["matches"] = []
-                    result["parse_warnings"] = [f"下載或解析失敗：{exc}"]
+                    result["parse_warnings"] = ["附件裡找不到「總賽程表」"]
             else:
                 result["matches"] = []
-                result["parse_warnings"] = ["附件裡找不到「總賽程表」"]
-        else:
-            result["matches"] = []
-            result["parse_warnings"] = ["已跳過PDF解析(--skip-pdf)"]
+                result["parse_warnings"] = ["已跳過PDF解析(--skip-pdf)"]
+
+        if not args.event_id:
+            # 不管這筆賽事等一下會不會被下面的hide-past-days濾掉，都先存進
+            # 快取——這樣比賽結束、首頁不再顯示之後，只要標題沒再變，下次
+            # 還是能命中快取，不用每天重新抓一次已經打完、內容不會再變的
+            # 舊公告。
+            new_cache[e["id"]] = result
+
+        if not args.event_id and result.get("date_end"):
+            comp_end = datetime.strptime(result["date_end"], "%Y-%m-%d").date()
+            days_since_end = (date.today() - comp_end).days
+            if days_since_end > args.hide_past_days:
+                print(f"  略過(比賽日期 {result['date_end']} 已結束，{days_since_end} "
+                      f"天前，超過 {args.hide_past_days} 天門檻)")
+                continue
 
         results.append(result)
         time.sleep(REQUEST_DELAY_SEC)
@@ -757,6 +884,10 @@ def main():
         json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     print(f"寫出 {len(results)} 筆賽事資料到 {out_path}")
+
+    if not args.event_id:
+        save_cache(cache_path, new_cache)
+        print(f"寫出 {len(new_cache)} 筆快取到 {cache_path}")
 
 
 if __name__ == "__main__":
