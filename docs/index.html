@@ -193,7 +193,9 @@ function renderMatchCard(m, ev, q, opts = {}) {
 function renderAttachmentsList(ev) {
   // 相關文件下載連結：2026-09-10 使用者要求簡化，一律直接連協會官網的原始
   // 連結(att.url)，不使用repo本地檔案(local_path)。
-  const atts = ev.attachments || [];
+  // 同一天使用者再要求：附件只留「總賽程表」跟「(分組)賽制圖」這兩種，
+  // 其他像競賽規程、個人/團體資料及肖像授權同意書之類的不需要顯示。
+  const atts = (ev.attachments || []).filter(a => /賽程表|賽制圖/.test(a.name || ''));
   if (!atts.length) return null;
   const wrap = el('div', {class: 'attachments'});
   wrap.appendChild(el('div', {class: 'attachments-title', text: '📎 相關文件'}));
@@ -377,8 +379,14 @@ function renderResults(query) {
 }
 
 function appendComingSoon(container, events, now) {
-  if (!events.length) return;
-  const ranked = events.slice().sort((a, b) => eventDistanceMs(a, now) - eventDistanceMs(b, now));
+  // 「即將登場」只列真的查得到比賽日期的賽事(parseEventRange抓得到)，
+  // 像和家盃、媽祖盃目前抓到的都是舊文章、根本沒有查到115學年的比賽日期，
+  // 顯示「日期未定」反而容易讓人誤會協會已經公布、只是還沒排定——
+  // 2026-09-10 使用者要求拿掉這種「查無日期」的，即將登場清單目前應該
+  // 只會顯示華宗盃這種真的排出比賽日期的賽事。
+  const withDate = events.filter(ev => parseEventRange(ev) !== null);
+  if (!withDate.length) return;
+  const ranked = withDate.slice().sort((a, b) => eventDistanceMs(a, now) - eventDistanceMs(b, now));
   container.appendChild(el('div', {class: 'section-title', text: '即將登場・Coming Soon'}));
   const list = el('div', {class: 'coming-soon-list'});
   ranked.forEach(ev => list.appendChild(renderComingSoonRow(ev, now)));
