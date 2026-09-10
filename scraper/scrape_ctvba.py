@@ -61,6 +61,12 @@ REQUEST_DELAY_SEC = 1.0  # 對官網保持禮貌的抓取間隔，別打太快
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
+# 預設只抓這幾個指定盃賽的資料（2026-09-10 使用者要求縮小範圍）。
+# 用「不含杯/盃字樣的關鍵字」去比對賽事標題的子字串，因為官網同一個盃賽
+# 在不同文章裡「杯」「盃」兩種寫法都會出現（例如「永信杯」vs 標題其他地方
+# 可能寫成「永信盃」），拿掉那個字才能兩種寫法都比對得到。
+DEFAULT_TOURNAMENT_KEYWORDS = ["永信", "媽祖", "華宗", "和家"]
+
 
 # --------------------------------------------------------------------------
 # 資料結構
@@ -143,6 +149,13 @@ def list_events() -> list[dict]:
             "url": urljoin(BASE_URL, href),
         })
     return events
+
+
+def filter_events_by_keywords(events: list[dict], keywords: list[str]) -> list[dict]:
+    """只保留標題包含任一關鍵字的賽事。keywords 是空list就直接回傳全部(不篩選)。"""
+    if not keywords:
+        return events
+    return [e for e in events if any(k in e["name"] for k in keywords)]
 
 
 # --------------------------------------------------------------------------
@@ -379,12 +392,21 @@ def main():
                               "GitHub Pages 才能直接讀到）")
     parser.add_argument("--skip-pdf", action="store_true",
                          help="跳過總賽程表PDF解析，只抓賽事基本資訊(比較快)")
+    parser.add_argument(
+        "--tournaments",
+        default=",".join(DEFAULT_TOURNAMENT_KEYWORDS),
+        help="只抓標題包含這些關鍵字的盃賽，多個關鍵字用逗號分隔"
+             f"(預設：{','.join(DEFAULT_TOURNAMENT_KEYWORDS)})。"
+             "傳空字串 --tournaments \"\" 表示不篩選、抓全部賽事。"
+             "用 --event-id 直接指定單一賽事時不受此篩選影響。",
+    )
     args = parser.parse_args()
 
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     if args.event_id:
+        # 直接指定文章ID時，視為使用者明確要抓這一篇，不套用盃賽關鍵字篩選
         events = [e for e in list_events() if e["id"] == args.event_id]
         if not events:
             # 允許直接指定文章ID，即使沒出現在列表頁裡
@@ -394,6 +416,10 @@ def main():
     else:
         events = list_events()
         print(f"列表頁找到 {len(events)} 個賽事")
+        keywords = [k.strip() for k in args.tournaments.split(",") if k.strip()]
+        if keywords:
+            events = filter_events_by_keywords(events, keywords)
+            print(f"依關鍵字 {keywords} 篩選後剩 {len(events)} 個賽事")
 
     results = []
     for e in events:
