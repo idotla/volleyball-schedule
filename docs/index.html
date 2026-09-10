@@ -96,6 +96,18 @@
   .gender-heading{
     font-size:0.82rem;font-weight:700;color:var(--accent);margin:16px 0 8px;
   }
+  .tournament-meta{
+    display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;
+    font-size:0.85rem;color:var(--muted);margin-bottom:10px;
+  }
+  .attachments{margin:4px 0 16px;}
+  .attachments-title{font-size:0.8rem;color:var(--muted);margin-bottom:6px;font-weight:600;}
+  .attachments-list{display:flex;flex-wrap:wrap;gap:8px;}
+  .attachment-link{
+    font-size:0.82rem;color:var(--accent);background:var(--accent-soft);
+    padding:4px 10px;border-radius:8px;text-decoration:none;
+  }
+  .attachment-link:hover{text-decoration:underline;}
 </style>
 </head>
 <body>
@@ -106,8 +118,8 @@
   </header>
 
   <div class="search-box">
-    <input type="text" id="search" placeholder="輸入學校或隊伍名稱，查詢該隊的比賽賽程...">
-    <div class="search-hint">例如：輸入「豐原高商」會列出所有找得到豐原高商比賽的賽事場次</div>
+    <input type="text" id="search" value="大雅國中" placeholder="輸入學校或隊伍名稱，查詢該隊的比賽賽程...">
+    <div class="search-hint">預設顯示大雅國中的賽程，如要查詢其他學校/隊伍，直接在上面欄位輸入即可</div>
   </div>
 
   <div id="results"></div>
@@ -178,6 +190,27 @@ function renderMatchCard(m, ev, q, opts = {}) {
   return card;
 }
 
+function renderAttachmentsList(ev) {
+  // 相關文件下載連結：優先連本地repo裡的檔案(local_path，不會失效)，
+  // 沒有local_path的(例如附件太大、超過GitHub單檔100MB上限沒被下載進repo)
+  // 就退回去連協會官網的原始連結。
+  const atts = ev.attachments || [];
+  if (!atts.length) return null;
+  const wrap = el('div', {class: 'attachments'});
+  wrap.appendChild(el('div', {class: 'attachments-title', text: '📎 相關文件'}));
+  const list = el('div', {class: 'attachments-list'});
+  atts.forEach(a => {
+    const href = a.local_path || a.url;
+    if (!href) return;
+    list.appendChild(el('a', {
+      href, target: '_blank', rel: 'noopener', class: 'attachment-link', text: a.name || '附件',
+    }));
+  });
+  if (!list.children.length) return null;
+  wrap.appendChild(list);
+  return wrap;
+}
+
 function parseEventRange(ev) {
   // 回傳 {start, end}（Date物件），抓不到日期就回傳 null
   if (!ev.date_start) return null;
@@ -228,6 +261,9 @@ function renderEventOverviewCard(ev, opts = {}) {
   });
   if (dl.children.length) card.appendChild(dl);
 
+  const attBlock = renderAttachmentsList(ev);
+  if (attBlock) card.appendChild(attBlock);
+
   if (!ev.matches || !ev.matches.length) {
     const msg = (ev.parse_warnings && ev.parse_warnings.length)
       ? ev.parse_warnings.join('；')
@@ -275,12 +311,7 @@ function renderResults(query) {
     container.appendChild(el('div', {class: 'section-title', text: '最近賽事'}));
     container.appendChild(renderEventOverviewCard(featured, {now}));
 
-    if (rest.length) {
-      container.appendChild(el('div', {class: 'section-title', text: '即將登場・Coming Soon'}));
-      const list = el('div', {class: 'coming-soon-list'});
-      rest.forEach(ev => list.appendChild(renderComingSoonRow(ev, now)));
-      container.appendChild(list);
-    }
+    appendComingSoon(container, rest, now);
     return;
   }
 
@@ -293,16 +324,18 @@ function renderResults(query) {
     });
   });
 
+  const now = new Date();
+
   if (!hits.length) {
     container.appendChild(el('div', {class: 'empty', text: `找不到「${query}」的比賽場次，可能是這個賽事的賽程還沒解析出來，或名稱寫法不同，可以換個關鍵字試試看。`}));
+    appendComingSoon(container, ALL_EVENTS, now);
     return;
   }
 
-  container.appendChild(el('div', {class: 'section-title', text: `找到 ${hits.length} 場比賽`}));
+  container.appendChild(el('div', {class: 'section-title', text: `最近賽事・找到 ${hits.length} 場比賽`}));
 
   // 先依賽事(盃賽)分組，同一個盃賽底下再依男排/女排分兩區塊顯示，
   // 賽事本身依「離現在最近」排序(用跟首頁一樣的邏輯)，讓最近的盃賽排最前面。
-  const now = new Date();
   const byEvent = new Map();
   hits.forEach(({m, ev}) => {
     const key = ev.name || '';
@@ -315,6 +348,18 @@ function renderResults(query) {
   const GENDER_ORDER = ['男排', '女排', '其他'];
   groupedEvents.forEach(({ev, matches}) => {
     container.appendChild(el('div', {class: 'tournament-heading', text: ev.name || '(未命名賽事)'}));
+
+    const metaLine = el('div', {class: 'tournament-meta'});
+    const label = statusLabel(ev, now);
+    if (label) metaLine.appendChild(el('span', {class: 'status-badge', text: label}));
+    const dateText = ev.date_note || [ev.date_start, ev.date_end].filter(Boolean).join(' ~ ');
+    if (dateText) metaLine.appendChild(el('span', {text: '📅 ' + dateText}));
+    if (ev.venue) metaLine.appendChild(el('span', {text: '📍 ' + ev.venue}));
+    if (metaLine.children.length) container.appendChild(metaLine);
+
+    const attBlock = renderAttachmentsList(ev);
+    if (attBlock) container.appendChild(attBlock);
+
     const byGender = {'男排': [], '女排': [], '其他': []};
     matches.forEach(m => byGender[genderOf(m)].push(m));
     GENDER_ORDER.forEach(label => {
@@ -324,6 +369,21 @@ function renderResults(query) {
       list.forEach(m => container.appendChild(renderMatchCard(m, ev, q, {showEvent: false})));
     });
   });
+
+  // 其餘沒有找到這個關鍵字比賽的賽事，簡化成「即將登場」清單放在最下面，
+  // 讓使用者知道還有哪些盃賽在追蹤中。
+  const shownNames = new Set(groupedEvents.map(g => g.ev.name || ''));
+  const rest = ALL_EVENTS.filter(ev => !shownNames.has(ev.name || ''));
+  appendComingSoon(container, rest, now);
+}
+
+function appendComingSoon(container, events, now) {
+  if (!events.length) return;
+  const ranked = events.slice().sort((a, b) => eventDistanceMs(a, now) - eventDistanceMs(b, now));
+  container.appendChild(el('div', {class: 'section-title', text: '即將登場・Coming Soon'}));
+  const list = el('div', {class: 'coming-soon-list'});
+  ranked.forEach(ev => list.appendChild(renderComingSoonRow(ev, now)));
+  container.appendChild(list);
 }
 
 document.getElementById('search').addEventListener('input', (e) => renderResults(e.target.value));
@@ -335,7 +395,7 @@ fetch('data/events.json')
   })
   .then(data => {
     ALL_EVENTS = data;
-    renderResults('');
+    renderResults(document.getElementById('search').value);
   })
   .catch(err => {
     document.getElementById('results').innerHTML = '';
