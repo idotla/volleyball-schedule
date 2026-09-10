@@ -196,6 +196,44 @@ def _extract_title_year(name: str) -> Optional[int]:
     return candidates[0][1]
 
 
+def pick_latest_year_events(events: list[dict], keywords: list[str]) -> list[dict]:
+    """在還沒抓文章內文、還沒下載附件之前，先只用列表頁標題判斷「這個關鍵字
+    底下最新一屆是哪一年」，只留下那個年度的文章，把其他舊年度的文章直接
+    丟掉，不進到後面「抓內文+下載附件」的迴圈。
+
+    背景(2026-09-10)：merge_events_by_tournament() 本來就只會在最後把非
+    最新年度的文章丟掉、不輸出，但「丟掉」是在抓完內文、下載完附件PDF
+    之後才發生的，等於白白對官網多抓了好幾篇舊公告、下載了好幾份舊PDF
+    (例如114年/去年那屆已經打完的「華宗盃」成績公告跟賽程表)——實際跑
+    GitHub Actions時就因為這樣一次要commit的資料量變太大，push還逾時
+    失敗過一次。提早在這裡濾掉，可以避免這些用不到的網路請求，也讓
+    repo不會塞進一堆網站上其實不會顯示的舊年度附件。
+
+    分組邏輯跟merge_events_by_tournament()一致(用同一套「先比對到的
+    關鍵字」分組、「年度最大」優先，抓不到年度的視為最舊)，這樣這裡濾掉
+    的文章，一定也是merge最後才會丟掉的那些，不會提早濾掉不該濾的。
+    """
+    if not keywords:
+        return events
+
+    by_kw_year: dict[str, dict[Optional[int], list[dict]]] = {}
+    unmatched: list[dict] = []
+    for e in events:
+        matched_kw = next((k for k in keywords if k in (e.get("name") or "")), None)
+        if matched_kw is None:
+            unmatched.append(e)
+            continue
+        year = _extract_title_year(e.get("name") or "")
+        by_kw_year.setdefault(matched_kw, {}).setdefault(year, []).append(e)
+
+    kept: list[dict] = []
+    for year_groups in by_kw_year.values():
+        best_year = max(year_groups.keys(), key=lambda y: (y is not None, y or 0))
+        kept.extend(year_groups[best_year])
+
+    return unmatched + kept
+
+
 def merge_events_by_tournament(results: list[dict], keywords: list[str]) -> list[dict]:
     """
     把同一個盃賽底下抓到的多篇公告文章合併成一筆賽事資料。
@@ -811,6 +849,9 @@ def main():
         if keywords:
             events = filter_events_by_keywords(events, keywords)
             print(f"依關鍵字 {keywords} 篩選後剩 {len(events)} 個賽事")
+            events = pick_latest_year_events(events, keywords)
+            print(f"只保留每個盃賽最新年度的公告後剩 {len(events)} 個賽事"
+                  "(避免抓/下載舊年度已經用不到的公告跟附件)")
 
     cache: dict = {} if (args.event_id or args.no_cache) else load_cache(cache_path)
     new_cache: dict = {}
