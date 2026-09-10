@@ -118,8 +118,14 @@ def list_events() -> list[dict]:
 
     events = []
     seen_ids = set()
+    # 賽事列表實際上是頁面裡唯一一個 <table class="highlight striped">，
+    # 一定要scope在這張表格裡面抓，否則會連同左側選單、頁尾等處的
+    # /article/ 連結（例如各縣市委員會的「組織簡則」「成員名單」）一起
+    # 抓進來，混進上百筆不相關的連結。
+    # (2026-09-10 實跑驗證：不scope會抓到 126 個連結，scope之後剛好 30 個。)
+    scope = soup.select_one("table.highlight.striped") or soup
     # 賽事文章連結格式觀察到的樣式為 /article/{id}/{slug}
-    for a in soup.select("a[href*='/article/']"):
+    for a in scope.select("a[href*='/article/']"):
         href = a.get("href", "")
         m = re.search(r"/article/(\d+)/", href)
         if not m:
@@ -143,9 +149,22 @@ def list_events() -> list[dict]:
 # Step 2：解析單一賽事文章頁
 # --------------------------------------------------------------------------
 
+# 日期範圍正則，處理過程中發現兩個容易誤判的實際案例，寫法特別針對它們調整過：
+#   1. (2026-09-10 event 1909) 結束日沒有重複「月」，例如「7月16日至21日」，
+#      如果月份用 (\d{1,2})?\s*月?\s*(\d{1,2}) 這種寫法，「21」會被貪婪地
+#      拆成「月=2、日=1」這種離譜結果。修法：把「月」這個字設為月份數字的
+#      必要條件（用 (?:(\d{1,2})\s*月\s*)? 包住），沒有「月」字就不吃這個
+#      數字，讓它完整留給「日」。
+#   2. (event 1950) 日期後面常常緊接著「(六)」「(二)」這種星期幾附註，例如
+#      「9月19日(六)至9月22日(二)」，如果沒有處理這段插入文字，
+#      \s*(?:至|~|-) 會因為前面多了「(六)」而配對不到，導致整個 range 都
+#      抓不到，退化成只抓到起始日。修法：在日期後面加一個可選的
+#      「(...)」群組，把星期幾附註吃掉再繼續比對。
 DATE_RANGE_RE = re.compile(
     r"(?:中華民國)?\s*(\d{2,3})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日"
-    r"\s*(?:至|~|-)\s*(?:(\d{2,3})\s*年)?\s*(\d{1,2})?\s*月?\s*(\d{1,2})\s*日"
+    r"(?:\s*[\(（][^)）]*[\)）])?"
+    r"\s*(?:至|~|-)\s*(?:(\d{2,3})\s*年\s*)?(?:(\d{1,2})\s*月\s*)?(\d{1,2})\s*日"
+    r"(?:\s*[\(（][^)）]*[\)）])?"
 )
 SINGLE_DATE_RE = re.compile(r"(\d{2,3})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日")
 
@@ -169,14 +188,47 @@ def parse_event_page(event_id: str, url: str) -> EventInfo:
     )
     text = content_node.get_text("\n", strip=True) if content_node else ""
 
-    name = (soup.select_one("h1") or soup.select_one("title"))
-    name_text = name.get_text(strip=True) if name else ""
+    # 賽事標題：實際觀察到的DOM結構是 <article> 裡面的 <h4>，頁面沒有 <h1>，
+    # <title> 則是全站共用的「中華民國排球協會」，不能拿來當標題退路。
+    # (2026-09-10 用瀏覽器實測 DOM 才發現這點。)
+    name_node = None
+    if content_node:
+        name_node = (
+            content_node.select_one("h4")
+            or content_node.select_one("h1")
+            or content_node.select_one("h2")
+        )
+    if not name_node:
+        name_node = soup.select_one("h1")
+    name_text = name_node.get_text(strip=True) if name_node else ""
 
     info = EventInfo(id=event_id, name=name_text, url=url)
     info.raw_text_excerpt = text[:500]
 
-    # 日期
-    m = DATE_RANGE_RE.search(text)
+    # 日期：不要直接對整篇文章文字(text)跑正則！
+    # text 是把所有段落用 \n 接起來的長字串，DATE_RANGE_RE 裡的 \s* 會吃掉
+    # \n，導致 regex 在「比賽日期」那行沒有乾淨符合時，往下backtrack、
+    # 跨段落配對到頁面下方完全無關的日期文字，抓出離譜的結果(例如
+    # date_end 比 date_start 還早)。
+    # (2026-09-10 用真實爬到的 event 1909 資料root-cause：原文是「比賽日期：
+    # 115 年 7 月 16 日至 21 日」，結束日沒有重複年月，照理該用 date_start
+    # 的年月補上，但跨段落誤配對蓋掉了正確結果。)
+    # 修法：先抓出「比賽日期：...」那一行(用 [^\n]+ 限制在同一行內)，
+    # 只對這個子字串跑日期正則，避免跨段落誤配對。
+    date_line_m = re.search(r"比賽日期[：:]\s*([^\n]+)", text)
+    date_search_text = date_line_m.group(1) if date_line_m else text
+    if date_line_m:
+        # date_note 保留原始文字(例如「中華民國115年9月19日(六)至9月22日(二)，共4天」)，
+        # 之前這個欄位從來沒被賦值過，網頁上一直顯示空白。
+        info.date_note = date_search_text.strip()
+    m = DATE_RANGE_RE.search(date_search_text)
+    if not m:
+        m = SINGLE_DATE_RE.search(date_search_text)
+        if m:
+            y1, mo1, d1 = m.groups()
+            info.date_start = roc_to_gregorian(y1, mo1, d1)
+            info.date_end = info.date_start
+            m = None  # 已經在這裡手動處理過了，避免下面的 range 邏輯重複跑
     if m:
         y1, mo1, d1, y2, mo2, d2 = m.groups()
         info.date_start = roc_to_gregorian(y1, mo1, d1)
@@ -184,10 +236,11 @@ def parse_event_page(event_id: str, url: str) -> EventInfo:
         end_month = mo2 or mo1
         info.date_end = roc_to_gregorian(end_year, end_month, d2)
 
-    # 地點：抓「比賽地點」「地點：」後面那段文字
-    venue_m = re.search(r"(?:比賽地點|地點)[：:]\s*([^\n]+)", text)
+    # 地點：不同賽事委員會用詞不太一樣，實測看過「比賽地點」「競賽場地」兩種，
+    # 都收進來抓；並把行尾常見的句點（。/.）去掉，避免資料尾巴多一個符號。
+    venue_m = re.search(r"(?:比賽地點|競賽場地|地點)[：:]\s*([^\n]+)", text)
     if venue_m:
-        info.venue = venue_m.group(1).strip()
+        info.venue = venue_m.group(1).strip().rstrip("。.")
 
     # 報名截止
     deadline_m = re.search(r"報名截止[日期]*[：:]\s*([^\n]+)", text)
