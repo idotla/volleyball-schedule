@@ -65,6 +65,11 @@ HEADERS = {
 REQUEST_TIMEOUT = 20
 REQUEST_DELAY_SEC = 1.0  # 對官網保持禮貌的抓取間隔，別打太快
 
+# GitHub 單一檔案硬性上限是 100MB，超過會讓整個 push 被拒絕(pre-receive hook
+# declined)。留一點緩衝空間，附件超過這個大小就不下載進repo，local_path維持
+# None，網頁改連回協會官網的原始連結(這種通常是電子秩序冊之類的大型掃描檔)。
+MAX_ATTACHMENT_BYTES = 80 * 1024 * 1024  # 80MB
+
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
 # 預設只抓這幾個指定盃賽的資料（2026-09-10 使用者要求縮小範圍）。
@@ -123,6 +128,31 @@ def fetch_bytes(url: str) -> bytes:
     resp = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
     resp.raise_for_status()
     return resp.content
+
+
+def fetch_bytes_capped(url: str, max_bytes: int) -> Optional[bytes]:
+    """跟 fetch_bytes 一樣，但邊下載邊檢查大小，一旦超過 max_bytes 就中止連線、
+    回傳 None(而不是先整個下載完才發現太大——附件PDF可能到幾百MB，白白浪費
+    流量跟時間)。"""
+    with requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT, stream=True) as resp:
+        resp.raise_for_status()
+        content_length = resp.headers.get("Content-Length")
+        if content_length is not None:
+            try:
+                if int(content_length) > max_bytes:
+                    return None
+            except ValueError:
+                pass
+        chunks = []
+        total = 0
+        for chunk in resp.iter_content(chunk_size=1024 * 1024):
+            if not chunk:
+                continue
+            total += len(chunk)
+            if total > max_bytes:
+                return None
+            chunks.append(chunk)
+        return b"".join(chunks)
 
 
 # --------------------------------------------------------------------------
@@ -572,9 +602,16 @@ def download_attachments(info: EventInfo, attachments_dir: Path) -> None:
             att.local_path = rel_path
             continue
         try:
-            content = fetch_bytes(att.url)
+            content = fetch_bytes_capped(att.url, MAX_ATTACHMENT_BYTES)
         except Exception as exc:  # noqa: BLE001
             print(f"    附件下載失敗：{att.name} ({exc})", file=sys.stderr)
+            continue
+        if content is None:
+            print(
+                f"    附件超過 {MAX_ATTACHMENT_BYTES // (1024 * 1024)}MB，"
+                f"不下載進repo，網頁將改連協會官網原始連結：{att.name}",
+                file=sys.stderr,
+            )
             continue
         if not content:
             continue
