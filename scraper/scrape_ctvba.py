@@ -45,7 +45,7 @@ import sys
 import time
 import unicodedata
 from dataclasses import dataclass, field, asdict
-from datetime import date, datetime
+from datetime import date, datetime, timezone, timedelta
 from pathlib import Path
 from typing import Optional
 from urllib.parse import urljoin
@@ -71,6 +71,12 @@ REQUEST_DELAY_SEC = 1.0  # 對官網保持禮貌的抓取間隔，別打太快
 MAX_ATTACHMENT_BYTES = 80 * 1024 * 1024  # 80MB
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+
+# 2026-09-10 使用者要求網頁上顯示「實際更新時間」取代原本寫死的「每日自動
+# 更新」字樣。GitHub Actions runner 預設是UTC，直接用 datetime.now() 會是UTC
+# 時間、使用者看了會覺得時間不對，所以固定用台灣時間(UTC+8，台灣不實施日光
+# 節約時間，全年固定，不需要用 zoneinfo 查時區資料庫)。
+TAIWAN_TZ = timezone(timedelta(hours=8))
 
 # 預設只抓這幾個指定盃賽的資料（2026-09-10 使用者要求縮小範圍）。
 # 用「不含杯/盃字樣的關鍵字」去比對賽事標題的子字串，因為官網同一個盃賽
@@ -1030,6 +1036,21 @@ def main():
         json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     print(f"寫出 {len(results)} 筆賽事資料到 {out_path}")
+
+    # 2026-09-10 使用者要求：網頁上不要再寫死顯示「每日自動更新」，改成顯示
+    # 這次資料實際更新的時間。跟 events.json 分開存成單獨的小檔案，不動
+    # events.json 原本「純陣列」的結構(前端一堆地方直接假設它是陣列)。
+    # 單一賽事測試模式(--event-id)不寫這個檔案，因為那不是正式的完整更新。
+    if not args.event_id:
+        updated_at_path = out_path.parent / "last_updated.json"
+        updated_at_path.write_text(
+            json.dumps(
+                {"updated_at": datetime.now(TAIWAN_TZ).strftime("%Y/%m/%d %H:%M")},
+                ensure_ascii=False, indent=2,
+            ),
+            encoding="utf-8",
+        )
+        print(f"寫出更新時間到 {updated_at_path}")
 
     if not args.event_id:
         save_cache(cache_path, new_cache)
