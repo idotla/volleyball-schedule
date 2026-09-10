@@ -87,6 +87,15 @@
   .coming-soon-row:last-child{border-bottom:none;}
   .coming-soon-name{font-size:0.92rem;}
   .coming-soon-date{font-size:0.8rem;color:var(--muted);white-space:nowrap;}
+
+  .tournament-heading{
+    font-size:1.15rem;font-weight:700;margin:28px 0 12px;padding-bottom:8px;
+    border-bottom:2px solid var(--accent);
+  }
+  .tournament-heading:first-of-type{margin-top:6px;}
+  .gender-heading{
+    font-size:0.82rem;font-weight:700;color:var(--accent);margin:16px 0 8px;
+  }
 </style>
 </head>
 <body>
@@ -132,9 +141,20 @@ function highlight(name, q) {
   return span;
 }
 
-function renderMatchCard(m, ev, q) {
+function genderOf(m) {
+  // 從 group 欄位判斷這場是男排還是女排，例如「國男小組賽B」「高女 小組賽D」；
+  // 有些組別(例如「社九」)不含男/女字樣(混合或不分性別的組別)，歸到「其他」。
+  const g = m.group || '';
+  if (g.includes('男')) return '男排';
+  if (g.includes('女')) return '女排';
+  return '其他';
+}
+
+function renderMatchCard(m, ev, q, opts = {}) {
   const card = el('div', {class: 'match-card'});
-  card.appendChild(el('div', {class: 'match-event', text: ev.name || ''}));
+  if (opts.showEvent !== false) {
+    card.appendChild(el('div', {class: 'match-event', text: ev.name || ''}));
+  }
 
   const teams = el('div', {class: 'match-teams'});
   teams.appendChild(highlight(m.team_a || '', q));
@@ -279,7 +299,31 @@ function renderResults(query) {
   }
 
   container.appendChild(el('div', {class: 'section-title', text: `找到 ${hits.length} 場比賽`}));
-  hits.forEach(({m, ev}) => container.appendChild(renderMatchCard(m, ev, q)));
+
+  // 先依賽事(盃賽)分組，同一個盃賽底下再依男排/女排分兩區塊顯示，
+  // 賽事本身依「離現在最近」排序(用跟首頁一樣的邏輯)，讓最近的盃賽排最前面。
+  const now = new Date();
+  const byEvent = new Map();
+  hits.forEach(({m, ev}) => {
+    const key = ev.name || '';
+    if (!byEvent.has(key)) byEvent.set(key, {ev, matches: []});
+    byEvent.get(key).matches.push(m);
+  });
+  const groupedEvents = Array.from(byEvent.values())
+    .sort((a, b) => eventDistanceMs(a.ev, now) - eventDistanceMs(b.ev, now));
+
+  const GENDER_ORDER = ['男排', '女排', '其他'];
+  groupedEvents.forEach(({ev, matches}) => {
+    container.appendChild(el('div', {class: 'tournament-heading', text: ev.name || '(未命名賽事)'}));
+    const byGender = {'男排': [], '女排': [], '其他': []};
+    matches.forEach(m => byGender[genderOf(m)].push(m));
+    GENDER_ORDER.forEach(label => {
+      const list = byGender[label];
+      if (!list.length) return;
+      container.appendChild(el('div', {class: 'gender-heading', text: label}));
+      list.forEach(m => container.appendChild(renderMatchCard(m, ev, q, {showEvent: false})));
+    });
+  });
 }
 
 document.getElementById('search').addEventListener('input', (e) => renderResults(e.target.value));
