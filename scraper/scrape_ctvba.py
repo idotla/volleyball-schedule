@@ -266,6 +266,63 @@ def pick_latest_year_events(events: list[dict], keywords: list[str]) -> list[dic
     return unmatched + kept
 
 
+def _build_display_title(
+    name: Optional[str],
+    date_start: Optional[str],
+    date_end: Optional[str],
+    keyword: Optional[str],
+) -> str:
+    """2026-09-10 使用者要求：網頁上盃賽標題統一格式化成「{民國年}年第{屆}屆
+    {盃賽名稱}盃 {民國年}/{月}/{日}～{月}/{日}（星期X至星期Y）」，不要協會
+    公告標題原本那些「全國」「競賽規程」「(8/28更新分組賽製圖及總賽程表)」
+    之類的贅字，讓使用者一眼就看出是第幾屆、什麼時候比賽。
+
+    例：「115年第53屆「永信杯」全國排球錦標賽 競賽規程(8/28更新...)」
+        → 「115年第53屆永信盃 115/9/19～9/22（星期六至星期二）」
+
+    抓不到屆數的話標題就只剩盃賽名稱本身，抓不到日期的話就不附日期區間——
+    寧可缺資訊，也不要硬湊出錯誤的假資料(呼應本專案一貫「寧可顯示0場，也
+    不要顯示錯誤場次」的原則)。
+    """
+    name = name or ""
+    m = re.search(r"(\d{2,3})年(?:全國)?第(\d+)屆", name)
+    cup_name = f"{keyword}盃" if keyword else None
+
+    if m and cup_name:
+        title = f"{m.group(1)}年第{m.group(2)}屆{cup_name}"
+    elif cup_name:
+        title = cup_name
+    else:
+        title = name or "(未命名賽事)"
+
+    date_part = None
+    if date_start:
+        try:
+            d_start = datetime.strptime(date_start, "%Y-%m-%d").date()
+            weekday_zh = ["一", "二", "三", "四", "五", "六", "日"]
+            roc_year = d_start.year - 1911
+            start_str = f"{roc_year}/{d_start.month}/{d_start.day}"
+            if date_end and date_end != date_start:
+                d_end = datetime.strptime(date_end, "%Y-%m-%d").date()
+                # 使用者範例是頭尾都寫「月/日」(例如 115/9/19～9/22)，即使
+                # 同一個月也把月份重複寫一次，不要因為同月就省略，避免使用者
+                # 掃過去誤以為後面那個數字是別的意思。
+                end_str = f"{d_end.month}/{d_end.day}"
+                w_start = weekday_zh[d_start.weekday()]
+                w_end = weekday_zh[d_end.weekday()]
+                week_str = (
+                    f"星期{w_start}" if w_start == w_end
+                    else f"星期{w_start}至星期{w_end}"
+                )
+                date_part = f"{start_str}～{end_str}（{week_str}）"
+            else:
+                date_part = f"{start_str}（星期{weekday_zh[d_start.weekday()]}）"
+        except ValueError:
+            date_part = None
+
+    return f"{title} {date_part}" if date_part else title
+
+
 def merge_events_by_tournament(results: list[dict], keywords: list[str]) -> list[dict]:
     """
     把同一個盃賽底下抓到的多篇公告文章合併成一筆賽事資料。
@@ -326,7 +383,7 @@ def merge_events_by_tournament(results: list[dict], keywords: list[str]) -> list
         by_kw_year.setdefault(matched_kw, {}).setdefault(year, []).append(r)
 
     merged: list[dict] = []
-    for year_groups in by_kw_year.values():
+    for kw, year_groups in by_kw_year.items():
         # 同一個關鍵字底下可能混到不同年度的舊公告，只留「年度最新」的
         # 那一組合併；年度是None(抓不到)的視為最舊、優先度最低。
         best_year = max(year_groups.keys(), key=lambda y: (y is not None, y or 0))
@@ -404,6 +461,10 @@ def merge_events_by_tournament(results: list[dict], keywords: list[str]) -> list
         out["source_articles"] = [
             {"name": r.get("name"), "url": r.get("url")} for r in group
         ]
+
+        out["display_title"] = _build_display_title(
+            out.get("name"), out.get("date_start"), out.get("date_end"), kw
+        )
 
         merged.append(out)
 
