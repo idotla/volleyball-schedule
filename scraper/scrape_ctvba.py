@@ -160,6 +160,133 @@ def filter_events_by_keywords(events: list[dict], keywords: list[str]) -> list[d
     return [e for e in events if any(k in e["name"] for k in keywords)]
 
 
+def merge_events_by_tournament(results: list[dict], keywords: list[str]) -> list[dict]:
+    """
+    把同一個盃賽底下抓到的多篇公告文章合併成一筆賽事資料。
+
+    背景：CTVBA官網一個盃賽通常會有好幾篇獨立公告文章(競賽規程、成績公告、
+    住宿資訊、會議紀錄、即時比分連結...)，用關鍵字篩選(--tournaments)只是
+    把「不相關的其他賽事」濾掉，同一個盃賽底下這些文章本身還是各自一筆，
+    直接輸出到events.json的話，網頁上的「Coming Soon」清單一個盃賽會重複
+    出現好幾行，使用者要看的其實是「這個盃賽」而不是「這篇公告」。
+    (2026-09-10 使用者要求：Coming Soon清單也要乾淨，只顯示這幾個盃賽本身
+    的資訊，其餘不用。)
+
+    只有在有指定關鍵字篩選時才合併——沒有 --tournaments 篩選(要看全部賽事
+    原始清單)的情況下不合併，避免在關鍵字不明確時把不相關的賽事誤合併。
+
+    合併規則：
+    - 用跟篩選一樣的關鍵字子字串比對，把同一個關鍵字底下的所有文章分成一組。
+    - 每組挑一篇「主要文章」代表這個盃賽的name/url/日期/地點等metadata：
+      優先選標題含「競賽規程」的(通常是最完整、最正式的官方公告，賽事全名、
+      日期、地點、報名費都寫得最清楚)，其次選有解析出matches的，都沒有就
+      選第一篇。matches本身是合併整組所有文章解析出來的結果(見下)，跟
+      「主要文章」的選擇無關，就算「總賽程表」那篇不是主要文章，它的
+      matches還是會被合併進來。
+    - 純量欄位(日期、地點、主辦單位、報名截止、報名費、聯絡email、修改日期)
+      以主要文章為主，缺漏的用同組其他文章裡第一個非空值補上。
+    - contact_phone / attachments：合併同組所有文章的，並去重。
+    - matches：合併同組所有文章解析出來的matches(正常情況下只有「總賽程表」
+      那篇文章有解析出東西)，用(day,time,venue,team_a,team_b)去重，並依
+      day/time排序。
+    - parse_warnings：只保留主要文章的，其他文章的parse_warnings(通常只是
+      「這篇公告的附件裡沒有總賽程表」這種對其他公告本來就正常的訊息)沒必要
+      顯示出來混淆使用者。
+    - source_articles：新增欄位，記錄同組所有來源文章的{name,url}，讓使用者
+      需要時可以自己點進去看原始公告全文(例如完整競賽規程)。
+    """
+    if not keywords:
+        return results
+
+    groups: dict[str, list[dict]] = {}
+    unmatched: list[dict] = []
+    for r in results:
+        matched_kw = next((k for k in keywords if k in (r.get("name") or "")), None)
+        if matched_kw is None:
+            unmatched.append(r)
+            continue
+        groups.setdefault(matched_kw, []).append(r)
+
+    merged: list[dict] = []
+    for group in groups.values():
+        primary = (
+            next((r for r in group if "競賽規程" in (r.get("name") or "")), None)
+            or next((r for r in group if r.get("matches")), None)
+            or group[0]
+        )
+        out = dict(primary)
+
+        scalar_fields = [
+            "date_start", "date_end", "date_note", "venue", "organizer",
+            "registration_deadline", "registration_fee", "contact_email",
+            "last_modified",
+        ]
+        for f in scalar_fields:
+            if not out.get(f):
+                for r in group:
+                    if r.get(f):
+                        out[f] = r[f]
+                        break
+
+        phones: list[str] = []
+        for r in group:
+            for p in (r.get("contact_phone") or []):
+                if p not in phones:
+                    phones.append(p)
+        out["contact_phone"] = phones
+
+        atts: list[dict] = []
+        seen_urls: set = set()
+        for r in group:
+            for a in (r.get("attachments") or []):
+                if a.get("url") in seen_urls:
+                    continue
+                seen_urls.add(a.get("url"))
+                atts.append(a)
+        out["attachments"] = atts
+
+        seen_match_keys: set = set()
+        all_matches: list[dict] = []
+        for r in group:
+            for m in (r.get("matches") or []):
+                key = (m.get("day"), m.get("time"), m.get("venue"),
+                       m.get("team_a"), m.get("team_b"))
+                if key in seen_match_keys:
+                    continue
+                seen_match_keys.add(key)
+                all_matches.append(m)
+        all_matches.sort(key=lambda m: (
+            m.get("day") if m.get("day") is not None else 999,
+            m.get("time") or "",
+            m.get("venue") or "",
+        ))
+        out["matches"] = all_matches
+        if all_matches:
+            # 已經從同組某篇文章(通常是總賽程表)合併出實際場次資料了，
+            # 「主要文章」(可能是競賽規程，本來就不含附件PDF場次)自己的
+            # parse_warnings(例如「附件裡找不到總賽程表」)在這裡已經不成立，
+            # 不該顯示出來誤導使用者以為沒有場次資料。
+            out["parse_warnings"] = []
+        else:
+            seen_warnings: set = set()
+            merged_warnings: list[str] = []
+            for r in group:
+                for w in (r.get("parse_warnings") or []):
+                    if w in seen_warnings:
+                        continue
+                    seen_warnings.add(w)
+                    merged_warnings.append(w)
+            out["parse_warnings"] = merged_warnings
+
+        out["source_articles"] = [
+            {"name": r.get("name"), "url": r.get("url")} for r in group
+        ]
+
+        merged.append(out)
+
+    return unmatched + merged
+
+
 # --------------------------------------------------------------------------
 # Step 2：解析單一賽事文章頁
 # --------------------------------------------------------------------------
@@ -183,8 +310,13 @@ DATE_RANGE_RE = re.compile(
 )
 SINGLE_DATE_RE = re.compile(r"(\d{2,3})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日")
 
+# 總賽程表PDF每頁最上面會有「1150919(六)」這種「民國年3碼+月2碼+日2碼」
+# 沒有分隔符號、緊接著星期幾(括號)的日期格式，跟文章內文的「115年9月19日」
+# 完全不同格式，所以另外開一個regex，不能共用SINGLE_DATE_RE。
+PDF_HEADER_DATE_RE = re.compile(r"(\d{3})(\d{2})(\d{2})\(")
+
 # 文章頁最下面通常有「修改日期：2026/08/28 12:27」這種西元格式的時間戳，
-# 用來判斷這篇文章是不是「最近才更新過」的。跟上面比賽日期用民國年不同，
+# 用來判斷這篇文章是不是最近才更新的。跟上面比賽日期用民國年不同，
 # 這裡官網本身就是西元年，不用轉換。
 LAST_MODIFIED_RE = re.compile(r"修改日期[：:]\s*(\d{4})[/-](\d{1,2})[/-](\d{1,2})")
 
@@ -326,14 +458,48 @@ def find_schedule_attachment(info: EventInfo) -> Optional[Attachment]:
     return None
 
 
+# 表格cell裡場次標籤的格式是「組別 輪次 M數字」，例如「社男 ⼩組賽D M1」，
+# 數字前面的M是場次編號，用來把「組別/輪次」跟「場次編號」拆開存。
+MATCH_LABEL_RE = re.compile(r"^(.*?)(?:\s+(M\d+))?$")
+
+# 總賽程表PDF的內嵌字型有些字會被錯誤對應到「部首」符號而不是正常漢字
+# (例如「三民國中」被抽出來變成「三⺠國中」，「長春國小」變成「⻑春國小」)，
+# 這是PDF本身字型編碼的問題，不是我們解析邏輯的bug，NFKC normalize也修不了
+# 這幾個(它們屬於CJK Radicals Supplement，NFKC不會分解回本字)。
+# 目前只發現這兩個字有這個問題，用簡單對照表修正；未來如果發現更多字有
+# 同樣狀況，在這裡繼續加。
+PDF_GLYPH_FIXES = {
+    "⺠": "民",  # CJK RADICAL CIVILIAN -> 民
+    "⻑": "長",  # CJK RADICAL LONG ONE -> 長
+}
+
+
+def _fix_pdf_glyphs(s: str) -> str:
+    for bad, good in PDF_GLYPH_FIXES.items():
+        s = s.replace(bad, good)
+    return s
+
+
 def parse_schedule_pdf(pdf_bytes: bytes) -> tuple[list[Match], list[str]]:
     """
     嘗試用 pdfplumber 抓表格。回傳 (成功解析的場次, 解析警告訊息)。
 
-    注意：CTVBA 的總賽程表是「場地(列) x 時間(欄)」的網格表，且不同賽事、
-    不同年度排版不一定相同，這裡先用「抓每個 cell、如果符合『隊伍 vs 隊伍』
-    或包含 vs/對 字樣的就視為一場比賽』的通用邏輯來抓，抓不到規律的表格
-    會回報警告，改用「請查看附件PDF」的 fallback。
+    2026-09-10 用真實下載的「115年第53屆永信盃」總賽程表PDF實測後，
+    確認CTVBA的總賽程表是「時間(列) x 場地(欄)」的網格表(不是原本猜測的
+    「場地(列) x 時間(欄)」，欄列相反)，每個有比賽的cell內容是「組別/輪次
+    標籤 \n 隊伍A \n 隊伍B」三行文字堆疊在一起，不是「隊伍A vs 隊伍B」單行
+    字串——舊版邏輯找 "vs"/"對" 字樣，實際PDF裡完全不會出現這兩個字，
+    所以永遠抓不到東西。改用「每個cell用換行拆成多行，抓得到3行以上的才
+    當作一場比賽(第1行是組別/輪次標籤，第2、3行是兩隊隊名)」的邏輯。
+
+    另外要注意：
+    - 表頭(header)第0欄是日期(例如「1150919(六)」，用PDF_HEADER_DATE_RE另外
+      解析，跟文章內文日期格式不同)，其餘欄位是「場地 01」「場地 02」...。
+    - 每個row第0欄是時間(例如「09:00」)，用來判斷這一列是不是真的賽程列
+      (跳過像「09:00 開幕典禮」這種只有單行文字、沒有隊伍資訊的列)。
+    - 複賽/淘汰賽輪次(通常在最後一天)會出現「隊伍還沒決定，只有前一場
+      勝負代號(如 W21/L21)」的cell，只有2行文字、沒有真正隊名，這種cell
+      沒辦法抓出隊名，直接跳過(不算解析失敗，只是那場還沒對到真正隊伍)。
     """
     import pdfplumber  # 延遲載入，避免沒安裝時整支程式打不開
 
@@ -348,9 +514,14 @@ def parse_schedule_pdf(pdf_bytes: bytes) -> tuple[list[Match], list[str]]:
                 continue
 
             page_text = page.extract_text() or ""
+
+            # 「第X天」有時候會被拆成「第 天\n X」(X跑到天後面)，兩種格式都要試。
             day_m = re.search(r"第\s*(\d+)\s*天", page_text)
-            date_m = SINGLE_DATE_RE.search(page_text)
+            if not day_m:
+                day_m = re.search(r"天\s*\n\s*(\d+)", page_text)
             day_no = int(day_m.group(1)) if day_m else None
+
+            date_m = PDF_HEADER_DATE_RE.search(page_text)
             date_str = (
                 roc_to_gregorian(*date_m.groups()) if date_m else None
             )
@@ -358,28 +529,67 @@ def parse_schedule_pdf(pdf_bytes: bytes) -> tuple[list[Match], list[str]]:
             for table in tables:
                 if not table or len(table) < 2:
                     continue
-                header = table[0]
-                for row in table[1:]:
-                    venue = row[0] if row else None
+                # 表頭列(日期+場地欄位)不一定是table的第0列——有時候PDF會把
+                # 賽事標題(跨欄合併儲存格)獨立佔一整列排在最前面(例如場地
+                # 12~19那個table)，這種情況下table[0]其實是標題列，不是
+                # 表頭，要往下找「有欄位以『場地』開頭」的那一列才是真表頭。
+                header = None
+                header_idx = None
+                for idx, row in enumerate(table):
+                    if row and any(
+                        c and unicodedata.normalize("NFKC", c).strip().startswith("場地")
+                        for c in row[1:]
+                        if c
+                    ):
+                        header = row
+                        header_idx = idx
+                        break
+                if header is None:
+                    warnings.append(
+                        f"第{page_index}頁的表格找不到「場地」欄位表頭，跳過"
+                    )
+                    continue
+                venues = header[1:]
+                for row in table[header_idx + 1:]:
+                    if not row or not row[0]:
+                        continue
+                    time_label = unicodedata.normalize("NFKC", row[0]).strip()
+                    if not re.match(r"^\d{1,2}:\d{2}$", time_label):
+                        # 例如表尾空白列，或不是「時間」開頭的列，跳過。
+                        continue
                     for col_index, cell in enumerate(row[1:], start=1):
                         if not cell:
                             continue
-                        cell = unicodedata.normalize("NFKC", cell).strip()
-                        if not cell or ("vs" not in cell.lower() and "對" not in cell):
+                        cell = _fix_pdf_glyphs(unicodedata.normalize("NFKC", cell)).strip()
+                        lines = [l.strip() for l in cell.split("\n") if l.strip()]
+                        if len(lines) < 3:
+                            # 少於3行代表這格不是「標籤+兩隊」的完整比賽資訊
+                            # (例如「開幕典禮」只有1行，或淘汰賽還沒決定隊伍
+                            # 只有勝負代號的2行)，抓不出隊名，跳過。
                             continue
-                        time_label = (
-                            header[col_index] if col_index < len(header) else None
+                        label, team_a, team_b = lines[0], lines[1], lines[2]
+                        label_m = MATCH_LABEL_RE.match(label)
+                        group = label_m.group(1).strip() if label_m else label
+                        match_no = label_m.group(2) if label_m else None
+                        venue_raw = (
+                            venues[col_index - 1]
+                            if col_index - 1 < len(venues)
+                            else None
                         )
-                        teams = re.split(r"vs|VS|對", cell, maxsplit=1)
-                        if len(teams) != 2:
-                            continue
+                        venue = (
+                            _fix_pdf_glyphs(unicodedata.normalize("NFKC", venue_raw)).strip()
+                            if venue_raw
+                            else None
+                        )
                         matches.append(Match(
                             day=day_no,
                             date=date_str,
                             venue=venue,
                             time=time_label,
-                            team_a=teams[0].strip(),
-                            team_b=teams[1].strip(),
+                            group=group,
+                            match_no=match_no,
+                            team_a=team_a,
+                            team_b=team_b,
                             source_page=page_index,
                         ))
 
@@ -428,6 +638,7 @@ def main():
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
+    keywords: list[str] = []
     if args.event_id:
         # 直接指定文章ID時，視為使用者明確要抓這一篇，不套用盃賽關鍵字篩選
         events = [e for e in list_events() if e["id"] == args.event_id]
@@ -489,6 +700,11 @@ def main():
 
         results.append(result)
         time.sleep(REQUEST_DELAY_SEC)
+
+    if not args.event_id and keywords:
+        before = len(results)
+        results = merge_events_by_tournament(results, keywords)
+        print(f"依盃賽合併：{before} 篇公告文章合併成 {len(results)} 筆賽事資料")
 
     out_path.write_text(
         json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8"
