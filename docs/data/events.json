@@ -1,683 +1,12 @@
 [
   {
-    "id": "1",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/1/協會簡介",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "中華民國排球協會前身為中華全國排球委員會，於民國43年12月28日成立，由曹廷贊先生擔任首任主任委員。\n民國47年10月02日第一次改組，由黃仁霖先生擔任第二屆主任委員。\n民國55年06月24日第二次改組，由劉闊才先生擔任第三屆主任委員。\n民國62年03月31日第三次改組，更名為中華民國排球協會，由許金德先生擔任首任理事長。\n民國66年04月30日中華民國排球協會，第一次改組，由許金德先生繼任理事長。\n民國71年09月18日第二次改組，由許金德先生繼任第三屆理事長。\n民國71年12月理事長許金德先生請辭獲准，由副理事長曾聯嶽先生接任理事長。\n民國74年06月28日第三次改組，曾聯嶽先生擔任第四屆理事長。\n民國78年06月28日第四次改組，由林昭文先生擔任第五屆理事長。\n民國82年07月04日第五次改組，由林昭文先生繼任第六屆理事長。\n民國86年06月14日第六次改組，由王建昌先生擔任第七屆理事長。\n民國90年03月24日第七次改組，由王建昌先生繼任第八屆理事長。\n民國94年03月24日第八次改組，由王朝慶先生擔任第九屆理事長。\n民國98年6月日第九次改組，由許育瑞先生擔任第十屆理事長。",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "2",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/2/協會組織",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [
-      {
-        "name": "組織章程(114年6月8日第14屆第4次會員大會修正通過).pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20260312121049_nXSFXtfApB.pdf"
-      }
-    ],
-    "raw_text_excerpt": "經本會第15屆第1次理監事聯席會議決議事項\n暨第15屆第2次理監事聯席會議補選結果辦理\n附件列表：\n組織章程(114年6月8日第14屆第4次會員大會修正通過).pdf\n修改日期：2026/07/27 12:01",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "3",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/3/幹事部組織",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "修改日期：2018/09/06 12:51",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "4",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/4/縣市委員會",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [
-      {
-        "name": "2026排委會名冊.pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20260909143758_Z3ert5pDvH.pdf"
-      }
-    ],
-    "raw_text_excerpt": "2026排委會名冊.pdf\n修改日期：2026/09/09 14:38",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "5",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/5/室內排球規則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [
-      "025-2028"
-    ],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "2025-2028 官方排球規則\n英文版：\nhttp://www.fivb.org/EN/Refereeing-Rules/RulesOfTheGame_VB.asp\n中文版：請洽本會購買，每本定價新台幣350元整。\n修改日期：2026/05/20 10:58",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "6",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/6/沙灘排球規則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [
-      "025-2028"
-    ],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "2025-2028 官方沙灘排球規則\n英文版：\nhttps://www.fivb.com/wp-content/uploads/2025/02/FIVB-BeachVolleyball_Rules2025_2028-EN-v01.pdf\n中文版：請洽本會購買，每本定價新台幣350元整。\n修改日期：2026/05/20 11:01",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "7",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/7/國小排球規則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [
-      "025-2028"
-    ],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "2025-2028官方排球規則每本定價新台幣350元整，詳情請洽本會。\n修改日期：2026/05/20 11:01",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "546",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/546/組織簡則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [
-      {
-        "name": "「選訓委員會」組織簡則+名單.pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20200508120536_Ru9EILP452.pdf"
-      }
-    ],
-    "raw_text_excerpt": "選訓委員會-組織簡則\n選訓委員會-組織簡則\n附件列表：\n「選訓委員會」組織簡則+名單.pdf\n修改日期：2020/05/08 12:05",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "547",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/547/成員名單",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "中華民國排球協會第十三屆「選訓委員會」名單\n修改日期：2020/01/07 10:47",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "548",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/548/組織簡則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [
-      {
-        "name": "「青少年排球推展委員會」組織簡則+名單.pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20200508120553_Jdbg6tNJe3.pdf"
-      }
-    ],
-    "raw_text_excerpt": "青少年排球推動委員會-組織簡則\n青少年排球推動委員會-組織簡則\n附件列表：\n「青少年排球推展委員會」組織簡則+名單.pdf\n修改日期：2020/05/08 12:05",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "549",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/549/成員名單",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "中華民國排球協會第十三屆「青少年排球推動委員會」名單\n修改日期：2020/01/07 11:26",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "550",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/550/組織簡則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [
-      {
-        "name": "「競賽委員會」組織簡則+名單.pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20200508120517_hUSmCKUw72.pdf"
-      }
-    ],
-    "raw_text_excerpt": "競賽委員會-組織簡則\n競賽委員會-組織簡則\n附件列表：\n「競賽委員會」組織簡則+名單.pdf\n修改日期：2020/05/08 12:05",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "551",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/551/成員名單",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "中華民國排球協會第十三屆「競賽委員會」名單\n修改日期：2020/01/07 12:01",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "552",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/552/組織簡則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [
-      {
-        "name": "「裁判委員會」組織簡則+名單.pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20200508120431_JxI68w7FJu.pdf"
-      }
-    ],
-    "raw_text_excerpt": "裁判委員會-組織簡則\n裁判委員會-組織簡則\n附件列表：\n「裁判委員會」組織簡則+名單.pdf\n修改日期：2020/05/08 12:05",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "553",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/553/成員名單",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "中華民國排球協會第十三屆「裁判委員會」名單\n修改日期：2020/01/07 12:14",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "554",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/554/組織簡則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [
-      {
-        "name": "「紀律委員會」組織簡則+名單.pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20200508120411_eXSpjJx27K.pdf"
-      }
-    ],
-    "raw_text_excerpt": "紀律委員會-組織簡則\n紀律委員會-組織簡則\n附件列表：\n「紀律委員會」組織簡則+名單.pdf\n修改日期：2020/05/08 12:04",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "555",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/555/成員名單",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "中華民國排球協會第十三屆「紀律委員會」名單\n修改日期：2020/01/07 12:33",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "556",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/556/組織簡則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [
-      {
-        "name": "「運動員委員會」組織簡則+名單.pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20200508120347_HuRQfmaPac.pdf"
-      }
-    ],
-    "raw_text_excerpt": "運動員委員會-組織簡則\n運動員委員會-組織簡則\n附件列表：\n「運動員委員會」組織簡則+名單.pdf\n修改日期：2020/05/08 12:03",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "557",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/557/成員名單",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "中華民國排球協會第十三屆「運動員委員會」名單\n修改日期：2020/01/07 12:41",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "558",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/558/組織簡則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [
-      {
-        "name": "「婦女排球推動委員會」組織簡則+名單.pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20200508120314_IshJ8T8ZVb.pdf"
-      }
-    ],
-    "raw_text_excerpt": "婦女排球推動委員會-組織簡則\n婦女排球推動委員會-組織簡則\n附件列表：\n「婦女排球推動委員會」組織簡則+名單.pdf\n修改日期：2020/05/08 12:03",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "559",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/559/成員名單",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "中華民國排球協會第十三屆「婦女排球推動委員會」名單\n修改日期：2020/01/07 12:48",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "560",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/560/組織簡則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [
-      {
-        "name": "「沙灘排球推動委員會」組織簡則+名單.pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20200508120257_VyhendwUhB.pdf"
-      }
-    ],
-    "raw_text_excerpt": "沙灘排球推動委員會-組織簡則\n沙灘排球推動委員會-組織簡則\n附件列表：\n「沙灘排球推動委員會」組織簡則+名單.pdf\n修改日期：2020/05/08 12:02",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "561",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/561/成員名單",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "中華民國排球協會第十三屆「沙灘排球推動委員會」名單\n沙灘排球推動委員會-成員名單\n修改日期：2020/01/07 14:46",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "562",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/562/組織簡則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [
-      {
-        "name": "「企業排球聯賽推動委員會」組織簡則+名單.pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20200508120236_heJGWcnipS.pdf"
-      }
-    ],
-    "raw_text_excerpt": "企業聯賽推動委員會-組織簡則\n企業聯賽推動委員會-組織簡則\n附件列表：\n「企業排球聯賽推動委員會」組織簡則+名單.pdf\n修改日期：2020/05/08 12:02",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "563",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/563/成員名單",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "中華民國排球協會第十三屆「企業聯賽執行委員會」名單\n企業聯賽推動委員會-成員名單\n修改日期：2020/01/07 14:59",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "564",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/564/組織簡則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [
-      {
-        "name": "「國際關係委員會」組織簡則+名單.pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20200508120209_FqtJjxVKsI.pdf"
-      }
-    ],
-    "raw_text_excerpt": "國際關係發展委員會-組織簡則\n國際關係發展委員會-組織簡則\n附件列表：\n「國際關係委員會」組織簡則+名單.pdf\n修改日期：2020/05/08 12:02",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "565",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/565/成員名單",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "中華民國排球協會第十三屆「國際關係發展委員會」名單\n修改日期：2020/01/07 15:47",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "566",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/566/組織簡則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "財務委員會-組織簡則\n財務委員會-組織簡則\n修改日期：2018/07/15 13:13",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "567",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/567/成員名單",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [],
-    "raw_text_excerpt": "中華民國排球協會第十三屆「財務委員會」名單\n修改日期：2020/01/07 15:47",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
-    "id": "568",
-    "name": "中華民國排球協會",
-    "url": "https://www.ctvba.org.tw/article/568/組織簡則",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": null,
-    "registration_deadline": null,
-    "registration_fee": null,
-    "organizer": null,
-    "contact_phone": [],
-    "contact_email": null,
-    "attachments": [
-      {
-        "name": "「編輯委員會」組織簡則+名單.pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20200508120117_vUCTamRecd.pdf"
-      }
-    ],
-    "raw_text_excerpt": "編輯委員會-組織簡則\n編輯委員會-組織簡則\n附件列表：\n「編輯委員會」組織簡則+名單.pdf\n修改日期：2020/05/08 12:02",
-    "matches": [],
-    "parse_warnings": [
-      "附件裡找不到「總賽程表」"
-    ]
-  },
-  {
     "id": "1981",
-    "name": "中華民國排球協會",
+    "name": "115年全國第47屆華宗盃排球錦標賽競賽規程",
     "url": "https://www.ctvba.org.tw/article/1981/115年全國第47屆華宗盃排球錦標賽競賽規程",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": "學甲國中排球館、學甲國中風雨球館、學甲區綜合體育館、東陽國小學 生活動中心、東陽國小風雨球場、學甲國小體育館、中洲國小備用。",
+    "date_start": "2026-10-17",
+    "date_end": "2026-10-21",
+    "date_note": "自 115 年 10 月 17 日 (六) ~ 10 月 21 日(三)計 5 天。",
+    "venue": "學甲國中排球館、學甲國中風雨球館、學甲區綜合體育館、東陽國小學 生活動中心、東陽國小風雨球場、學甲國小體育館、中洲國小備用",
     "registration_deadline": "115 年 9 月 3 日 (四)下午 5 時",
     "registration_fee": "1.先繳報名費再報名。(以完成繳費隊伍為報名完成之先後順序為依據)",
     "organizer": null,
@@ -699,7 +28,7 @@
   },
   {
     "id": "1977",
-    "name": "中華民國排球協會",
+    "name": "115學年度各大競賽預定時程(8/17更新)",
     "url": "https://www.ctvba.org.tw/article/1977/115學年度各大競賽預定時程-8-17更新-",
     "date_start": null,
     "date_end": null,
@@ -719,7 +48,7 @@
   },
   {
     "id": "1962",
-    "name": "中華民國排球協會",
+    "name": "115學年度各級球隊登錄作業【敬請留意時間】",
     "url": "https://www.ctvba.org.tw/article/1962/115學年度各級球隊登錄作業【敬請留意時間】",
     "date_start": null,
     "date_end": null,
@@ -739,7 +68,7 @@
   },
   {
     "id": "1952",
-    "name": "中華民國排球協會",
+    "name": "參加莒光盃、中華盃總決賽參賽資格辦法(0708更新)",
     "url": "https://www.ctvba.org.tw/article/1952/參加莒光盃、中華盃總決賽參賽資格辦法-0708更新-",
     "date_start": null,
     "date_end": null,
@@ -764,12 +93,12 @@
   },
   {
     "id": "1950",
-    "name": "中華民國排球協會",
+    "name": "115年第53屆「永信杯」全國排球錦標賽 競賽規程(8/２８更新分組賽製圖及總賽程表)",
     "url": "https://www.ctvba.org.tw/article/1950/115年第53屆「永信杯」全國排球錦標賽 競賽規程-8-２８更新分組賽製圖及總賽程表-",
     "date_start": "2026-09-19",
     "date_end": "2026-09-22",
-    "date_note": null,
-    "venue": "臺中市大甲區鐵砧山永信運動公園。",
+    "date_note": "中華民國115年9月19日至9月22日（星期六至星期二，共4天）。",
+    "venue": "臺中市大甲區鐵砧山永信運動公園",
     "registration_deadline": null,
     "registration_fee": "免報名費，比賽期間一切費用請自理。",
     "organizer": null,
@@ -805,12 +134,12 @@
   },
   {
     "id": "1909",
-    "name": "中華民國排球協會",
+    "name": "115 年全國沙灘排球錦標賽 競賽規程(6/18更新分組賽制圖及總賽程表)(7/21更新成績一覽表)",
     "url": "https://www.ctvba.org.tw/article/1909/115 年全國沙灘排球錦標賽 競賽規程-6-18更新分組賽制圖及總賽程表--7-21更新成績一覽表-",
     "date_start": "2026-07-16",
-    "date_end": "2026-02-01",
-    "date_note": null,
-    "venue": null,
+    "date_end": "2026-07-21",
+    "date_note": "115 年 7 月 16 日至 21 日 (星期四至星期二)",
+    "venue": "高雄市鳳山區公五沙灘排球場",
     "registration_deadline": null,
     "registration_fee": "新台幣參仟 (3000) 元整，以現金採掛號方式 (請註明報名組別及隊名) 於 115 年 6 月 10 日 (星 期三) 前逕寄 104 臺北市中山區朱崙街 20 號 8 樓 802 室 中華民國排球協會 黃維康先生 收 (以郵戳為憑 ，未於期限內繳交報名費者，視同未完成報名手續，不得參加小組賽抽籤)。",
     "organizer": null,
@@ -842,7 +171,7 @@
   },
   {
     "id": "1896",
-    "name": "中華民國排球協會",
+    "name": "115學年度各大競賽預定時程",
     "url": "https://www.ctvba.org.tw/article/1896/115學年度各大競賽預定時程",
     "date_start": null,
     "date_end": null,
@@ -862,11 +191,11 @@
   },
   {
     "id": "1879",
-    "name": "中華民國排球協會",
+    "name": "2026澎湖縣「菊島盃」全國沙灘排球錦標賽 14th",
     "url": "https://www.ctvba.org.tw/article/1879/2026澎湖縣「菊島盃」全國沙灘排球錦標賽 14th",
     "date_start": null,
     "date_end": null,
-    "date_note": null,
+    "date_note": "115年7月4-7日(六~二)",
     "venue": "湖西-隘門沙灘排球場",
     "registration_deadline": null,
     "registration_fee": null,
@@ -882,7 +211,7 @@
   },
   {
     "id": "1875",
-    "name": "中華民國排球協會",
+    "name": "115 年全國第 62 屆玉山莒光盃中等學校排球國手選拔賽_即時成績連結(3/17更新成績一覽表)",
     "url": "https://www.ctvba.org.tw/article/1875/115 年全國第 62 屆玉山莒光盃中等學校排球國手選拔賽_即時成績連結-3-17更新成績一覽表-",
     "date_start": null,
     "date_end": null,
@@ -907,7 +236,7 @@
   },
   {
     "id": "1873",
-    "name": "中華民國排球協會",
+    "name": "115年全國第55屆中華盃國小師生排球賽競賽 賽事相關資訊(5/27更新成績一覽表)",
     "url": "https://www.ctvba.org.tw/article/1873/115年全國第55屆中華盃國小師生排球賽競賽 賽事相關資訊-5-27更新成績一覽表-",
     "date_start": null,
     "date_end": null,
@@ -944,7 +273,7 @@
   },
   {
     "id": "1866",
-    "name": "中華民國排球協會",
+    "name": "115年度「優秀或具潛力選手-國手選拔」3/13(五) 專項選拔辦法/報名表",
     "url": "https://www.ctvba.org.tw/article/1866/115年度「優秀或具潛力選手-國手選拔」3-13-五- 專項選拔辦法-報名表",
     "date_start": null,
     "date_end": null,
@@ -973,10 +302,10 @@
   },
   {
     "id": "1858",
-    "name": "中華民國排球協會",
+    "name": "115 年全國第 62 屆玉山莒光盃中等學校排球國手選拔賽  更新 (分組賽制圖、總賽程表)3/9 更新 技術會議及裁判會議 地點",
     "url": "https://www.ctvba.org.tw/article/1858/115 年全國第 62 屆玉山莒光盃中等學校排球國手選拔賽  更新 -分組賽制圖、總賽程表-3-9 更新 技術會議及裁判會議 地點",
-    "date_start": null,
-    "date_end": null,
+    "date_start": "2026-03-13",
+    "date_end": "2026-03-13",
     "date_note": null,
     "venue": null,
     "registration_deadline": null,
@@ -1002,12 +331,12 @@
   },
   {
     "id": "1857",
-    "name": "中華民國排球協會",
+    "name": "取得參加115年全國第55屆中華盃 積分排名 (03/10更新)",
     "url": "https://www.ctvba.org.tw/article/1857/取得參加115年全國第55屆中華盃 積分排名 -03-10更新-",
     "date_start": null,
     "date_end": null,
     "date_note": null,
-    "venue": "10489臺北市中山區朱崙街20號802室(中華民國 排球協會)，辦理六男（15、16、17名）、五女(1、2名7、8名)抽籤如未到場由本會執行代抽，並於後續公告 各組地主隊參賽校名。",
+    "venue": "10489臺北市中山區朱崙街20號802室(中華民國 排球協會)，辦理六男（15、16、17名）、五女(1、2名7、8名)抽籤如未到場由本會執行代抽，並於後續公告 各組地主隊參賽校名",
     "registration_deadline": null,
     "registration_fee": null,
     "organizer": null,
@@ -1022,7 +351,7 @@
   },
   {
     "id": "1854",
-    "name": "中華民國排球協會",
+    "name": "取得參加115年全國第62屆莒光盃 積分排名",
     "url": "https://www.ctvba.org.tw/article/1854/取得參加115年全國第62屆莒光盃 積分排名",
     "date_start": null,
     "date_end": null,
@@ -1047,7 +376,7 @@
   },
   {
     "id": "1853",
-    "name": "中華民國排球協會",
+    "name": "115年第69屆和家盃排球錦標賽成績一覽表(2/10更新)",
     "url": "https://www.ctvba.org.tw/article/1853/115年第69屆和家盃排球錦標賽成績一覽表-2-10更新-",
     "date_start": null,
     "date_end": null,
@@ -1072,12 +401,12 @@
   },
   {
     "id": "1852",
-    "name": "中華民國排球協會",
+    "name": "115 年全國第 62 屆玉山莒光盃中等學校排球國手選拔賽 競賽規程(2/11)",
     "url": "https://www.ctvba.org.tw/article/1852/115 年全國第 62 屆玉山莒光盃中等學校排球國手選拔賽 競賽規程-2-11-",
     "date_start": "2026-03-14",
     "date_end": "2026-03-17",
-    "date_note": null,
-    "venue": "高雄市立福誠高中、高雄市立前鎮國中。",
+    "date_note": "115 年 3 月 14 日至 3 月 17 日",
+    "venue": "高雄市立福誠高中、高雄市立前鎮國中",
     "registration_deadline": null,
     "registration_fee": null,
     "organizer": null,
@@ -1097,7 +426,7 @@
   },
   {
     "id": "1851",
-    "name": "中華民國排球協會",
+    "name": "2026年全國第69屆和家盃排球錦標賽_即時成績連結",
     "url": "https://www.ctvba.org.tw/article/1851/2026年全國第69屆和家盃排球錦標賽_即時成績連結",
     "date_start": null,
     "date_end": null,
@@ -1117,7 +446,7 @@
   },
   {
     "id": "1846",
-    "name": "中華民國排球協會",
+    "name": "2026年全國第69屆和家盃排球錦標賽 賽前提醒公告/電子版秩序冊",
     "url": "https://www.ctvba.org.tw/article/1846/2026年全國第69屆和家盃排球錦標賽 賽前提醒公告-電子版秩序冊",
     "date_start": null,
     "date_end": null,
@@ -1142,12 +471,12 @@
   },
   {
     "id": "1841",
-    "name": "中華民國排球協會",
+    "name": "【0318更新】114學年度全國第 17 屆中等學校沙灘排球錦標賽 競賽規程(更新抽籤時間)(2/23更新分組賽製圖及賽程表)(線上即時成績)(3/27更新成績一覽表)",
     "url": "https://www.ctvba.org.tw/article/1841/【0318更新】114學年度全國第 17 屆中等學校沙灘排球錦標賽 競賽規程-更新抽籤時間--2-23更新分組賽製圖及賽程表--線上即時成績--3-27更新成績一覽表-",
     "date_start": "2026-03-19",
     "date_end": "2026-03-24",
-    "date_note": null,
-    "venue": "鳳山公五沙灘排球場。",
+    "date_note": "115年3月19日至3月24日(星期四至星期二)",
+    "venue": "鳳山公五沙灘排球場",
     "registration_deadline": null,
     "registration_fee": null,
     "organizer": null,
@@ -1195,12 +524,12 @@
   },
   {
     "id": "1835",
-    "name": "中華民國排球協會",
+    "name": "115年全國第六十九屆「和家盃」排球錦標賽 競賽規程(1/8更新不符合球員名單)(1/21更新分組賽制圖)(1/29更新總賽程表)",
     "url": "https://www.ctvba.org.tw/article/1835/115年全國第六十九屆「和家盃」排球錦標賽 競賽規程-1-8更新不符合球員名單--1-21更新分組賽制圖--1-29更新總賽程表-",
-    "date_start": null,
-    "date_end": null,
-    "date_note": null,
-    "venue": "高雄市立福誠高中體育館、福誠高中多功能綜合運動場、高雄市立前鎮國中、高雄市立樂群國小、高雄市立福康國小。",
+    "date_start": "2026-02-07",
+    "date_end": "2026-02-10",
+    "date_note": "民國 115 年 2 月 7 日(星期六) ~ 2 月 10 日(星期二) 4 天。",
+    "venue": "高雄市立福誠高中體育館、福誠高中多功能綜合運動場、高雄市立前鎮國中、高雄市立樂群國小、高雄市立福康國小",
     "registration_deadline": null,
     "registration_fee": null,
     "organizer": null,
@@ -1248,7 +577,7 @@
   },
   {
     "id": "1834",
-    "name": "中華民國排球協會",
+    "name": "114年第46屆華宗盃排球錦標賽成績一覽表(12/11更新)",
     "url": "https://www.ctvba.org.tw/article/1834/114年第46屆華宗盃排球錦標賽成績一覽表-12-11更新-",
     "date_start": null,
     "date_end": null,
@@ -1273,7 +602,7 @@
   },
   {
     "id": "1833",
-    "name": "中華民國排球協會",
+    "name": "114年第46屆華宗盃排球錦標賽即時成績",
     "url": "https://www.ctvba.org.tw/article/1833/114年第46屆華宗盃排球錦標賽即時成績",
     "date_start": null,
     "date_end": null,
@@ -1293,7 +622,7 @@
   },
   {
     "id": "1830",
-    "name": "中華民國排球協會",
+    "name": "更新【2025年全國第46屆華宗盃排球錦標賽】賽程表 11/28",
     "url": "https://www.ctvba.org.tw/article/1830/更新【2025年全國第46屆華宗盃排球錦標賽】賽程表 11-28",
     "date_start": null,
     "date_end": null,
@@ -1318,10 +647,10 @@
   },
   {
     "id": "1828",
-    "name": "中華民國排球協會",
+    "name": "114年全國第46屆華宗盃排球錦標賽第二次報名系統開放公告 (11/24 更新 不符合球員資格名單)",
     "url": "https://www.ctvba.org.tw/article/1828/114年全國第46屆華宗盃排球錦標賽第二次報名系統開放公告 -11-24 更新 不符合球員資格名單-",
-    "date_start": null,
-    "date_end": null,
+    "date_start": "2025-11-24",
+    "date_end": "2025-11-24",
     "date_note": null,
     "venue": null,
     "registration_deadline": null,
@@ -1340,7 +669,7 @@
   },
   {
     "id": "1827",
-    "name": "中華民國排球協會",
+    "name": "114年第14屆媽祖盃排球錦標賽成績一覽表11/24更新",
     "url": "https://www.ctvba.org.tw/article/1827/114年第14屆媽祖盃排球錦標賽成績一覽表11-24更新",
     "date_start": null,
     "date_end": null,
@@ -1369,7 +698,7 @@
   },
   {
     "id": "1826",
-    "name": "中華民國排球協會",
+    "name": "114年全國第十四屆「北港媽祖盃」排球錦標賽 審判委員會 會議決議",
     "url": "https://www.ctvba.org.tw/article/1826/114年全國第十四屆「北港媽祖盃」排球錦標賽 審判委員會 會議決議",
     "date_start": null,
     "date_end": null,
@@ -1389,7 +718,7 @@
   },
   {
     "id": "1825",
-    "name": "中華民國排球協會",
+    "name": "114學年度莒光/中華盃 參賽資格積分表",
     "url": "https://www.ctvba.org.tw/article/1825/114學年度莒光-中華盃 參賽資格積分表",
     "date_start": null,
     "date_end": null,
@@ -1409,7 +738,7 @@
   },
   {
     "id": "1824",
-    "name": "中華民國排球協會",
+    "name": "114年第14屆媽祖盃排球錦標賽及時成績",
     "url": "https://www.ctvba.org.tw/article/1824/114年第14屆媽祖盃排球錦標賽及時成績",
     "date_start": null,
     "date_end": null,
@@ -1429,7 +758,7 @@
   },
   {
     "id": "1823",
-    "name": "中華民國排球協會",
+    "name": "114年全國第十四屆北港媽祖盃排球錦標賽第二階段住宿公告(11/13更新)",
     "url": "https://www.ctvba.org.tw/article/1823/114年全國第十四屆北港媽祖盃排球錦標賽第二階段住宿公告-11-13更新-",
     "date_start": null,
     "date_end": null,
@@ -1454,7 +783,7 @@
   },
   {
     "id": "1821",
-    "name": "中華民國排球協會",
+    "name": "114年全國第十四屆北港媽祖盃排球錦標賽第一階段住宿公告(11/11更新)",
     "url": "https://www.ctvba.org.tw/article/1821/114年全國第十四屆北港媽祖盃排球錦標賽第一階段住宿公告-11-11更新-",
     "date_start": null,
     "date_end": null,
