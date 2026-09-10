@@ -624,13 +624,21 @@ def main():
              "用 --event-id 直接指定單一賽事時不受此篩選影響。",
     )
     parser.add_argument(
-        "--updated-within-days",
+        "--hide-past-days",
         type=int,
-        default=10,
-        help="只保留文章「修改日期」在最近N天內的賽事(預設10天)，避免抓一堆"
-             "很久沒更新、內容應該已經穩定不變的舊公告。設為0表示不篩選、"
-             "不管修改日期多舊都抓。文章頁抓不到修改日期時，保守起見還是會"
-             "保留(無法判斷新舊，不代表它是舊的)。"
+        default=0,
+        help="用「比賽日期」(不是文章修改日期)判斷賽事是不是已經過期："
+             "比賽結束日(date_end)超過N天前就濾掉，預設0天表示比賽一結束"
+             "就濾掉，還在進行中或未來才開打的都保留。想讓剛結束的賽事"
+             "還留著一陣子方便回顧，可以調大這個數字，例如30。"
+             "(2026-09-10 原本是用「修改日期」判斷「文章是不是最近更新過」，"
+             "但這樣會把『比賽還沒開打、公告內容其實還有效，只是官網很早"
+             "就發布、後來沒再更新』的賽事也濾掉——例如永信盃的總賽程表"
+             "8/28發布後就沒再變過，但比賽是9/19~9/22，用修改日期判斷會"
+             "誤判成『太舊』而濾掉，明明比賽根本還沒開打。改用比賽日期判斷"
+             "才是真正符合『這個網站是查賽程』的用途。)"
+             "文章抓不到比賽日期時，保守起見還是會保留(無法判斷是否已經"
+             "過期，不代表它已經過期)。"
              "用 --event-id 直接指定單一賽事時不受此篩選影響。",
     )
     args = parser.parse_args()
@@ -664,16 +672,12 @@ def main():
             print(f"  失敗：{exc}", file=sys.stderr)
             continue
 
-        if (
-            not args.event_id
-            and args.updated_within_days > 0
-            and info.last_modified
-        ):
-            modified = datetime.strptime(info.last_modified, "%Y-%m-%d").date()
-            age_days = (date.today() - modified).days
-            if age_days > args.updated_within_days:
-                print(f"  略過(修改日期 {info.last_modified}，{age_days} 天前，"
-                      f"超過 {args.updated_within_days} 天門檻)")
+        if not args.event_id and info.date_end:
+            comp_end = datetime.strptime(info.date_end, "%Y-%m-%d").date()
+            days_since_end = (date.today() - comp_end).days
+            if days_since_end > args.hide_past_days:
+                print(f"  略過(比賽日期 {info.date_end} 已結束，{days_since_end} "
+                      f"天前，超過 {args.hide_past_days} 天門檻)")
                 continue
 
         result = asdict(info)
