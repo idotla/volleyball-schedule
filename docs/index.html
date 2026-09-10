@@ -156,6 +156,15 @@ function highlight(name, q) {
   return span;
 }
 
+function titleOf(ev) {
+  // 2026-09-10 使用者要求盃賽標題統一格式(年度第幾屆+盃賽名稱+日期區間)，
+  // 不要協會公告原始標題那些「全國」「競賽規程」「(8/28更新...)」之類的
+  // 贅字。scraper端(merge_events_by_tournament)已經產生格式化好的
+  // display_title欄位，這裡只是fallback：萬一某筆資料是舊格式快取、還沒有
+  // 這個欄位，就退回顯示原始的name，總比顯示空白好。
+  return ev.display_title || ev.name || '(未命名賽事)';
+}
+
 function genderOf(m) {
   // 從 group 欄位判斷這場是男排還是女排，例如「國男小組賽B」「高女 小組賽D」；
   // 有些組別(例如「社九」)不含男/女字樣(混合或不分性別的組別)，歸到「其他」。
@@ -290,7 +299,7 @@ function renderEventOverviewCard(ev, opts = {}) {
   const label = statusLabel(ev, opts.now || new Date());
   if (label) card.appendChild(el('span', {class: 'status-badge', text: label}));
   if (ev.organizer) card.appendChild(el('span', {class: 'badge', text: ev.organizer + ' 主辦'}));
-  card.appendChild(el('h2', {text: ev.name || '(未命名賽事)'}));
+  card.appendChild(el('h2', {text: titleOf(ev)}));
 
   const dl = el('dl', {class: 'meta-grid'});
   const rows = [
@@ -319,7 +328,7 @@ function renderEventOverviewCard(ev, opts = {}) {
 
 function renderComingSoonRow(ev, now) {
   const row = el('div', {class: 'coming-soon-row'});
-  row.appendChild(el('div', {class: 'coming-soon-name', text: ev.name || '(未命名賽事)'}));
+  row.appendChild(el('div', {class: 'coming-soon-name', text: titleOf(ev)}));
   const dateText = ev.date_note
     || [ev.date_start, ev.date_end].filter(Boolean).join(' ~ ')
     || (statusLabel(ev, now) || '日期未定');
@@ -390,7 +399,7 @@ function renderResults(query) {
 
   const GENDER_ORDER = ['男排', '女排', '其他'];
   groupedEvents.forEach(({ev, matches}) => {
-    container.appendChild(el('div', {class: 'tournament-heading', text: ev.name || '(未命名賽事)'}));
+    container.appendChild(el('div', {class: 'tournament-heading', text: titleOf(ev)}));
 
     const metaLine = el('div', {class: 'tournament-meta'});
     const label = statusLabel(ev, now);
