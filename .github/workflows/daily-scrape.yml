@@ -1,0 +1,42 @@
+name: 每日抓取排球協會賽事資料
+
+on:
+  schedule:
+    # UTC 22:00 = 台灣時間(UTC+8) 隔天 06:00
+    - cron: "0 22 * * *"
+  workflow_dispatch: {}   # 允許在 GitHub 網頁上手動點一下馬上跑一次
+
+permissions:
+  contents: write   # 需要能把抓到的資料 commit 回 repo
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 設定 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安裝套件
+        run: pip install -r requirements.txt
+
+      - name: 執行爬蟲
+        run: python scraper/scrape_ctvba.py --out docs/data/events.json
+
+      - name: 檢查資料檔是否有變化
+        id: git-check
+        run: |
+          git config user.name "ctvba-scraper-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data/events.json
+          git diff --cached --quiet && echo "changed=false" >> "$GITHUB_OUTPUT" || echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit 並推送更新
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git commit -m "每日自動更新賽事資料 $(date -u +%Y-%m-%d)"
+          git push
