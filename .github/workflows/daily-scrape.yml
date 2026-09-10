@@ -38,5 +38,19 @@ jobs:
       - name: Commit 並推送更新
         if: steps.git-check.outputs.changed == 'true'
         run: |
+          # 附件PDF加起來可能有幾十MB，一次push偶爾會遇到 GitHub 那邊的
+          # RPC逾時(HTTP 408)，加大git的HTTP緩衝區、改用HTTP/1.1、並失敗時
+          # 重試幾次，避免單純網路不穩就讓整個排程失敗。
+          git config http.postBuffer 524288000
+          git config http.version HTTP/1.1
           git commit -m "每日自動更新賽事資料 $(date -u +%Y-%m-%d)"
-          git push
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "推送成功(第 $i 次嘗試)"
+              exit 0
+            fi
+            echo "推送失敗，5秒後重試(第 $i 次嘗試)..."
+            sleep 5
+          done
+          echo "推送重試 5 次都失敗"
+          exit 1
