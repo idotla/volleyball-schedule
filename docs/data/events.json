@@ -1,0 +1,39 @@
+[
+  {
+    "id": "1950",
+    "name": "115年第53屆「永信杯」全國排球錦標賽",
+    "url": "https://www.ctvba.org.tw/article/1950/115年第53屆「永信杯」全國排球錦標賽 競賽規程-8-２８更新分組賽製圖及總賽程表-",
+    "date_start": "2026-09-19",
+    "date_end": "2026-09-22",
+    "date_note": "中華民國115年9月19日(六)至9月22日(二)，共4天",
+    "venue": "臺中市大甲區鐵砧山永信運動公園",
+    "registration_deadline": "2026-08-06",
+    "registration_fee": "免報名費，比賽期間一切費用請自理",
+    "organizer": "中華民國排球協會",
+    "contact_phone": ["(02)2778-6222", "(02)8771-1438"],
+    "contact_email": "ctvba@hotmail.com",
+    "attachments": [
+      {"name": "競賽規程", "url": "https://www.ctvba.org.tw/files/articleAttr/20260708151552_fTvnzCiJqL.pdf"},
+      {"name": "個人資料及肖像授權同意書", "url": "https://www.ctvba.org.tw/files/articleAttr/20260708151601_AMxdkhINWW.pdf"},
+      {"name": "團體資料及肖像授權同意書", "url": "https://www.ctvba.org.tw/files/articleAttr/20260708151602_J6dnLrnYTt.pdf"},
+      {"name": "分組賽制圖", "url": "https://www.ctvba.org.tw/files/articleAttr/20260819101806_4ByYeYgqdX.pdf"},
+      {"name": "總賽程表", "url": "https://www.ctvba.org.tw/files/articleAttr/20260828120634_22hHAZjIvs.pdf"}
+    ],
+    "matches": [
+      {"venue": "場地01", "time": "16:00", "date": "2026-09-19", "day": 1, "group": "社男", "match_no": "M1", "team_a": "達億鐵材行", "team_b": "國立陽明交通大學"},
+      {"venue": "場地02", "time": "16:00", "date": "2026-09-19", "day": 1, "group": "社男", "match_no": "M2", "team_a": "青稻夫農產", "team_b": "霹靂小比中興大隊"},
+      {"venue": "場地03", "time": "16:00", "date": "2026-09-19", "day": 1, "group": "社男", "match_no": "M3", "team_a": "晁德益", "team_b": "苗栗縣立苑裡高級中學"},
+      {"venue": "場地04", "time": "16:00", "date": "2026-09-19", "day": 1, "group": "社男", "match_no": "M4", "team_a": "彰化師大", "team_b": "豐原高商"},
+      {"venue": "場地05", "time": "16:00", "date": "2026-09-19", "day": 1, "group": "社男", "match_no": "M5", "team_a": "東山Vortex", "team_b": "龍津高中"},
+      {"venue": "場地06", "time": "16:00", "date": "2026-09-19", "day": 1, "group": "社女", "match_no": "M3", "team_a": "臺灣體大", "team_b": "琮盈交通"},
+      {"venue": "場地07", "time": "16:00", "date": "2026-09-19", "day": 1, "group": "社女", "match_no": "M4", "team_a": "加一", "team_b": "樂晴上岸"},
+      {"venue": "場地08", "time": "16:00", "date": "2026-09-19", "day": 1, "group": "社女", "match_no": "M2", "team_a": "噗巧", "team_b": "觀音拿鐵"},
+      {"venue": "場地09", "time": "16:00", "date": "2026-09-19", "day": 1, "group": "社女", "match_no": "M1", "team_a": "十根四季逗", "team_b": "陽明交大"},
+      {"venue": "場地10", "time": "16:00", "date": "2026-09-19", "day": 1, "group": "社九", "match_no": "M1", "team_a": "崇友電梯", "team_b": "北師校友"},
+      {"venue": "場地11", "time": "16:00", "date": "2026-09-19", "day": 1, "group": "社九", "match_no": "M2", "team_a": "永發停車", "team_b": "山的那一邊"}
+    ],
+    "parse_warnings": [
+      "以上11場是AI從PDF試讀出來的樣本資料(只有第1天16:00這個時段)，用來先測試「輸入學校查詢」這個功能，還沒有涵蓋4天完整賽程，也還沒逐筆核對過，正式資料要等 GitHub Actions 第一次成功執行後才會由爬蟲程式覆蓋。"
+    ]
+  }
+]
