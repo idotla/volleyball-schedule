@@ -1,9 +1,11 @@
-name: 每日抓取排球協會賽事資料
+name: 每日抓取排球協會賽事資料（平日晚上7點多，有更新才寄信通知）
 
 on:
   schedule:
-    # UTC 22:00 = 台灣時間(UTC+8) 隔天 06:00
-    - cron: "0 22 * * *"
+    # UTC 11:10 = 台灣時間(UTC+8) 晚上7點10分。故意不用整點(19:00)，避開 GitHub Actions
+    # 排程在整點常常會塞車延遲的問題。day-of-week 用 1-5 代表週一到週五(0/7=週日)，
+    # 協會網站平常不會在週末發新公告，週六日不排程。
+    - cron: "10 11 * * 1-5"
   workflow_dispatch: {}   # 允許在 GitHub 網頁上手動點一下馬上跑一次
 
 permissions:
@@ -27,12 +29,23 @@ jobs:
       - name: 執行爬蟲
         run: python scraper/scrape_ctvba.py --out docs/data/events.json
 
-      - name: 檢查資料檔是否有變化
-        id: git-check
+      - name: 設定 git 使用者
         run: |
           git config user.name "ctvba-scraper-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/data/events.json docs/data/last_updated.json docs/data/scrape_cache.json docs/data/attachments
+
+      - name: 檢查「比賽資料」本身是否有變化(不含更新時間戳記，用來決定要不要寄信)
+        id: data-check
+        run: |
+          git add docs/data/events.json docs/data/scrape_cache.json docs/data/attachments
+          git diff --cached --quiet && echo "data_changed=false" >> "$GITHUB_OUTPUT" || echo "data_changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: 加入更新時間戳記(這個檔案每次跑都會變，所以獨立於上面的資料變化判斷之外)
+        run: git add docs/data/last_updated.json
+
+      - name: 檢查是否有任何東西要commit
+        id: git-check
+        run: |
           git diff --cached --quiet && echo "changed=false" >> "$GITHUB_OUTPUT" || echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit 並推送更新
@@ -43,7 +56,7 @@ jobs:
           # 重試幾次，避免單純網路不穩就讓整個排程失敗。
           git config http.postBuffer 524288000
           git config http.version HTTP/1.1
-          git commit -m "每日自動更新賽事資料 $(date -u +%Y-%m-%d)"
+          git commit -m "每日自動更新賽事資料 $(date -u +%Y-%m-%d)（比賽資料有變化：${{ steps.data-check.outputs.data_changed }}）"
           for i in 1 2 3 4 5; do
             if git push; then
               echo "推送成功(第 $i 次嘗試)"
@@ -54,3 +67,21 @@ jobs:
           done
           echo "推送重試 5 次都失敗"
           exit 1
+
+      - name: 寄信通知有新資料(只有真的偵測到比賽資料變化才寄，時間戳記變化不算)
+        if: steps.data-check.outputs.data_changed == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.GMAIL_ADDRESS }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "【排球賽程查詢】排球協會官網賽事資料有更新"
+          to: idotla@gmail.com
+          from: 排球賽程查詢機器人 <${{ secrets.GMAIL_ADDRESS }}>
+          body: |
+            平日晚間檢查(台灣時間19:10)偵測到中華民國排球協會官網的賽事資料有更新（永信盃/媽祖盃/華宗盃/和家盃其中至少一項）。
+
+            請至網站查看最新賽程：https://idotla.github.io/volleyball-schedule/
+
+            (這封信由 GitHub Actions 自動寄出，偵測到資料沒有變化時不會寄信。)
