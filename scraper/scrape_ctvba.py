@@ -128,7 +128,14 @@ class EventInfo:
 def fetch(url: str) -> str:
     resp = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
     resp.raise_for_status()
-    resp.encoding = resp.apparent_encoding or "utf-8"
+    # 2026-09-16 修復重大bug：原本用 resp.apparent_encoding（chardet統計猜測）覆蓋掉
+    # requests 從 HTTP 回應標頭(協會網站固定回傳 Content-Type: text/html; charset=UTF-8)
+    # 自動判斷出的正確編碼。結果爬到「115年第53屆永信杯...競賽規程(9/15更新不符合球員
+    # 名單)」這篇文章時，apparent_encoding 猜錯，把整篇中文內文亂碼成類似阿拉伯文的亂碼
+    # 字元，導致比賽日期解析不到、連帶永信盃470場真實比賽資料全部憑空消失（使用者發現
+    # 「永信盃的賽程不見了」才抓到這個bug）。協會網站的HTTP回應標頭一律宣告UTF-8，這是
+    # 可靠的資訊來源，不應該用不可靠的統計猜測去覆蓋它，所以直接固定用utf-8。
+    resp.encoding = "utf-8"
     return resp.text
 
 
