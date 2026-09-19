@@ -338,7 +338,7 @@ function formatDateHeading(dateStr) {
   if (!m) return dateStr;
   const d = new Date(dateStr + 'T00:00:00');
   const week = ['日', '一', '二', '三', '四', '五', '六'][d.getDay()];
-  return `${parseInt(m[2], 10)}月${parseInt(m[3], 10)}日（星期${week}）`;
+  return `${parseInt(m[2], 10)}/${parseInt(m[3], 10)}（${week}）`;
 }
 
 function groupMatchesByDate(matches) {
