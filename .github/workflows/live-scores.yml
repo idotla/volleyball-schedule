@@ -1,0 +1,77 @@
+name: 永信盃即時比分定時更新
+
+# 2026-09-19 使用者要求：即時比分不要一次手動抓一天就結束，要隨著比賽日期
+# (9/19~9/22)自動抓「當天」的比分——今天(9/20)就自動抓9/20的、明天(9/21)
+# 就自動抓9/21的，以此類推。這裡用一個獨立於 daily-scrape.yml 的排程，資料
+# 來源(vbg.yungshingroup.com)、輸出檔案(docs/data/live_scores_1950.json)都
+# 跟主賽程爬蟲完全分開，互不影響。
+#
+# 永信盃只有9/19~9/22這4天比賽，這個排程過了這幾天就沒有意義了——賽事結束後
+# 記得回來 disable 或刪除這個 workflow(cron的month/day-of-month欄位沒有
+# 「年」，明年9/19~9/22還是會照樣觸發，要留意)。
+
+on:
+  schedule:
+    # UTC 0:00~9:30(每30分鐘一次) = 台灣時間(UTC+8) 08:00~17:30，涵蓋即時比分
+    # 網站實際出現過的比賽時段(社會組6:00~16:00、國小組9:00~15:50左右)，
+    # 前後留一點餘裕。day-of-month限定19~22、month限定9，對應永信盃比賽日期。
+    - cron: "0,30 0-9 19-22 9 *"
+  workflow_dispatch:
+    inputs:
+      day:
+        description: "要抓哪一天(YYYY-MM-DD)，留空預設抓台灣時間的今天"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-live-scores:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 設定 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安裝套件
+        run: pip install -r requirements.txt
+
+      - name: 決定要抓哪一天
+        id: day
+        run: |
+          if [ -n "${{ github.event.inputs.day }}" ]; then
+            echo "day=${{ github.event.inputs.day }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "day=$(TZ=Asia/Taipei date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 執行即時比分爬蟲
+        run: python scraper/scrape_live_scores.py --day "${{ steps.day.outputs.day }}" --event-id 1950 --out docs/data/live_scores_1950.json
+
+      - name: 檢查資料檔是否有變化
+        id: git-check
+        run: |
+          git config user.name "vbg-live-score-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data/live_scores_1950.json
+          git diff --cached --quiet && echo "changed=false" >> "$GITHUB_OUTPUT" || echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit 並推送更新
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git commit -m "更新永信盃即時比分 ${{ steps.day.outputs.day }} $(date -u +%H:%M)"
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "推送成功(第 $i 次嘗試)"
+              exit 0
+            fi
+            echo "推送失敗，5秒後重試(第 $i 次嘗試)..."
+            sleep 5
+          done
+          echo "推送重試 5 次都失敗"
+          exit 1
