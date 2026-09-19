@@ -115,7 +115,7 @@
   }
   .attachment-link:hover{text-decoration:underline;}
 
-  .live-wrap{margin-bottom:28px;}
+  .live-wrap{margin-top:36px;padding-top:28px;border-top:2px solid var(--border);margin-bottom:28px;}
   .live-title-row{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 12px;margin-bottom:10px;}
   .live-title{font-size:1.05rem;font-weight:700;}
   .live-updated{font-size:0.78rem;color:var(--muted);}
@@ -163,6 +163,13 @@
     <div class="sub">資料來源：中華民國排球協會官網・更新時間：<span id="updated-at">載入中...</span></div>
   </header>
 
+  <div class="search-box">
+    <input type="text" id="search" value="大雅國中" placeholder="輸入學校或隊伍名稱，查詢該隊的比賽賽程...">
+    <div class="search-hint">預設顯示大雅國中的賽程，如要查詢其他學校/隊伍，直接在上面欄位輸入即可</div>
+  </div>
+
+  <div id="results"></div>
+
   <div class="live-wrap" id="live-wrap" style="display:none;">
     <div class="live-title-row">
       <div class="live-title">🔴 永信盃 即時比分</div>
@@ -174,13 +181,6 @@
     <div class="live-list" id="live-list"></div>
     <div class="notice live-note">⚠️ 這是第一版試做：資料來源是<a href="https://vbg.yungshingroup.com/tw/event/time?day=2026-09-19" target="_blank" rel="noopener">協會即時計分網站</a>，目前只有9/19當天的資料、還沒有自動更新機制，之後會再依你的回饋調整排版跟更新方式。</div>
   </div>
-
-  <div class="search-box">
-    <input type="text" id="search" value="大雅國中" placeholder="輸入學校或隊伍名稱，查詢該隊的比賽賽程...">
-    <div class="search-hint">預設顯示大雅國中的賽程，如要查詢其他學校/隊伍，直接在上面欄位輸入即可</div>
-  </div>
-
-  <div id="results"></div>
 
   <footer>
     資料來源：<a href="https://www.ctvba.org.tw/article/front/inGame" target="_blank" rel="noopener">中華民國排球協會官網</a>
