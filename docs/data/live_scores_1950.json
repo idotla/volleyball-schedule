@@ -3,7 +3,7 @@
   "event_name": "115年第53屆永信盃",
   "day": "2026-09-19",
   "source_url": "https://vbg.yungshingroup.com/tw/event/time?day=2026-09-19",
-  "updated_at": "2026/09/19 18:39",
+  "updated_at": "2026/09/19 19:07",
   "matches": [
     {
       "venue": "場地1",
@@ -12,7 +12,7 @@
       "match_code": "小組賽M1",
       "team_a": "(11)達億鐵材行",
       "team_b": "(10)國立陽明交通大學",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -35,7 +35,7 @@
       "match_code": "小組賽M1",
       "team_a": "(14)臺中家商",
       "team_b": "(13)麥寮高中",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -59,7 +59,7 @@
       "team_a": "(10)國立陽明交通大學",
       "team_b": "(12)霹靂小比中興大隊",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -108,7 +108,7 @@
       "match_code": "小組賽M4",
       "team_a": "(4)壽山高中",
       "team_b": "(5)縣苑裡高",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -159,7 +159,7 @@
       "team_a": "(3)清華大學",
       "team_b": "(1)東山Vortex",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -182,7 +182,7 @@
       "team_a": "(13)青稻夫農產",
       "team_b": "(12)霹靂小比中興大隊",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -204,7 +204,7 @@
       "match_code": "小組賽M2",
       "team_a": "(16)永慶高中",
       "team_b": "(15)豐原高商",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -281,7 +281,7 @@
       "match_code": "小組賽M5",
       "team_a": "(7)武陵高中",
       "team_b": "(8)白河商工",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -386,7 +386,7 @@
       "team_a": "(1)興大附農",
       "team_b": "(2)臺中一中",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -409,7 +409,7 @@
       "team_a": "(14)苗栗縣立苑裡高級中學",
       "team_b": "(16)豐商岳龍",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -431,7 +431,7 @@
       "match_code": "小組賽M13",
       "team_a": "(5)龍津",
       "team_b": "(6)豐商明緯",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -454,7 +454,7 @@
       "match_code": "小組賽M6",
       "team_a": "(10)陽明交大附中",
       "team_b": "(11)僑泰高中",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -477,7 +477,7 @@
       "match_code": "小組賽M17",
       "team_a": "(14)苗栗縣立苑裡高級中學",
       "team_b": "(17)彰化師大",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -501,7 +501,7 @@
       "team_a": "(17)彰化師大",
       "team_b": "(16)豐商岳龍",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -524,7 +524,7 @@
       "team_a": "(1)臺中教大",
       "team_b": "(2)嘉義大學",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -574,7 +574,7 @@
       "team_a": "(8)摸魔茶",
       "team_b": "(9)黃氏企業",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -596,7 +596,7 @@
       "match_code": "小組賽M18",
       "team_a": "(16)豐商岳龍",
       "team_b": "(15)晁德益",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -619,7 +619,7 @@
       "match_code": "小組賽M21",
       "team_a": "(9)黃氏企業",
       "team_b": "(7)靜宜大學B",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -642,7 +642,7 @@
       "match_code": "小組賽M5",
       "team_a": "(1)東山Vortex",
       "team_b": "(2)龍津高中",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -666,7 +666,7 @@
       "team_a": "(4)連義華排球屋",
       "team_b": "(5)龍津",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -688,7 +688,7 @@
       "match_code": "小組賽M2",
       "team_a": "(4)陽明交大",
       "team_b": "(5)中興大學",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -712,7 +712,7 @@
       "team_a": "(13)臺灣體大",
       "team_b": "(14)明新科大",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -735,7 +735,7 @@
       "team_a": "(2)東海校友A",
       "team_b": "(3)南市教聯球友",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -784,7 +784,7 @@
       "match_code": "小組賽M3",
       "team_a": "(7)臺灣體大",
       "team_b": "(8)琮盈交通",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -807,7 +807,7 @@
       "match_code": "小組賽M7",
       "team_a": "(7)靜宜大學B",
       "team_b": "(8)摸魔茶",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -830,7 +830,7 @@
       "match_code": "小組賽M3",
       "team_a": "(7)屏東大學",
       "team_b": "(8)逢甲大學",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -853,7 +853,7 @@
       "match_code": "小組賽M6",
       "team_a": "(16)靜宜大學",
       "team_b": "(17)高雄師大",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -877,7 +877,7 @@
       "team_a": "(5)天博設備",
       "team_b": "(6)東海校友B",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -899,7 +899,7 @@
       "match_code": "小組賽M16",
       "team_a": "(6)東海校友B",
       "team_b": "(4)排球壯年左隊",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -922,7 +922,7 @@
       "match_code": "小組賽M4",
       "team_a": "(10)加一",
       "team_b": "(11)樂晴上岸",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -973,7 +973,7 @@
       "team_a": "(4)枋寮高中",
       "team_b": "(5)華江高中",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -996,7 +996,7 @@
       "team_a": "(11)樂晴上岸",
       "team_b": "(12)縣立苑裡高中",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1018,7 +1018,7 @@
       "match_code": "小組賽M6",
       "team_a": "(10)僑泰高中",
       "team_b": "(12)東石高中",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -1042,7 +1042,7 @@
       "team_a": "(5)華江高中",
       "team_b": "(6)興大附農",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1065,7 +1065,7 @@
       "team_a": "(12)縣立苑裡高中",
       "team_b": "(10)加一",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1088,7 +1088,7 @@
       "team_a": "(4)噗巧",
       "team_b": "(5)觀音拿鐵",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1111,7 +1111,7 @@
       "team_a": "(13)臺中女中",
       "team_b": "(12)東石高中",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1160,7 +1160,7 @@
       "match_code": "小組賽M6",
       "team_a": "(5)觀音拿鐵",
       "team_b": "(6)永慶高中",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -1183,7 +1183,7 @@
       "match_code": "小組賽M7",
       "team_a": "(11)嘉義女中",
       "team_b": "(13)臺中女中",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -1207,7 +1207,7 @@
       "team_a": "(8)長億高中",
       "team_b": "(9)壽山高中",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1229,7 +1229,7 @@
       "match_code": "小組賽M10",
       "team_a": "(6)永慶高中",
       "team_b": "(4)噗巧",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -1252,7 +1252,7 @@
       "match_code": "小組賽M1",
       "team_a": "(1)十根四季逗",
       "team_b": "(2)陽明交大",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -1330,7 +1330,7 @@
       "team_a": "(8)琮盈交通",
       "team_b": "(9)中華景美",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1353,12 +1353,12 @@
       "team_a": "(3)連義華排球屋",
       "team_b": "(1)十根四季逗",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
           "25",
-          null
+          "0"
         ],
         [
           "25",
@@ -1376,7 +1376,7 @@
       "team_a": "(2)縣苑裡高",
       "team_b": "(3)豐原高中",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1399,7 +1399,7 @@
       "team_a": "(9)中華景美",
       "team_b": "(7)臺灣體大",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1422,7 +1422,7 @@
       "team_a": "(14)崇友電梯",
       "team_b": "(13)北師校友",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1471,7 +1471,7 @@
       "match_code": "小組賽M5",
       "team_a": "(7)北市教聯",
       "team_b": "(8)排球壯年右隊",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -1495,7 +1495,7 @@
       "team_a": "(13)北師校友",
       "team_b": "(15)山的那一邊",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1517,7 +1517,7 @@
       "match_code": "小組賽M11",
       "team_a": "(8)排球壯年右隊",
       "team_b": "(9)興齡長照",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -1540,7 +1540,7 @@
       "match_code": "小組賽M13",
       "team_a": "(13)北師校友",
       "team_b": "(16)永發停車",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -1591,7 +1591,7 @@
       "team_a": "(16)永發停車",
       "team_b": "(15)山的那一邊",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1614,7 +1614,7 @@
       "team_a": "(4)排球壯年左隊",
       "team_b": "(5)天博設備",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1637,7 +1637,7 @@
       "team_a": "(10)白河一群農夫",
       "team_b": "(11)DCC型男",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1686,7 +1686,7 @@
       "match_code": "小組賽M12",
       "team_a": "(11)DCC型男",
       "team_b": "(12)陳安老漁行",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -1709,7 +1709,7 @@
       "match_code": "小組賽M14",
       "team_a": "(15)山的那一邊",
       "team_b": "(14)崇友電梯",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -1759,7 +1759,7 @@
       "match_code": "小組賽M2",
       "team_a": "(25)新北頂溪國小",
       "team_b": "(24)竹縣光明國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -1836,7 +1836,7 @@
       "match_code": "小組賽M8",
       "team_a": "(10)新北後埔國小",
       "team_b": "(11)中市北屯國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -1860,7 +1860,7 @@
       "team_a": "(16)苗縣卓蘭國小",
       "team_b": "(17)中市西屯國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1882,7 +1882,7 @@
       "match_code": "小組賽M12",
       "team_a": "(22)苗縣苑裡國小",
       "team_b": "(24)竹縣光明國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -1906,7 +1906,7 @@
       "team_a": "(26)新北三峽國小",
       "team_b": "(28)高市樂群國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1929,7 +1929,7 @@
       "team_a": "(2)中市豐田國小",
       "team_b": "(3)雲縣橋頭國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -1952,7 +1952,7 @@
       "team_a": "(32)中市大元國小",
       "team_b": "(31)雲縣橋頭國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2055,7 +2055,7 @@
       "match_code": "小組賽M9",
       "team_a": "(19)新北文林國小",
       "team_b": "(20)高市樂群國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -2078,7 +2078,7 @@
       "match_code": "小組賽M11",
       "team_a": "(25)新北積穗國小",
       "team_b": "(26)宜縣礁溪國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -2101,7 +2101,7 @@
       "match_code": "小組賽M13",
       "team_a": "(31)雲縣橋頭國小",
       "team_b": "(33)桃市大成國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -2205,7 +2205,7 @@
       "match_code": "小組賽M6",
       "team_a": "(10)新北後埔國小",
       "team_b": "(11)北市天母國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -2229,7 +2229,7 @@
       "team_a": "(16)北市長春國小",
       "team_b": "(17)雲縣麥寮國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2251,7 +2251,7 @@
       "match_code": "小組賽M10",
       "team_a": "(22)嘉縣朴子國小",
       "team_b": "(23)中市大雅國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -2302,7 +2302,7 @@
       "team_a": "(32)中市大元國小",
       "team_b": "(34)新北三峽國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2325,7 +2325,7 @@
       "team_a": "(5)屏縣佳義國小",
       "team_b": "(6)新北頂溪國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2347,7 +2347,7 @@
       "match_code": "小組賽M1",
       "team_a": "(23)中市新平國小",
       "team_b": "(22)苗縣苑裡國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -2371,7 +2371,7 @@
       "team_a": "(27)屏縣崇蘭國小",
       "team_b": "(26)新北三峽國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2448,7 +2448,7 @@
       "team_a": "(13)中市神岡國小",
       "team_b": "(14)北市東新國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2471,7 +2471,7 @@
       "team_a": "(19)北市三民國小",
       "team_b": "(20)新北積穗國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2494,7 +2494,7 @@
       "team_a": "(23)中市新平國小",
       "team_b": "(25)新北頂溪國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2517,7 +2517,7 @@
       "team_a": "(27)屏縣崇蘭國小",
       "team_b": "(29)中市力行國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2540,7 +2540,7 @@
       "team_a": "(29)北市五常國小",
       "team_b": "(28)高市莊敬國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2563,7 +2563,7 @@
       "team_a": "(1)屏縣內埔國小",
       "team_b": "(2)新北莒光國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2613,7 +2613,7 @@
       "team_a": "(13)苗縣苑裡國小",
       "team_b": "(14)高市中庄國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2635,7 +2635,7 @@
       "match_code": "小組賽M9",
       "team_a": "(19)苗縣卓蘭國小",
       "team_b": "(20)中市力行國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -2658,7 +2658,7 @@
       "match_code": "小組賽M11",
       "team_a": "(25)北市明湖國小",
       "team_b": "(26)新北頂溪國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -2682,7 +2682,7 @@
       "team_a": "(29)北市五常國小",
       "team_b": "(31)中市西屯國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2705,7 +2705,7 @@
       "team_a": "(5)桃市中山國小",
       "team_b": "(6)竹縣光明國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2728,7 +2728,7 @@
       "team_a": "(31)中市西屯國小",
       "team_b": "(30)新北文林國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2751,7 +2751,7 @@
       "team_a": "(4)中市大雅國小",
       "team_b": "(5)桃市中山國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2801,7 +2801,7 @@
       "team_a": "(16)中市神岡國小",
       "team_b": "(17)新北積穗國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2823,7 +2823,7 @@
       "match_code": "小組賽M10",
       "team_a": "(22)高市樂群國小",
       "team_b": "(23)嘉縣朴子國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -2873,7 +2873,7 @@
       "match_code": "小組賽M14",
       "team_a": "(2)新北莒光國小",
       "team_b": "(3)中市北屯國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -2897,7 +2897,7 @@
       "team_a": "(8)新北三峽國小",
       "team_b": "(9)中市惠文國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2920,7 +2920,7 @@
       "team_a": "(1)苗縣苑裡國小",
       "team_b": "(2)雲縣東勢國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2943,7 +2943,7 @@
       "team_a": "(7)中市四張犁國小",
       "team_b": "(8)新北頂溪國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -2992,7 +2992,7 @@
       "match_code": "小組賽M7",
       "team_a": "(19)嘉市北園國小",
       "team_b": "(20)中市大雅國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -3015,7 +3015,7 @@
       "match_code": "小組賽M9",
       "team_a": "(25)屏縣潮州國小",
       "team_b": "(26)高市中庄國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -3039,7 +3039,7 @@
       "team_a": "(31)新北後埔國小",
       "team_b": "(32)中市力行國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -3061,7 +3061,7 @@
       "match_code": "小組賽M13",
       "team_a": "(37)宜縣礁溪國小",
       "team_b": "(38)中市東寶國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -3085,7 +3085,7 @@
       "team_a": "(5)北市長春國小",
       "team_b": "(6)新北大觀國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -3107,7 +3107,7 @@
       "match_code": "小組賽M2",
       "team_a": "(4)屏縣霧臺國小",
       "team_b": "(5)北市長春國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -3131,7 +3131,7 @@
       "team_a": "(10)新北積穗國小",
       "team_b": "(11)北市天母國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -3154,7 +3154,7 @@
       "team_a": "(16)桃市中山國小",
       "team_b": "(17)嘉縣朴子國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
@@ -3176,7 +3176,7 @@
       "match_code": "小組賽M8",
       "team_a": "(22)南市開元國小",
       "team_b": "(23)北市三民國小",
-      "team_a_sets_won": null,
+      "team_a_sets_won": "0",
       "team_b_sets_won": "2",
       "winner": "team_b",
       "set_scores": [
@@ -3200,7 +3200,7 @@
       "team_a": "(28)南市六甲國小",
       "team_b": "(29)新北三峽國小",
       "team_a_sets_won": "2",
-      "team_b_sets_won": null,
+      "team_b_sets_won": "0",
       "winner": "team_a",
       "set_scores": [
         [
