@@ -115,9 +115,9 @@
   }
   .attachment-link:hover{text-decoration:underline;}
 
-  .live-wrap{margin-top:36px;padding-top:28px;border-top:2px solid var(--border);margin-bottom:28px;}
+  .live-wrap{margin-top:18px;}
   .live-title-row{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 12px;margin-bottom:10px;}
-  .live-title{font-size:1.05rem;font-weight:700;}
+  .live-title{font-size:0.82rem;font-weight:700;color:var(--accent);}
   .live-updated{font-size:0.78rem;color:var(--muted);}
   .live-filter{margin-bottom:12px;}
   .live-filter select{
@@ -169,18 +169,6 @@
   </div>
 
   <div id="results"></div>
-
-  <div class="live-wrap" id="live-wrap" style="display:none;">
-    <div class="live-title-row">
-      <div class="live-title">🔴 永信盃 即時比分</div>
-      <div class="live-updated" id="live-updated"></div>
-    </div>
-    <div class="live-filter">
-      <select id="live-group-filter"><option value="">全部組別</option></select>
-    </div>
-    <div class="live-list" id="live-list"></div>
-    <div class="notice live-note">⚠️ 這是第一版試做：資料來源是<a href="https://vbg.yungshingroup.com/tw/event/time?day=2026-09-19" target="_blank" rel="noopener">協會即時計分網站</a>，目前只有9/19當天的資料、還沒有自動更新機制，之後會再依你的回饋調整排版跟更新方式。</div>
-  </div>
 
   <footer>
     資料來源：<a href="https://www.ctvba.org.tw/article/front/inGame" target="_blank" rel="noopener">中華民國排球協會官網</a>
@@ -375,6 +363,11 @@ function renderEventOverviewCard(ev, opts = {}) {
     card.appendChild(el('div', {class: 'notice', text: 'ℹ️ ' + msg}));
   }
 
+  // 2026-09-19 使用者要求：即時比分直接併入這筆查詢結果卡片裡面，接在
+  // 賽程/附件資訊下面，不要另外獨立成一個有分隔線的大區塊。
+  const liveBlock = renderLiveScoreBlock(ev);
+  if (liveBlock) card.appendChild(liveBlock);
+
   return card;
 }
 
@@ -394,6 +387,7 @@ function renderComingSoonRow(ev, now) {
 }
 
 let ALL_EVENTS = [];
+let LIVE_DATA_BY_EVENT = {}; // event_id(字串) -> live_scores_*.json 解析出的物件
 
 function renderResults(query) {
   const container = document.getElementById('results');
@@ -477,6 +471,11 @@ function renderResults(query) {
       container.appendChild(el('div', {class: 'gender-heading', text: label}));
       renderMatchesGroupedByDate(container, list, ev, q);
     });
+
+    // 2026-09-19 使用者要求：即時比分直接接在這個盃賽自己的比賽列表下面，
+    // 當作同一組查詢結果的一部分，不要放到頁面最下面、即將登場清單之後。
+    const liveBlock = renderLiveScoreBlock(ev);
+    if (liveBlock) container.appendChild(liveBlock);
   });
 
   // 其餘沒有找到這個關鍵字比賽的賽事，簡化成「即將登場」清單放在最下面，
@@ -536,10 +535,17 @@ fetch('data/last_updated.json')
 // 2026-09-19 即時比分（第一版試做）：資料來源是協會另外找到的即時計分網站
 // (vbg.yungshingroup.com，目前只有永信盃在用)，跟主賽程資料(events.json，
 // 來自協會官網總賽程表PDF)是分開的兩份資料，用 event_id 對應但欄位/隊伍
-// 名稱寫法不完全一樣，所以先做成獨立的一個區塊，不嘗試合併進上面的賽程
-// 查詢結果裡。目前是手動抓一次存成 docs/data/live_scores_1950.json，
+// 名稱寫法不完全一樣。目前是手動抓一次存成 docs/data/live_scores_1950.json，
 // 還沒有自動排程更新，等版面確認過後再決定要不要做成定期自動抓取。
-let LIVE_MATCHES = [];
+//
+// 2026-09-19 使用者反饋兩次調整排版位置：第一版放在頁面最上方(標題底下)，
+// 使用者說要放在原本查詢頁面後面；改成放在查詢結果最後面(即將登場清單之後)
+// 後，使用者又說「即時比數SHOW在查詢後的結果後面就好」，意思是要直接併入
+// 該盃賽自己的查詢結果卡片裡面，接在比賽列表下面，不要另外獨立一個有分隔線
+// 的區塊。所以改成 renderLiveScoreBlock(ev)：由 renderEventOverviewCard()
+// (空白搜尋時的「最近賽事」卡片)跟 renderResults() 的搜尋結果區塊(依盃賽分組
+// 的那個迴圈)各自呼叫，只有 ev.id 在 LIVE_DATA_BY_EVENT 裡有資料時才會顯示，
+// 直接接在該盃賽自己的比賽列表/附件資訊後面。
 
 function renderLiveScoreCard(m) {
   const card = el('div', {class: 'live-card'});
@@ -579,50 +585,73 @@ function renderLiveScoreCard(m) {
   return card;
 }
 
-function renderLiveScores(filterGroup) {
-  const list = document.getElementById('live-list');
-  if (!list) return;
-  list.innerHTML = '';
-  let matches = LIVE_MATCHES.slice();
-  if (filterGroup) matches = matches.filter(m => m.group === filterGroup);
-  matches.sort((a, b) => (a.time || '').localeCompare(b.time || '') || (a.venue || '').localeCompare(b.venue || ''));
-  if (!matches.length) {
-    list.appendChild(el('div', {class: 'empty', text: '目前這個篩選條件下沒有比賽資料'}));
-    return;
+function renderLiveScoreBlock(ev) {
+  const liveData = ev && ev.id ? LIVE_DATA_BY_EVENT[ev.id] : null;
+  const liveMatches = liveData && liveData.matches ? liveData.matches : [];
+  if (!liveMatches.length) return null;
+
+  const wrap = el('div', {class: 'live-wrap'});
+
+  const titleRow = el('div', {class: 'live-title-row'});
+  titleRow.appendChild(el('div', {class: 'live-title', text: '🔴 即時比分'}));
+  titleRow.appendChild(el('div', {
+    class: 'live-updated',
+    text: (liveData.day ? liveData.day + '・' : '') + '更新於 ' + (liveData.updated_at || '未知'),
+  }));
+  wrap.appendChild(titleRow);
+
+  const groups = [...new Set(liveMatches.map(m => m.group).filter(Boolean))];
+  const filterRow = el('div', {class: 'live-filter'});
+  const select = document.createElement('select');
+  const allOpt = document.createElement('option');
+  allOpt.value = '';
+  allOpt.textContent = '全部組別';
+  select.appendChild(allOpt);
+  groups.forEach(g => {
+    const opt = document.createElement('option');
+    opt.value = g;
+    opt.textContent = g;
+    select.appendChild(opt);
+  });
+  filterRow.appendChild(select);
+  wrap.appendChild(filterRow);
+
+  const list = el('div', {class: 'live-list'});
+  wrap.appendChild(list);
+
+  function renderList() {
+    list.innerHTML = '';
+    let matches = liveMatches.slice();
+    if (select.value) matches = matches.filter(m => m.group === select.value);
+    matches.sort((a, b) => (a.time || '').localeCompare(b.time || '') || (a.venue || '').localeCompare(b.venue || ''));
+    if (!matches.length) {
+      list.appendChild(el('div', {class: 'empty', text: '目前這個篩選條件下沒有比賽資料'}));
+      return;
+    }
+    matches.forEach(m => list.appendChild(renderLiveScoreCard(m)));
   }
-  matches.forEach(m => list.appendChild(renderLiveScoreCard(m)));
-}
+  select.addEventListener('change', renderList);
+  renderList();
 
-function initLiveScores(data) {
-  const wrap = document.getElementById('live-wrap');
-  if (!wrap) return;
-  LIVE_MATCHES = data.matches || [];
-  if (!LIVE_MATCHES.length) return;
-  wrap.style.display = '';
+  wrap.appendChild(el('div', {
+    class: 'notice live-note',
+    html: '⚠️ 這是第一版試做：資料來源是<a href="' + (liveData.source_url || '#') + '" target="_blank" rel="noopener">協會即時計分網站</a>，目前只有' + (liveData.day || '比賽當天') + '的資料、還沒有自動更新機制，之後會再依你的回饋調整排版跟更新方式。',
+  }));
 
-  const updatedEl = document.getElementById('live-updated');
-  if (updatedEl) {
-    updatedEl.textContent = (data.day ? data.day + '・' : '') + '更新於 ' + (data.updated_at || '未知');
-  }
-
-  const groups = [...new Set(LIVE_MATCHES.map(m => m.group).filter(Boolean))];
-  const select = document.getElementById('live-group-filter');
-  if (select) {
-    groups.forEach(g => {
-      const opt = document.createElement('option');
-      opt.value = g;
-      opt.textContent = g;
-      select.appendChild(opt);
-    });
-    select.addEventListener('change', () => renderLiveScores(select.value));
-  }
-
-  renderLiveScores('');
+  return wrap;
 }
 
 fetch('data/live_scores_1950.json')
   .then(r => (r.ok ? r.json() : null))
-  .then(data => { if (data) initLiveScores(data); })
+  .then(data => {
+    if (data && data.event_id) {
+      LIVE_DATA_BY_EVENT[data.event_id] = data;
+      // 即時比分是併入各盃賽自己的查詢結果卡片顯示的，如果這個 fetch 比
+      // events.json 晚回來，畫面已經先渲染過一次、還沒有即時比分，這裡要
+      // 重新呼叫 renderResults() 補上，用目前搜尋欄位的值重繪一次。
+      renderResults(document.getElementById('search').value);
+    }
+  })
   .catch(() => {});
 </script>
 </body>
