@@ -243,6 +243,21 @@ function findLiveMatch(m, liveMatches) {
   return tryMatch(pool, true) || tryMatch(pool, false);
 }
 
+function matchDateTime(m) {
+  // 用比賽本身的 date(YYYY-MM-DD) + time(HH:MM) 組成絕對時間，固定當作台灣
+  // 時間(UTC+8)解讀(不依賴使用者瀏覽器所在時區)，用來判斷「現在」是不是還
+  // 沒到這場比賽的排定時間。缺 date 或 time 就回傳 null(無法判斷)。
+  if (!m.date || !m.time) return null;
+  const dt = new Date(`${m.date}T${m.time}:00+08:00`);
+  return isNaN(dt.getTime()) ? null : dt;
+}
+
+function renderUpcomingBadge() {
+  const box = el('div', {class: 'match-row-score'});
+  box.appendChild(el('span', {class: 'live-status upcoming', text: '尚未開始'}));
+  return box;
+}
+
 function renderInlineScore(liveMatch, flipped) {
   // 比分方塊：狀態徽章＋總局數比分(依主賽程的team_a/team_b順序，
   // flipped代表即時比分那邊的team_a/team_b剛好跟主賽程相反，要對調)，
@@ -301,6 +316,16 @@ function renderMatchRow(m, q, liveMatches) {
   const liveInfo = liveMatches ? findLiveMatch(m, liveMatches) : null;
   if (liveInfo) {
     row.appendChild(renderInlineScore(liveInfo.liveMatch, liveInfo.flipped));
+  } else {
+    // 2026-09-19 使用者反饋：即時比分系統沒涵蓋的組別(例如國男/國女組)，
+    // 只要排定時間還沒到，也應該顯示「尚未開始」——這點不需要即時比分
+    // 資料源，單純比對比賽排定時間跟現在時間即可。時間已經過了的話，因為
+    // 沒有即時資料可以確認實際狀態(可能已經開打或結束)，就不顯示任何徽章，
+    // 避免顯示錯誤的「已結束」。
+    const dt = matchDateTime(m);
+    if (dt && dt.getTime() > Date.now()) {
+      row.appendChild(renderUpcomingBadge());
+    }
   }
 
   return row;
