@@ -53,8 +53,12 @@
     background:var(--card);border:1px solid var(--border);border-radius:14px;
     overflow:hidden;margin-bottom:12px;
   }
-  .match-row{padding:14px 20px;border-bottom:1px solid var(--border);}
+  .match-row{
+    padding:14px 20px;border-bottom:1px solid var(--border);
+    display:flex;justify-content:space-between;align-items:center;gap:14px;
+  }
   .match-row:last-child{border-bottom:none;}
+  .match-row-left{flex:1;min-width:0;}
   .match-row-main{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
   .match-time{color:var(--accent);font-weight:700;font-size:0.95rem;white-space:nowrap;}
   .match-teams{font-size:1.05rem;font-weight:700;}
@@ -67,6 +71,13 @@
   .group-tag{
     display:inline-block;font-size:0.72rem;padding:1px 8px;border-radius:6px;
     background:var(--accent-soft);color:var(--accent);
+  }
+  .match-row-score{
+    flex-shrink:0;display:flex;flex-direction:column;align-items:flex-end;gap:3px;
+  }
+  .match-row-score-total{font-size:1.05rem;font-weight:700;color:var(--ink);white-space:nowrap;}
+  .match-row-score-sets{
+    font-size:0.72rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;
   }
 
   .notice{
@@ -115,45 +126,15 @@
   }
   .attachment-link:hover{text-decoration:underline;}
 
-  .live-wrap{margin-top:18px;}
-  .live-title-row{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 12px;margin-bottom:10px;}
-  .live-title{font-size:0.82rem;font-weight:700;color:var(--accent);}
-  .live-updated{font-size:0.78rem;color:var(--muted);}
-  .live-filter{margin-bottom:12px;}
-  .live-filter select{
-    padding:8px 10px;border-radius:8px;border:1px solid var(--border);
-    background:var(--card);color:var(--ink);font-size:0.88rem;max-width:100%;
-  }
-  .live-list{display:flex;flex-direction:column;gap:8px;}
-  .live-card{
-    background:var(--card);border:1px solid var(--border);border-radius:12px;
-    padding:12px 16px;
-  }
-  .live-card-meta{
-    display:flex;flex-wrap:wrap;gap:8px;font-size:0.75rem;color:var(--muted);
-    margin-bottom:8px;align-items:center;
-  }
   .live-status{
-    font-size:0.7rem;padding:1px 9px;border-radius:999px;font-weight:600;
-    background:var(--border);color:var(--muted);
+    font-size:0.68rem;padding:1px 9px;border-radius:999px;font-weight:600;
+    background:var(--border);color:var(--muted);white-space:nowrap;
   }
   .live-status.finished{background:var(--accent-soft);color:var(--accent);}
   .live-status.in_progress{background:var(--warn-bg);color:#8a6d1f;}
   @media (prefers-color-scheme: dark){
     .live-status.in_progress{color:#e8c766;}
   }
-  .live-teams{display:flex;flex-direction:column;gap:5px;}
-  .live-team-row{
-    display:flex;justify-content:space-between;align-items:center;gap:10px;
-    font-size:0.95rem;color:var(--muted);
-  }
-  .live-team-row.winner{color:var(--ink);font-weight:700;}
-  .live-team-name{flex:1;min-width:0;}
-  .live-set-scores{
-    display:flex;gap:6px;font-variant-numeric:tabular-nums;font-size:0.85rem;
-    white-space:nowrap;
-  }
-  .live-note{margin-top:10px;}
 </style>
 </head>
 <body>
@@ -217,13 +198,85 @@ function genderOf(m) {
   return '其他';
 }
 
-function renderMatchRow(m, q) {
+function normalizeTeamName(name) {
+  // 即時比分網站的隊名前面會加種子序號，例如「(11)達億鐵材行」，主賽程
+  // 資料(events.json)的隊名沒有這個前綴，比對前先把它拿掉。
+  return (name || '').replace(/^\(\d+\)\s*/, '').trim();
+}
+
+function teamsMatch(a, b) {
+  a = normalizeTeamName(a);
+  b = normalizeTeamName(b);
+  if (!a || !b) return false;
+  return a === b || a.includes(b) || b.includes(a);
+}
+
+function findLiveMatch(m, liveMatches) {
+  // 2026-09-19 使用者要求：即時比分不要另外獨立一個區塊，直接接在每一場
+  // 比賽自己的那一列(row)右側。這裡用「比賽時間＋雙方隊名」去比對
+  // live_scores_*.json 裡的場次，抓不到明確對應的話就不顯示比分(row維持
+  // 原樣，不留空白區塊)。venue(場地)寫法兩邊可能不完全一樣(例如「場地 12」
+  // vs「場地12」)，所以先嘗試連場地也比對、比對不到才放寬成只看時間+隊名。
+  // 只用「完全同一個時間」的場次來比對，不要在同時間找不到時退而求其次搜尋
+  // 全部場次——實測發現有些對戰組合(例如「臺中教大 vs 嘉義大學」)在整個賽程
+  // 裡會出現不只一次(不同時段各打一場)，如果不限制時間，某個時段的比賽會
+  // 誤抓到另一個時段的比分。
+  if (!liveMatches || !liveMatches.length) return null;
+  const normVenue = v => (v || '').replace(/\D/g, '');
+  const mVenue = normVenue(m.venue);
+  const pool = liveMatches.filter(lm => lm.time === m.time);
+  if (!pool.length) return null;
+
+  const tryMatch = (candidates, checkVenue) => {
+    for (const lm of candidates) {
+      if (checkVenue && mVenue && normVenue(lm.venue) !== mVenue) continue;
+      if (teamsMatch(lm.team_a, m.team_a) && teamsMatch(lm.team_b, m.team_b)) {
+        return {liveMatch: lm, flipped: false};
+      }
+      if (teamsMatch(lm.team_a, m.team_b) && teamsMatch(lm.team_b, m.team_a)) {
+        return {liveMatch: lm, flipped: true};
+      }
+    }
+    return null;
+  };
+
+  return tryMatch(pool, true) || tryMatch(pool, false);
+}
+
+function renderInlineScore(liveMatch, flipped) {
+  // 比分方塊：狀態徽章＋總局數比分(依主賽程的team_a/team_b順序，
+  // flipped代表即時比分那邊的team_a/team_b剛好跟主賽程相反，要對調)，
+  // 還沒有任何局數比分的(尚未開始)就只顯示狀態、不顯示「0:0」。
+  const box = el('div', {class: 'match-row-score'});
+  const statusText = liveMatch.status === 'finished' ? '已結束'
+    : (liveMatch.status === 'in_progress' ? '進行中' : '尚未開始');
+  box.appendChild(el('span', {class: 'live-status ' + liveMatch.status, text: statusText}));
+
+  const setScores = liveMatch.set_scores || [];
+  const hasScores = setScores.some(pair => (pair[0] !== null && pair[0] !== undefined) || (pair[1] !== null && pair[1] !== undefined));
+  if (hasScores) {
+    const aWins = flipped ? liveMatch.team_b_sets_won : liveMatch.team_a_sets_won;
+    const bWins = flipped ? liveMatch.team_a_sets_won : liveMatch.team_b_sets_won;
+    box.appendChild(el('div', {class: 'match-row-score-total', text: `${aWins ?? 0} : ${bWins ?? 0}`}));
+    const sets = setScores.map(pair => {
+      const a = flipped ? pair[1] : pair[0];
+      const b = flipped ? pair[0] : pair[1];
+      return (a === null || a === undefined ? '-' : a) + '-' + (b === null || b === undefined ? '-' : b);
+    });
+    box.appendChild(el('div', {class: 'match-row-score-sets', text: sets.join('  ')}));
+  }
+
+  return box;
+}
+
+function renderMatchRow(m, q, liveMatches) {
   // 2026-09-10 使用者要求：同一天的比賽擺在同一個方框裡面(見下方
   // renderMatchesGroupedByDate，一個日期分組對應一個 .match-day-card)，
   // 且比賽時間要擺在對戰隊伍「前面」。日期本身已經是分組標題了，這裡
   // (每一場比賽的row)就不重複顯示日期。
   const row = el('div', {class: 'match-row'});
 
+  const left = el('div', {class: 'match-row-left'});
   const main = el('div', {class: 'match-row-main'});
   if (m.time) main.appendChild(el('span', {class: 'match-time', text: '⏰ ' + m.time}));
   const teams = el('span', {class: 'match-teams'});
@@ -231,14 +284,24 @@ function renderMatchRow(m, q) {
   teams.appendChild(el('span', {class: 'vs', text: 'vs'}));
   teams.appendChild(highlight(m.team_b || '', q));
   main.appendChild(teams);
-  row.appendChild(main);
+  left.appendChild(main);
 
   const meta = el('div', {class: 'match-row-meta'});
   if (m.venue) meta.appendChild(el('span', {text: `📍 ${m.venue}`}));
   if (m.group) {
     meta.appendChild(el('span', {class: 'group-tag', text: m.group + (m.match_no ? ' ' + m.match_no : '')}));
   }
-  if (meta.children.length) row.appendChild(meta);
+  if (meta.children.length) left.appendChild(meta);
+
+  row.appendChild(left);
+
+  // 2026-09-19 使用者要求：即時比分直接顯示在對應那一場比賽的row右側，
+  // 不要另外獨立成一個區塊。找不到對應的即時比分資料(大部分場次、或
+  // 其他還沒開打的盃賽)就不顯示這一塊，row保持原本寬度。
+  const liveInfo = liveMatches ? findLiveMatch(m, liveMatches) : null;
+  if (liveInfo) {
+    row.appendChild(renderInlineScore(liveInfo.liveMatch, liveInfo.flipped));
+  }
 
   return row;
 }
@@ -273,10 +336,15 @@ function groupMatchesByDate(matches) {
 }
 
 function renderMatchesGroupedByDate(container, matches, ev, q) {
+  // 2026-09-19 使用者要求：即時比分直接顯示在對應比賽的row裡面，這裡先
+  // 查一次這個盃賽(ev.id)有沒有即時比分資料，有的話往下傳給每一個
+  // renderMatchRow()去比對顯示。
+  const liveData = ev && ev.id ? LIVE_DATA_BY_EVENT[ev.id] : null;
+  const liveMatches = liveData && liveData.matches ? liveData.matches : null;
   groupMatchesByDate(matches).forEach(({key, list}) => {
     container.appendChild(el('div', {class: 'date-heading', text: formatDateHeading(key)}));
     const box = el('div', {class: 'match-day-card'});
-    list.forEach(m => box.appendChild(renderMatchRow(m, q)));
+    list.forEach(m => box.appendChild(renderMatchRow(m, q, liveMatches)));
     container.appendChild(box);
   });
 }
@@ -362,11 +430,6 @@ function renderEventOverviewCard(ev, opts = {}) {
       : '目前還沒有這個賽事的場次資料。';
     card.appendChild(el('div', {class: 'notice', text: 'ℹ️ ' + msg}));
   }
-
-  // 2026-09-19 使用者要求：即時比分直接併入這筆查詢結果卡片裡面，接在
-  // 賽程/附件資訊下面，不要另外獨立成一個有分隔線的大區塊。
-  const liveBlock = renderLiveScoreBlock(ev);
-  if (liveBlock) card.appendChild(liveBlock);
 
   return card;
 }
@@ -471,11 +534,6 @@ function renderResults(query) {
       container.appendChild(el('div', {class: 'gender-heading', text: label}));
       renderMatchesGroupedByDate(container, list, ev, q);
     });
-
-    // 2026-09-19 使用者要求：即時比分直接接在這個盃賽自己的比賽列表下面，
-    // 當作同一組查詢結果的一部分，不要放到頁面最下面、即將登場清單之後。
-    const liveBlock = renderLiveScoreBlock(ev);
-    if (liveBlock) container.appendChild(liveBlock);
   });
 
   // 其餘沒有找到這個關鍵字比賽的賽事，簡化成「即將登場」清單放在最下面，
@@ -535,118 +593,31 @@ fetch('data/last_updated.json')
 // 2026-09-19 即時比分（第一版試做）：資料來源是協會另外找到的即時計分網站
 // (vbg.yungshingroup.com，目前只有永信盃在用)，跟主賽程資料(events.json，
 // 來自協會官網總賽程表PDF)是分開的兩份資料，用 event_id 對應但欄位/隊伍
-// 名稱寫法不完全一樣。目前是手動抓一次存成 docs/data/live_scores_1950.json，
-// 還沒有自動排程更新，等版面確認過後再決定要不要做成定期自動抓取。
+// 名稱寫法不完全一樣(即時比分網站的隊名會加種子序號前綴)。目前是手動抓一次
+// 存成 docs/data/live_scores_1950.json，還沒有自動排程更新，等版面確認過後
+// 再決定要不要做成定期自動抓取。
 //
-// 2026-09-19 使用者反饋兩次調整排版位置：第一版放在頁面最上方(標題底下)，
-// 使用者說要放在原本查詢頁面後面；改成放在查詢結果最後面(即將登場清單之後)
-// 後，使用者又說「即時比數SHOW在查詢後的結果後面就好」，意思是要直接併入
-// 該盃賽自己的查詢結果卡片裡面，接在比賽列表下面，不要另外獨立一個有分隔線
-// 的區塊。所以改成 renderLiveScoreBlock(ev)：由 renderEventOverviewCard()
-// (空白搜尋時的「最近賽事」卡片)跟 renderResults() 的搜尋結果區塊(依盃賽分組
-// 的那個迴圈)各自呼叫，只有 ev.id 在 LIVE_DATA_BY_EVENT 裡有資料時才會顯示，
-// 直接接在該盃賽自己的比賽列表/附件資訊後面。
-
-function renderLiveScoreCard(m) {
-  const card = el('div', {class: 'live-card'});
-
-  const meta = el('div', {class: 'live-card-meta'});
-  if (m.time) meta.appendChild(el('span', {text: '⏰ ' + m.time}));
-  if (m.venue) meta.appendChild(el('span', {text: '📍 ' + m.venue}));
-  if (m.group) {
-    meta.appendChild(el('span', {
-      class: 'group-tag',
-      text: m.group + (m.match_code ? ' ' + m.match_code : ''),
-    }));
-  }
-  const statusText = m.status === 'finished' ? '已結束'
-    : (m.status === 'in_progress' ? '進行中' : '尚未開始');
-  meta.appendChild(el('span', {class: 'live-status ' + m.status, text: statusText}));
-  card.appendChild(meta);
-
-  const teamsBox = el('div', {class: 'live-teams'});
-  ['team_a', 'team_b'].forEach((key, idx) => {
-    const name = m[key] || '';
-    const isWinner = m.winner === key;
-    const row = el('div', {class: 'live-team-row' + (isWinner ? ' winner' : '')});
-    row.appendChild(el('span', {class: 'live-team-name', text: name}));
-    if (m.set_scores && m.set_scores.length) {
-      const scoresWrap = el('span', {class: 'live-set-scores'});
-      m.set_scores.forEach(pair => {
-        const val = pair[idx];
-        scoresWrap.appendChild(el('span', {text: (val === null || val === undefined) ? '-' : val}));
-      });
-      row.appendChild(scoresWrap);
-    }
-    teamsBox.appendChild(row);
-  });
-  card.appendChild(teamsBox);
-
-  return card;
-}
-
-function renderLiveScoreBlock(ev) {
-  const liveData = ev && ev.id ? LIVE_DATA_BY_EVENT[ev.id] : null;
-  const liveMatches = liveData && liveData.matches ? liveData.matches : [];
-  if (!liveMatches.length) return null;
-
-  const wrap = el('div', {class: 'live-wrap'});
-
-  const titleRow = el('div', {class: 'live-title-row'});
-  titleRow.appendChild(el('div', {class: 'live-title', text: '🔴 即時比分'}));
-  titleRow.appendChild(el('div', {
-    class: 'live-updated',
-    text: (liveData.day ? liveData.day + '・' : '') + '更新於 ' + (liveData.updated_at || '未知'),
-  }));
-  wrap.appendChild(titleRow);
-
-  const groups = [...new Set(liveMatches.map(m => m.group).filter(Boolean))];
-  const filterRow = el('div', {class: 'live-filter'});
-  const select = document.createElement('select');
-  const allOpt = document.createElement('option');
-  allOpt.value = '';
-  allOpt.textContent = '全部組別';
-  select.appendChild(allOpt);
-  groups.forEach(g => {
-    const opt = document.createElement('option');
-    opt.value = g;
-    opt.textContent = g;
-    select.appendChild(opt);
-  });
-  filterRow.appendChild(select);
-  wrap.appendChild(filterRow);
-
-  const list = el('div', {class: 'live-list'});
-  wrap.appendChild(list);
-
-  function renderList() {
-    list.innerHTML = '';
-    let matches = liveMatches.slice();
-    if (select.value) matches = matches.filter(m => m.group === select.value);
-    matches.sort((a, b) => (a.time || '').localeCompare(b.time || '') || (a.venue || '').localeCompare(b.venue || ''));
-    if (!matches.length) {
-      list.appendChild(el('div', {class: 'empty', text: '目前這個篩選條件下沒有比賽資料'}));
-      return;
-    }
-    matches.forEach(m => list.appendChild(renderLiveScoreCard(m)));
-  }
-  select.addEventListener('change', renderList);
-  renderList();
-
-  wrap.appendChild(el('div', {
-    class: 'notice live-note',
-    html: '⚠️ 這是第一版試做：資料來源是<a href="' + (liveData.source_url || '#') + '" target="_blank" rel="noopener">協會即時計分網站</a>，目前只有' + (liveData.day || '比賽當天') + '的資料、還沒有自動更新機制，之後會再依你的回饋調整排版跟更新方式。',
-  }));
-
-  return wrap;
-}
+// 2026-09-19 使用者反饋排版位置調整了三次：第一版放在頁面最上方(標題底下)，
+// 使用者說要放原本查詢頁面後面；改成放查詢結果最後面(即將登場清單之後)後，
+// 使用者又說「即時比數SHOW在查詢後的結果後面就好」，改成直接併入該盃賽自己
+// 的查詢結果卡片裡面(renderLiveScoreBlock，接在比賽列表下面、但整場比賽獨立
+// 一塊、還有自己的組別篩選)；使用者看過這版後畫紅框明確指出「將比數加在我
+// 畫面紅框處就好 不需要有另外及時比分的區塊」，紅框位置是每一場比賽那一列
+// (row)的右側空白處——也就是要把比分直接嵌進對應的那一場比賽裡，不要任何
+// 獨立區塊、也不需要組別篩選(反正比賽本身已經是搜尋結果篩選過的)。
+// 所以拿掉了 renderLiveScoreCard()/renderLiveScoreBlock() 這兩個函式，改成
+// findLiveMatch()(依時間+雙方隊名比對出這一場比賽對應的即時比分資料，找不到
+// 就不顯示)+ renderInlineScore()(畫在 renderMatchRow 右側的比分方塊)，直接
+// 在 renderMatchesGroupedByDate() 裡把 LIVE_DATA_BY_EVENT[ev.id] 的資料傳給
+// 每一個 renderMatchRow()。renderEventOverviewCard()(空白搜尋時的「最近賽事」
+// 總覽卡片)本來就不會列出每一場比賽，所以不會顯示比分，這點不受影響。
 
 fetch('data/live_scores_1950.json')
   .then(r => (r.ok ? r.json() : null))
   .then(data => {
     if (data && data.event_id) {
       LIVE_DATA_BY_EVENT[data.event_id] = data;
-      // 即時比分是併入各盃賽自己的查詢結果卡片顯示的，如果這個 fetch 比
+      // 即時比分是嵌在每一場比賽自己的row裡顯示的，如果這個 fetch 比
       // events.json 晚回來，畫面已經先渲染過一次、還沒有即時比分，這裡要
       // 重新呼叫 renderResults() 補上，用目前搜尋欄位的值重繪一次。
       renderResults(document.getElementById('search').value);
