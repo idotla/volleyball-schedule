@@ -172,6 +172,7 @@ def scrape_day(day: str, event_id: str, event_name: str) -> dict:
         unique.append(m)
 
     for i, m in enumerate(unique):
+        m["date"] = day
         m["id"] = f"live-{event_id}-{i}"
 
     now = datetime.now(TZ_TW)
@@ -185,6 +186,19 @@ def scrape_day(day: str, event_id: str, event_name: str) -> dict:
     }
 
 
+def merge_matches(existing_matches, new_matches, day, event_id):
+    # 2026-09-20 使用者要求：比分要累加保留，不要每天互相覆蓋——之前的做法
+    # 是整份檔案直接蓋掉，前一天已經打完、有比分的比賽，過了那一天之後就會
+    # 從這個檔案裡消失(前端也就不會再顯示比分了)。這裡只把「今天」這個 day
+    # 的舊資料換成新抓到的，其他天的資料照原樣保留、疊加上去。
+    kept = [m for m in existing_matches if m.get("date") != day]
+    merged = kept + new_matches
+    merged.sort(key=lambda m: (m.get("date") or "", m.get("venue") or "", m.get("time") or ""))
+    for i, m in enumerate(merged):
+        m["id"] = f"live-{event_id}-{i}"
+    return merged
+
+
 def main():
     ap = argparse.ArgumentParser(description="抓取vbg.yungshingroup.com指定日期的即時比分")
     ap.add_argument("--day", required=True, help="YYYY-MM-DD，要抓哪一天的比分")
@@ -196,8 +210,27 @@ def main():
     data = scrape_day(args.day, args.event_id, args.event_name)
     out_path = Path(args.out or f"docs/data/live_scores_{args.event_id}.json")
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Wrote {len(data['matches'])} matches (day={args.day}) to {out_path}")
+
+    existing_matches = []
+    if out_path.exists():
+        try:
+            existing = json.loads(out_path.read_text(encoding="utf-8"))
+            existing_matches = existing.get("matches", [])
+        except (json.JSONDecodeError, OSError):
+            existing_matches = []
+
+    merged_matches = merge_matches(existing_matches, data["matches"], args.day, args.event_id)
+
+    result = {
+        "event_id": args.event_id,
+        "event_name": args.event_name,
+        "day": args.day,
+        "source_url": data["source_url"],
+        "updated_at": data["updated_at"],
+        "matches": merged_matches,
+    }
+    out_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Wrote {len(merged_matches)} matches total ({len(data['matches'])} for day={args.day}) to {out_path}")
 
 
 if __name__ == "__main__":
