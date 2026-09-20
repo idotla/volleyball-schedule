@@ -3,7 +3,7 @@
   "event_name": "115年第53屆永信盃",
   "day": "2026-09-20",
   "source_url": "https://vbg.yungshingroup.com/tw/event/time?day=2026-09-20",
-  "updated_at": "2026/09/20 08:43",
+  "updated_at": "2026/09/20 09:10",
   "matches": [
     {
       "venue": "場地1",
@@ -1272,11 +1272,20 @@
       "match_code": "小組賽M2",
       "team_a": "(4)中市大雅國中",
       "team_b": "(5)高市三民國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "2"
+        ],
+        [
+          "25",
+          "9"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-90"
     },
     {
@@ -1524,11 +1533,20 @@
       "match_code": "小組賽M18",
       "team_a": "(11)北市天母國小",
       "team_b": "(12)雲縣東勢國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "2"
+        ],
+        [
+          "25",
+          "19"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-108"
     },
     {
@@ -2224,11 +2242,20 @@
       "match_code": "小組賽M18",
       "team_a": "(14)高市中庄國小",
       "team_b": "(15)中市豐田國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "12"
+        ],
+        [
+          "25",
+          "9"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-158"
     },
     {
