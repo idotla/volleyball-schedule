@@ -232,7 +232,7 @@ function findLiveMatch(m, liveMatches) {
   // 比對就永遠對不起來。這裡統一把沒有補零的時間補上0(如 8:30 變 08:30)，
   // 兩邊都改成補零格式再比對，10點以後的場次本來就是兩位數不受影響。
   const normTime = t => (t || '').replace(/^(\d):/, '0$1:');
-  const pool = liveMatches.filter(lm => normTime(lm.time) === normTime(m.time));
+  const pool = liveMatches.filter(lm => normTime(lm.time) === normTime(m.time) && (!lm.date || !m.date || lm.date === m.date));
   if (!pool.length) return null;
 
   const tryMatch = (candidates, checkVenue) => {
