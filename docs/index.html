@@ -226,7 +226,13 @@ function findLiveMatch(m, liveMatches) {
   if (!liveMatches || !liveMatches.length) return null;
   const normVenue = v => (v || '').replace(/\D/g, '');
   const mVenue = normVenue(m.venue);
-  const pool = liveMatches.filter(lm => lm.time === m.time);
+  // 2026-09-20 使用者反饋：8:30、9:30這種早上場次比分一直沒接上，查出來是
+  // 官方賽程表(events.json)的時間有補零(例如「08:30」)，但即時比分那邊
+  // (live_scores_*.json)抓下來的時間沒有補零(「8:30」)，兩邊用字串完全相等
+  // 比對就永遠對不起來。這裡統一去掉開頭的0再比對，10點以後的場次本來就是
+  // 兩位數不受影響。
+  const normTime = t => (t || '').replace(/^0(\d:)/, '$1');
+  const pool = liveMatches.filter(lm => normTime(lm.time) === normTime(m.time));
   if (!pool.length) return null;
 
   const tryMatch = (candidates, checkVenue) => {
