@@ -191,7 +191,8 @@ def merge_matches(existing_matches, new_matches, day, event_id):
     # 是整份檔案直接蓋掉，前一天已經打完、有比分的比賽，過了那一天之後就會
     # 從這個檔案裡消失(前端也就不會再顯示比分了)。這裡只把「今天」這個 day
     # 的舊資料換成新抓到的，其他天的資料照原樣保留、疊加上去。
-    kept = [m for m in existing_matches if m.get("date") != day]
+    # 舊資料裡若有沒有 date 欄位的(這次加 date 欄位之前已經存在的舊資料)，一律當作與今天同一天、一起換掉，避免與新抓到、已經有 date 欄位的今天資料重複。
+    kept = [m for m in existing_matches if m.get("date") not in (None, day)]
     merged = kept + new_matches
     merged.sort(key=lambda m: (m.get("date") or "", m.get("venue") or "", m.get("time") or ""))
     for i, m in enumerate(merged):
