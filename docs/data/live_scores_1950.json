@@ -1,3340 +1,10 @@
 {
   "event_id": "1950",
   "event_name": "115年第53屆永信盃",
-  "day": "2026-09-19",
-  "source_url": "https://vbg.yungshingroup.com/tw/event/time?day=2026-09-19",
-  "updated_at": "2026/09/20 14:44",
+  "day": "2026-09-20",
+  "source_url": "https://vbg.yungshingroup.com/tw/event/time?day=2026-09-20",
+  "updated_at": "2026/09/20 14:48",
   "matches": [
-    {
-      "venue": "場地1",
-      "time": "10:30",
-      "group": "社男組",
-      "match_code": "淘汰賽M24",
-      "team_a": "(1)摸魔茶",
-      "team_b": "(W22)晁德益",
-      "team_a_sets_won": "1",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "25",
-          "20"
-        ],
-        [
-          "21",
-          "25"
-        ],
-        [
-          "12",
-          "15"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-0"
-    },
-    {
-      "venue": "場地1",
-      "time": "11:30",
-      "group": "高男組",
-      "match_code": "小組賽M7",
-      "team_a": "(13)麥寮高中",
-      "team_b": "(15)豐原高商",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "12",
-          "25"
-        ],
-        [
-          "24",
-          "26"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-1"
-    },
-    {
-      "venue": "場地1",
-      "time": "12:30",
-      "group": "社男組",
-      "match_code": "淘汰賽M28",
-      "team_a": "(L24)摸魔茶",
-      "team_b": "(L25)清華大學",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "0"
-        ],
-        [
-          "25",
-          "0"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-2"
-    },
-    {
-      "venue": "場地1",
-      "time": "13:30",
-      "group": "社男組",
-      "match_code": "淘汰賽M30",
-      "team_a": "(W24)晁德益",
-      "team_b": "(W25)連義華排球屋",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-3"
-    },
-    {
-      "venue": "場地1",
-      "time": "14:30",
-      "group": "社男組",
-      "match_code": "淘汰賽M32",
-      "team_a": "(W28)摸魔茶",
-      "team_b": "(W29)豐商明緯",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-4"
-    },
-    {
-      "venue": "場地1",
-      "time": "16:30",
-      "group": "社男組",
-      "match_code": "淘汰賽M33",
-      "team_a": "(L30)",
-      "team_b": "(L31)",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-5"
-    },
-    {
-      "venue": "場地1",
-      "time": "8:30",
-      "group": "社男組",
-      "match_code": "淘汰賽M22",
-      "team_a": "(9)達億鐵材行",
-      "team_b": "(8)晁德益",
-      "team_a_sets_won": "1",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "21",
-          "25"
-        ],
-        [
-          "25",
-          "21"
-        ],
-        [
-          "8",
-          "15"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-6"
-    },
-    {
-      "venue": "場地1",
-      "time": "9:30",
-      "group": "高男組",
-      "match_code": "小組賽M10",
-      "team_a": "(5)縣苑裡高",
-      "team_b": "(6)豐原高中",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "6"
-        ],
-        [
-          "25",
-          "12"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-7"
-    },
-    {
-      "venue": "場地10",
-      "time": "10:30",
-      "group": "大專女組",
-      "match_code": "小組賽M3",
-      "team_a": "(7)聯合大學",
-      "team_b": "(8)臺中教大",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "1",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "12",
-          "25"
-        ],
-        [
-          "25",
-          "21"
-        ],
-        [
-          "15",
-          "11"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-8"
-    },
-    {
-      "venue": "場地10",
-      "time": "11:30",
-      "group": "大專女組",
-      "match_code": "小組賽M4",
-      "team_a": "(10)馬偕醫大",
-      "team_b": "(11)臺體體育",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "11",
-          "25"
-        ],
-        [
-          "8",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-9"
-    },
-    {
-      "venue": "場地10",
-      "time": "12:30",
-      "group": "國女組",
-      "match_code": "小組賽M6",
-      "team_a": "(16)新北聖心女中",
-      "team_b": "(17)屏縣內埔國中",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "13",
-          "256"
-        ],
-        [
-          "14",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-10"
-    },
-    {
-      "venue": "場地10",
-      "time": "13:30",
-      "group": "國女組",
-      "match_code": "小組賽M8",
-      "team_a": "(22)新北鶯歌國中",
-      "team_b": "(23)中市潭秀國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-11"
-    },
-    {
-      "venue": "場地10",
-      "time": "14:30",
-      "group": "國女組",
-      "match_code": "小組賽M10",
-      "team_a": "(5)中市大雅國中",
-      "team_b": "(6)雲縣馬光國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-12"
-    },
-    {
-      "venue": "場地10",
-      "time": "15:30",
-      "group": "國女組",
-      "match_code": "小組賽M12",
-      "team_a": "(11)投縣草屯國中",
-      "team_b": "(12)高市三民國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-13"
-    },
-    {
-      "venue": "場地10",
-      "time": "16:30",
-      "group": "國女組",
-      "match_code": "小組賽M22",
-      "team_a": "(18)桃市建國國中",
-      "team_b": "(16)新北聖心女中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-14"
-    },
-    {
-      "venue": "場地10",
-      "time": "8:30",
-      "group": "大專女組",
-      "match_code": "小組賽M1",
-      "team_a": "(1)國北教大",
-      "team_b": "(2)弘光科大",
-      "team_a_sets_won": "1",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "15",
-          "25"
-        ],
-        [
-          "25",
-          "20"
-        ],
-        [
-          "12",
-          "15"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-15"
-    },
-    {
-      "venue": "場地10",
-      "time": "9:30",
-      "group": "大專女組",
-      "match_code": "小組賽M2",
-      "team_a": "(4)高雄科大",
-      "team_b": "(5)靜宜大學",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "21",
-          "25"
-        ],
-        [
-          "26",
-          "28"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-16"
-    },
-    {
-      "venue": "場地11",
-      "time": "10:30",
-      "group": "國男組",
-      "match_code": "小組賽M5",
-      "team_a": "(13)東縣海端國中",
-      "team_b": "(14)北市誠正國中",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "12",
-          "25"
-        ],
-        [
-          "8",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-17"
-    },
-    {
-      "venue": "場地11",
-      "time": "11:30",
-      "group": "國男組",
-      "match_code": "小組賽M7",
-      "team_a": "(19)桃市八德國中",
-      "team_b": "(20)雲縣麥寮高中",
-      "team_a_sets_won": "1",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "20",
-          "25"
-        ],
-        [
-          "28",
-          "26"
-        ],
-        [
-          "12",
-          "15"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-18"
-    },
-    {
-      "venue": "場地11",
-      "time": "12:30",
-      "group": "國男組",
-      "match_code": "小組賽M9",
-      "team_a": "(2)新北積穗國中",
-      "team_b": "(3)屏縣潮州國中",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "1",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "21"
-        ],
-        [
-          "24",
-          "26"
-        ],
-        [
-          "15",
-          "9"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-19"
-    },
-    {
-      "venue": "場地11",
-      "time": "13:30",
-      "group": "國男組",
-      "match_code": "小組賽M11",
-      "team_a": "(8)投縣同富國中",
-      "team_b": "(9)桃市建國國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-20"
-    },
-    {
-      "venue": "場地11",
-      "time": "14:30",
-      "group": "國男組",
-      "match_code": "小組賽M13",
-      "team_a": "(14)北市誠正國中",
-      "team_b": "(15)中市后里國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-21"
-    },
-    {
-      "venue": "場地11",
-      "time": "15:30",
-      "group": "國男組",
-      "match_code": "小組賽M15",
-      "team_a": "(20)雲縣麥寮高中",
-      "team_b": "(21)屏縣新園國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-22"
-    },
-    {
-      "venue": "場地11",
-      "time": "8:30",
-      "group": "國男組",
-      "match_code": "小組賽M1",
-      "team_a": "(1)苗縣建國國中",
-      "team_b": "(2)新北積穗國中",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "11",
-          "25"
-        ],
-        [
-          "22",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-23"
-    },
-    {
-      "venue": "場地11",
-      "time": "9:30",
-      "group": "國男組",
-      "match_code": "小組賽M3",
-      "team_a": "(7)中市潭秀國中",
-      "team_b": "(8)投縣同富國中",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "15"
-        ],
-        [
-          "25",
-          "21"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-24"
-    },
-    {
-      "venue": "場地12",
-      "time": "10:30",
-      "group": "國男組",
-      "match_code": "小組賽M6",
-      "team_a": "(16)竹縣二重國中",
-      "team_b": "(17)苗縣苑裡高中",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "11",
-          "25"
-        ],
-        [
-          "22",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-25"
-    },
-    {
-      "venue": "場地12",
-      "time": "11:30",
-      "group": "國男組",
-      "match_code": "小組賽M8",
-      "team_a": "(22)中市四張犁國中",
-      "team_b": "(23)新北鶯歌國中",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "9",
-          "25"
-        ],
-        [
-          "19",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-26"
-    },
-    {
-      "venue": "場地12",
-      "time": "12:30",
-      "group": "國男組",
-      "match_code": "小組賽M10",
-      "team_a": "(5)高市三民國中",
-      "team_b": "(6)屏縣明正國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-27"
-    },
-    {
-      "venue": "場地12",
-      "time": "13:30",
-      "group": "國男組",
-      "match_code": "小組賽M12",
-      "team_a": "(11)雲縣馬光國中",
-      "team_b": "(12)中市居仁國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-28"
-    },
-    {
-      "venue": "場地12",
-      "time": "14:30",
-      "group": "國男組",
-      "match_code": "小組賽M14",
-      "team_a": "(17)苗縣苑裡高中",
-      "team_b": "(18)屏縣內埔國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-29"
-    },
-    {
-      "venue": "場地12",
-      "time": "15:30",
-      "group": "國男組",
-      "match_code": "小組賽M16",
-      "team_a": "(23)新北鶯歌國中",
-      "team_b": "(24)嘉縣義竹國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-30"
-    },
-    {
-      "venue": "場地12",
-      "time": "8:30",
-      "group": "國男組",
-      "match_code": "小組賽M2",
-      "team_a": "(4)中市大雅國中",
-      "team_b": "(5)高市三民國中",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "2"
-        ],
-        [
-          "25",
-          "9"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-31"
-    },
-    {
-      "venue": "場地12",
-      "time": "9:30",
-      "group": "國男組",
-      "match_code": "小組賽M4",
-      "team_a": "(10)投縣草屯國中",
-      "team_b": "(11)雲縣馬光國中",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "1",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "21",
-          "25"
-        ],
-        [
-          "25",
-          "17"
-        ],
-        [
-          "15",
-          "12"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-32"
-    },
-    {
-      "venue": "場地13",
-      "time": "10:10",
-      "group": "五年級男童組",
-      "match_code": "小組賽M21",
-      "team_a": "(20)高市樂群國小",
-      "team_b": "(21)中市中山國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "1",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "19"
-        ],
-        [
-          "19",
-          "25"
-        ],
-        [
-          "15",
-          "7"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-33"
-    },
-    {
-      "venue": "場地13",
-      "time": "11:00",
-      "group": "五年級男童組",
-      "match_code": "小組賽M23",
-      "team_a": "(26)宜縣礁溪國小",
-      "team_b": "(27)桃市中山國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "22"
-        ],
-        [
-          "25",
-          "19"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-34"
-    },
-    {
-      "venue": "場地13",
-      "time": "11:50",
-      "group": "五年級男童組",
-      "match_code": "小組賽M25",
-      "team_a": "(31)雲縣橋頭國小",
-      "team_b": "(34)新北三峽國小",
-      "team_a_sets_won": "1",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "25",
-          "22"
-        ],
-        [
-          "17",
-          "25"
-        ],
-        [
-          "6",
-          "15"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-35"
-    },
-    {
-      "venue": "場地13",
-      "time": "12:40",
-      "group": "五年級男童組",
-      "match_code": "小組賽M27",
-      "team_a": "(3)南市安慶國小",
-      "team_b": "(1)中市東寶國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "22"
-        ],
-        [
-          "25",
-          "18"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-36"
-    },
-    {
-      "venue": "場地13",
-      "time": "13:30",
-      "group": "五年級男童組",
-      "match_code": "小組賽M29",
-      "team_a": "(9)屏縣霧臺國小",
-      "team_b": "(7)竹縣新豐國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-37"
-    },
-    {
-      "venue": "場地13",
-      "time": "14:20",
-      "group": "五年級男童組",
-      "match_code": "小組賽M31",
-      "team_a": "(15)中市惠文國小",
-      "team_b": "(13)南市六甲國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-38"
-    },
-    {
-      "venue": "場地13",
-      "time": "15:10",
-      "group": "五年級男童組",
-      "match_code": "小組賽M33",
-      "team_a": "(21)中市中山國小",
-      "team_b": "(19)新北文林國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-39"
-    },
-    {
-      "venue": "場地13",
-      "time": "16:00",
-      "group": "五年級男童組",
-      "match_code": "小組賽M35",
-      "team_a": "(27)桃市中山國小",
-      "team_b": "(25)新北積穗國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-40"
-    },
-    {
-      "venue": "場地13",
-      "time": "8:30",
-      "group": "五年級男童組",
-      "match_code": "小組賽M17",
-      "team_a": "(8)新北大觀國小",
-      "team_b": "(9)屏縣霧臺國小",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "8",
-          "25"
-        ],
-        [
-          "13",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-41"
-    },
-    {
-      "venue": "場地13",
-      "time": "9:20",
-      "group": "五年級男童組",
-      "match_code": "小組賽M19",
-      "team_a": "(14)北市三民國小",
-      "team_b": "(15)中市惠文國小",
-      "team_a_sets_won": "1",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "25",
-          "16"
-        ],
-        [
-          "20",
-          "25"
-        ],
-        [
-          "4",
-          "15"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-42"
-    },
-    {
-      "venue": "場地14",
-      "time": "10:10",
-      "group": "五年級男童組",
-      "match_code": "小組賽M22",
-      "team_a": "(23)中市大雅國小",
-      "team_b": "(24)新北重慶國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "6"
-        ],
-        [
-          "25",
-          "10"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-43"
-    },
-    {
-      "venue": "場地14",
-      "time": "11:00",
-      "group": "五年級男童組",
-      "match_code": "小組賽M24",
-      "team_a": "(29)雲縣北辰國小",
-      "team_b": "(30)中市力行國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "23"
-        ],
-        [
-          "25",
-          "9"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-44"
-    },
-    {
-      "venue": "場地14",
-      "time": "11:50",
-      "group": "五年級男童組",
-      "match_code": "小組賽M26",
-      "team_a": "(33)桃市大成國小",
-      "team_b": "(32)中市大元國小",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "12",
-          "25"
-        ],
-        [
-          "24",
-          "26"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-45"
-    },
-    {
-      "venue": "場地14",
-      "time": "12:40",
-      "group": "五年級男童組",
-      "match_code": "小組賽M28",
-      "team_a": "(6)新北頂溪國小",
-      "team_b": "(4)中市東勢國小",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "12",
-          "25"
-        ],
-        [
-          "25",
-          "27"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-46"
-    },
-    {
-      "venue": "場地14",
-      "time": "13:30",
-      "group": "五年級男童組",
-      "match_code": "小組賽M30",
-      "team_a": "(12)雲縣東勢國小",
-      "team_b": "(10)新北後埔國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-47"
-    },
-    {
-      "venue": "場地14",
-      "time": "14:20",
-      "group": "五年級男童組",
-      "match_code": "小組賽M32",
-      "team_a": "(18)新北莒光國小",
-      "team_b": "(16)北市長春國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-48"
-    },
-    {
-      "venue": "場地14",
-      "time": "15:10",
-      "group": "五年級男童組",
-      "match_code": "小組賽M34",
-      "team_a": "(24)新北重慶國小",
-      "team_b": "(22)嘉縣朴子國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-49"
-    },
-    {
-      "venue": "場地14",
-      "time": "16:00",
-      "group": "五年級男童組",
-      "match_code": "小組賽M36",
-      "team_a": "(30)中市力行國小",
-      "team_b": "(28)高市中庄國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-50"
-    },
-    {
-      "venue": "場地14",
-      "time": "8:30",
-      "group": "五年級男童組",
-      "match_code": "小組賽M18",
-      "team_a": "(11)北市天母國小",
-      "team_b": "(12)雲縣東勢國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "2"
-        ],
-        [
-          "25",
-          "19"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-51"
-    },
-    {
-      "venue": "場地14",
-      "time": "9:20",
-      "group": "五年級男童組",
-      "match_code": "小組賽M20",
-      "team_a": "(17)雲縣麥寮國小",
-      "team_b": "(18)新北莒光國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "5"
-        ],
-        [
-          "25",
-          "17"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-52"
-    },
-    {
-      "venue": "場地15",
-      "time": "10:10",
-      "group": "五年級女童組",
-      "match_code": "小組賽M19",
-      "team_a": "(11)中市北屯國小",
-      "team_b": "(12)雲縣馬光國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "14"
-        ],
-        [
-          "25",
-          "12"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-53"
-    },
-    {
-      "venue": "場地15",
-      "time": "11:00",
-      "group": "五年級女童組",
-      "match_code": "小組賽M20",
-      "team_a": "(14)北市東新國小",
-      "team_b": "(15)竹縣六家國小",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "18",
-          "25"
-        ],
-        [
-          "20",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-54"
-    },
-    {
-      "venue": "場地15",
-      "time": "11:50",
-      "group": "五年級女童組",
-      "match_code": "小組賽M21",
-      "team_a": "(17)中市西屯國小",
-      "team_b": "(18)桃市中山國小",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "9",
-          "25"
-        ],
-        [
-          "8",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-55"
-    },
-    {
-      "venue": "場地15",
-      "time": "12:40",
-      "group": "五年級女童組",
-      "match_code": "小組賽M22",
-      "team_a": "(20)新北積穗國小",
-      "team_b": "(21)中市東寶國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "18"
-        ],
-        [
-          "25",
-          "22"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-56"
-    },
-    {
-      "venue": "場地15",
-      "time": "13:30",
-      "group": "五年級女童組",
-      "match_code": "小組賽M28",
-      "team_a": "(6)新北文林國小",
-      "team_b": "(4)中市大雅國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-57"
-    },
-    {
-      "venue": "場地15",
-      "time": "14:20",
-      "group": "五年級女童組",
-      "match_code": "小組賽M29",
-      "team_a": "(9)新北莒光國小",
-      "team_b": "(7)桃市大成國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-58"
-    },
-    {
-      "venue": "場地15",
-      "time": "15:10",
-      "group": "五年級女童組",
-      "match_code": "小組賽M30",
-      "team_a": "(12)雲縣馬光國小",
-      "team_b": "(10)新北後埔國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-59"
-    },
-    {
-      "venue": "場地15",
-      "time": "16:00",
-      "group": "五年級女童組",
-      "match_code": "小組賽M31",
-      "team_a": "(15)竹縣六家國小",
-      "team_b": "(13)中市神岡國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-60"
-    },
-    {
-      "venue": "場地15",
-      "time": "8:30",
-      "group": "五年級女童組",
-      "match_code": "小組賽M17",
-      "team_a": "(5)南市東興國小",
-      "team_b": "(6)新北文林國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "16"
-        ],
-        [
-          "25",
-          "8"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-61"
-    },
-    {
-      "venue": "場地15",
-      "time": "9:20",
-      "group": "五年級女童組",
-      "match_code": "小組賽M18",
-      "team_a": "(8)高市中庄國小",
-      "team_b": "(9)新北莒光國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "17"
-        ],
-        [
-          "25",
-          "19"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-62"
-    },
-    {
-      "venue": "場地16",
-      "time": "10:10",
-      "group": "六年級女童組",
-      "match_code": "小組賽M23",
-      "team_a": "(28)高市莊敬國小",
-      "team_b": "(31)中市西屯國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "17"
-        ],
-        [
-          "25",
-          "12"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-63"
-    },
-    {
-      "venue": "場地16",
-      "time": "11:00",
-      "group": "六年級女童組",
-      "match_code": "小組賽M25",
-      "team_a": "(3)中市北屯國小",
-      "team_b": "(1)屏縣內埔國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "29",
-          "27"
-        ],
-        [
-          "25",
-          "21"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-64"
-    },
-    {
-      "venue": "場地16",
-      "time": "11:50",
-      "group": "六年級女童組",
-      "match_code": "小組賽M27",
-      "team_a": "(9)中市惠文國小",
-      "team_b": "(7)北市天母國小",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "14",
-          "25"
-        ],
-        [
-          "23",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-65"
-    },
-    {
-      "venue": "場地16",
-      "time": "12:40",
-      "group": "六年級女童組",
-      "match_code": "小組賽M29",
-      "team_a": "(15)中市豐田國小",
-      "team_b": "(13)苗縣苑裡國小",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "12",
-          "25"
-        ],
-        [
-          "11",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-66"
-    },
-    {
-      "venue": "場地16",
-      "time": "13:30",
-      "group": "六年級女童組",
-      "match_code": "小組賽M31",
-      "team_a": "(21)新北大觀國小",
-      "team_b": "(19)苗縣卓蘭國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-67"
-    },
-    {
-      "venue": "場地16",
-      "time": "14:20",
-      "group": "五年級女童組",
-      "match_code": "小組賽M27",
-      "team_a": "(3)雲縣橋頭國小",
-      "team_b": "(1)新北大觀國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-68"
-    },
-    {
-      "venue": "場地16",
-      "time": "15:10",
-      "group": "五年級女童組",
-      "match_code": "小組賽M23",
-      "team_a": "(22)苗縣苑裡國小",
-      "team_b": "(25)新北頂溪國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-69"
-    },
-    {
-      "venue": "場地16",
-      "time": "16:00",
-      "group": "五年級女童組",
-      "match_code": "小組賽M25",
-      "team_a": "(26)新北三峽國小",
-      "team_b": "(29)中市力行國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-70"
-    },
-    {
-      "venue": "場地16",
-      "time": "8:30",
-      "group": "六年級女童組",
-      "match_code": "小組賽M19",
-      "team_a": "(17)新北積穗國小",
-      "team_b": "(18)雲縣北辰國小",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "15",
-          "25"
-        ],
-        [
-          "13",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-71"
-    },
-    {
-      "venue": "場地16",
-      "time": "9:20",
-      "group": "六年級女童組",
-      "match_code": "小組賽M21",
-      "team_a": "(23)嘉縣朴子國小",
-      "team_b": "(24)中市新平國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "4"
-        ],
-        [
-          "25",
-          "14"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-72"
-    },
-    {
-      "venue": "場地17",
-      "time": "10:10",
-      "group": "六年級女童組",
-      "match_code": "小組賽M24",
-      "team_a": "(30)新北文林國小",
-      "team_b": "(29)北市五常國小",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "12",
-          "25"
-        ],
-        [
-          "13",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-73"
-    },
-    {
-      "venue": "場地17",
-      "time": "11:00",
-      "group": "六年級女童組",
-      "match_code": "小組賽M26",
-      "team_a": "(6)竹縣光明國小",
-      "team_b": "(4)中市大雅國小",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "20",
-          "25"
-        ],
-        [
-          "12",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-74"
-    },
-    {
-      "venue": "場地17",
-      "time": "11:50",
-      "group": "六年級女童組",
-      "match_code": "小組賽M28",
-      "team_a": "(12)中市東寶國小",
-      "team_b": "(10)北市三民國小",
-      "team_a_sets_won": "1",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "18",
-          "25"
-        ],
-        [
-          "25",
-          "23"
-        ],
-        [
-          "6",
-          "15"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-75"
-    },
-    {
-      "venue": "場地17",
-      "time": "12:40",
-      "group": "六年級女童組",
-      "match_code": "小組賽M30",
-      "team_a": "(18)雲縣北辰國小",
-      "team_b": "(16)中市神岡國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "15"
-        ],
-        [
-          "25",
-          "14"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-76"
-    },
-    {
-      "venue": "場地17",
-      "time": "13:30",
-      "group": "六年級女童組",
-      "match_code": "小組賽M32",
-      "team_a": "(24)中市新平國小",
-      "team_b": "(22)高市樂群國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-77"
-    },
-    {
-      "venue": "場地17",
-      "time": "14:20",
-      "group": "六年級女童組",
-      "match_code": "小組賽M33",
-      "team_a": "(27)桃市大成國小",
-      "team_b": "(25)北市明湖國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-78"
-    },
-    {
-      "venue": "場地17",
-      "time": "15:10",
-      "group": "五年級女童組",
-      "match_code": "小組賽M24",
-      "team_a": "(24)竹縣光明國小",
-      "team_b": "(23)中市新平國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-79"
-    },
-    {
-      "venue": "場地17",
-      "time": "16:00",
-      "group": "五年級女童組",
-      "match_code": "小組賽M26",
-      "team_a": "(28)高市樂群國小",
-      "team_b": "(27)屏縣崇蘭國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-80"
-    },
-    {
-      "venue": "場地17",
-      "time": "8:30",
-      "group": "六年級女童組",
-      "match_code": "小組賽M20",
-      "team_a": "(20)中市力行國小",
-      "team_b": "(21)新北大觀國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "7"
-        ],
-        [
-          "25",
-          "6"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-81"
-    },
-    {
-      "venue": "場地17",
-      "time": "9:20",
-      "group": "六年級女童組",
-      "match_code": "小組賽M22",
-      "team_a": "(26)新北頂溪國小",
-      "team_b": "(27)桃市大成國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "17"
-        ],
-        [
-          "25",
-          "7"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-82"
-    },
-    {
-      "venue": "場地18",
-      "time": "10:10",
-      "group": "六年級男童組",
-      "match_code": "小組賽M19",
-      "team_a": "(17)嘉縣朴子國小",
-      "team_b": "(18)新北文林國小",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "21",
-          "25"
-        ],
-        [
-          "12",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-83"
-    },
-    {
-      "venue": "場地18",
-      "time": "11:00",
-      "group": "六年級男童組",
-      "match_code": "小組賽M21",
-      "team_a": "(23)北市三民國小",
-      "team_b": "(24)新北莒光國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "20"
-        ],
-        [
-          "26",
-          "24"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-84"
-    },
-    {
-      "venue": "場地18",
-      "time": "11:50",
-      "group": "六年級男童組",
-      "match_code": "小組賽M23",
-      "team_a": "(29)新北三峽國小",
-      "team_b": "(30)中市惠文國小",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "14",
-          "25"
-        ],
-        [
-          "16",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-85"
-    },
-    {
-      "venue": "場地18",
-      "time": "12:40",
-      "group": "六年級男童組",
-      "match_code": "小組賽M25",
-      "team_a": "(35)桃市大成國小",
-      "team_b": "(36)中市南陽國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-86"
-    },
-    {
-      "venue": "場地18",
-      "time": "13:30",
-      "group": "六年級男童組",
-      "match_code": "小組賽M27",
-      "team_a": "(3)高市樂群國小",
-      "team_b": "(1)苗縣苑裡國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-87"
-    },
-    {
-      "venue": "場地18",
-      "time": "14:20",
-      "group": "六年級男童組",
-      "match_code": "小組賽M29",
-      "team_a": "(9)雲縣北辰國小",
-      "team_b": "(7)中市四張犁國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-88"
-    },
-    {
-      "venue": "場地18",
-      "time": "15:10",
-      "group": "六年級男童組",
-      "match_code": "小組賽M31",
-      "team_a": "(15)雲縣大有國小",
-      "team_b": "(13)屏縣萬丹國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-89"
-    },
-    {
-      "venue": "場地18",
-      "time": "16:00",
-      "group": "六年級男童組",
-      "match_code": "小組賽M33",
-      "team_a": "(21)新北重慶國小",
-      "team_b": "(19)嘉市北園國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-90"
-    },
-    {
-      "venue": "場地18",
-      "time": "8:30",
-      "group": "六年級女童組",
-      "match_code": "小組賽M17",
-      "team_a": "(11)新北後埔國小",
-      "team_b": "(12)中市東寶國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "1",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "15",
-          "25"
-        ],
-        [
-          "25",
-          "17"
-        ],
-        [
-          "15",
-          "13"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-91"
-    },
-    {
-      "venue": "場地18",
-      "time": "9:20",
-      "group": "六年級男童組",
-      "match_code": "小組賽M17",
-      "team_a": "(11)北市天母國小",
-      "team_b": "(12)雲縣麥寮國小",
-      "team_a_sets_won": "1",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "12",
-          "25"
-        ],
-        [
-          "25",
-          "22"
-        ],
-        [
-          "7",
-          "15"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-92"
-    },
-    {
-      "venue": "場地19",
-      "time": "10:10",
-      "group": "六年級男童組",
-      "match_code": "小組賽M20",
-      "team_a": "(20)中市大雅國小",
-      "team_b": "(21)新北重慶國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "16"
-        ],
-        [
-          "25",
-          "20"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-93"
-    },
-    {
-      "venue": "場地19",
-      "time": "11:00",
-      "group": "六年級男童組",
-      "match_code": "小組賽M22",
-      "team_a": "(26)高市中庄國小",
-      "team_b": "(27)中市大元國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "18"
-        ],
-        [
-          "25",
-          "22"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-94"
-    },
-    {
-      "venue": "場地19",
-      "time": "11:50",
-      "group": "六年級男童組",
-      "match_code": "小組賽M24",
-      "team_a": "(32)中市力行國小",
-      "team_b": "(33)屏縣佳義國小",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "9",
-          "25"
-        ],
-        [
-          "15",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-95"
-    },
-    {
-      "venue": "場地19",
-      "time": "12:40",
-      "group": "六年級男童組",
-      "match_code": "小組賽M26",
-      "team_a": "(38)中市東寶國小",
-      "team_b": "(39)北市五常國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "12"
-        ],
-        [
-          "25",
-          "19"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-96"
-    },
-    {
-      "venue": "場地19",
-      "time": "13:30",
-      "group": "六年級男童組",
-      "match_code": "小組賽M28",
-      "team_a": "(6)新北大觀國小",
-      "team_b": "(4)屏縣霧臺國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-97"
-    },
-    {
-      "venue": "場地19",
-      "time": "14:20",
-      "group": "六年級男童組",
-      "match_code": "小組賽M30",
-      "team_a": "(12)雲縣麥寮國小",
-      "team_b": "(10)新北積穗國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-98"
-    },
-    {
-      "venue": "場地19",
-      "time": "15:10",
-      "group": "六年級男童組",
-      "match_code": "小組賽M32",
-      "team_a": "(18)新北文林國小",
-      "team_b": "(16)桃市中山國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-99"
-    },
-    {
-      "venue": "場地19",
-      "time": "16:00",
-      "group": "六年級男童組",
-      "match_code": "小組賽M34",
-      "team_a": "(24)新北莒光國小",
-      "team_b": "(22)南市開元國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-100"
-    },
-    {
-      "venue": "場地19",
-      "time": "8:30",
-      "group": "六年級女童組",
-      "match_code": "小組賽M18",
-      "team_a": "(14)高市中庄國小",
-      "team_b": "(15)中市豐田國小",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "12"
-        ],
-        [
-          "25",
-          "9"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-101"
-    },
-    {
-      "venue": "場地19",
-      "time": "9:20",
-      "group": "六年級男童組",
-      "match_code": "小組賽M18",
-      "team_a": "(14)北市福星國小",
-      "team_b": "(15)雲縣大有國小",
-      "team_a_sets_won": "1",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "21",
-          "25"
-        ],
-        [
-          "25",
-          "18"
-        ],
-        [
-          "11",
-          "15"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-102"
-    },
-    {
-      "venue": "場地2",
-      "time": "10:30",
-      "group": "社男組",
-      "match_code": "淘汰賽M27",
-      "team_a": "(W23)豐商明緯",
-      "team_b": "(2)青稻夫農產",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "20",
-          "25"
-        ],
-        [
-          "18",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-103"
-    },
-    {
-      "venue": "場地2",
-      "time": "11:30",
-      "group": "高男組",
-      "match_code": "小組賽M8",
-      "team_a": "(14)臺中家商",
-      "team_b": "(16)永慶高中",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "10",
-          "25"
-        ],
-        [
-          "12",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-104"
-    },
-    {
-      "venue": "場地2",
-      "time": "12:30",
-      "group": "社男組",
-      "match_code": "淘汰賽M29",
-      "team_a": "(L26)靜宜大學B",
-      "team_b": "(L27)豐商明緯",
-      "team_a_sets_won": "1",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "25",
-          "23"
-        ],
-        [
-          "21",
-          "25"
-        ],
-        [
-          "12",
-          "15"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-105"
-    },
-    {
-      "venue": "場地2",
-      "time": "13:30",
-      "group": "社男組",
-      "match_code": "淘汰賽M31",
-      "team_a": "(W26)彰化師大",
-      "team_b": "(W27)青稻夫農產",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-106"
-    },
-    {
-      "venue": "場地2",
-      "time": "14:30",
-      "group": "社會九人制組",
-      "match_code": "淘汰賽M24",
-      "team_a": "(L21)崇友電梯",
-      "team_b": "(L22)東海校友A",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-107"
-    },
-    {
-      "venue": "場地2",
-      "time": "16:30",
-      "group": "社男組",
-      "match_code": "淘汰賽M34",
-      "team_a": "(W30)",
-      "team_b": "(W31)",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-108"
-    },
-    {
-      "venue": "場地2",
-      "time": "8:30",
-      "group": "社男組",
-      "match_code": "淘汰賽M23",
-      "team_a": "(7)龍津",
-      "team_b": "(10)豐商明緯",
-      "team_a_sets_won": "1",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "15",
-          "25"
-        ],
-        [
-          "25",
-          "17"
-        ],
-        [
-          "10",
-          "15"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-109"
-    },
-    {
-      "venue": "場地2",
-      "time": "9:30",
-      "group": "高男組",
-      "match_code": "小組賽M11",
-      "team_a": "(8)白河商工",
-      "team_b": "(9)龍津高中",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "22",
-          "25"
-        ],
-        [
-          "18",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-110"
-    },
-    {
-      "venue": "場地3",
-      "time": "10:30",
-      "group": "社男組",
-      "match_code": "淘汰賽M25",
-      "team_a": "(5)清華大學",
-      "team_b": "(4)連義華排球屋",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "25",
-          "22"
-        ],
-        [
-          "29",
-          "27"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-111"
-    },
-    {
-      "venue": "場地3",
-      "time": "11:30",
-      "group": "高男組",
-      "match_code": "小組賽M15",
-      "team_a": "(3)潮州高中",
-      "team_b": "(1)興大附農",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "16"
-        ],
-        [
-          "25",
-          "23"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-112"
-    },
-    {
-      "venue": "場地3",
-      "time": "12:30",
-      "group": "高男組",
-      "match_code": "小組賽M16",
-      "team_a": "(6)豐原高中",
-      "team_b": "(4)壽山高中",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "1",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "24",
-          "26"
-        ],
-        [
-          "25",
-          "18"
-        ],
-        [
-          "15",
-          "8"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-113"
-    },
-    {
-      "venue": "場地3",
-      "time": "13:30",
-      "group": "高男組",
-      "match_code": "小組賽M17",
-      "team_a": "(9)龍津高中",
-      "team_b": "(7)武陵高中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-114"
-    },
-    {
-      "venue": "場地3",
-      "time": "14:30",
-      "group": "社會九人制組",
-      "match_code": "淘汰賽M25",
-      "team_a": "(W21)白河一群農夫",
-      "team_b": "(W22)排球壯年左隊",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-115"
-    },
-    {
-      "venue": "場地3",
-      "time": "16:30",
-      "group": "大專男組",
-      "match_code": "淘汰賽M19",
-      "team_a": "(9)",
-      "team_b": "(8)",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-116"
-    },
-    {
-      "venue": "場地3",
-      "time": "8:30",
-      "group": "高男組",
-      "match_code": "小組賽M9",
-      "team_a": "(2)臺中一中",
-      "team_b": "(3)潮州高中",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "19",
-          "25"
-        ],
-        [
-          "11",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-117"
-    },
-    {
-      "venue": "場地3",
-      "time": "9:30",
-      "group": "高男組",
-      "match_code": "小組賽M12",
-      "team_a": "(11)僑泰高中",
-      "team_b": "(12)曾文農工",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "11",
-          "25"
-        ],
-        [
-          "18",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-118"
-    },
-    {
-      "venue": "場地4",
-      "time": "10:30",
-      "group": "社男組",
-      "match_code": "淘汰賽M26",
-      "team_a": "(3)彰化師大",
-      "team_b": "(6)靜宜大學B",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "21"
-        ],
-        [
-          "25",
-          "14"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-119"
-    },
-    {
-      "venue": "場地4",
-      "time": "11:30",
-      "group": "社會九人制組",
-      "match_code": "淘汰賽M23",
-      "team_a": "(L19)興齡長照",
-      "team_b": "(L20)永發停車",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "21",
-          "0"
-        ],
-        [
-          "21",
-          "0"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-120"
-    },
-    {
-      "venue": "場地4",
-      "time": "12:30",
-      "group": "大專男組",
-      "match_code": "小組賽M13",
-      "team_a": "(3)虎尾科大",
-      "team_b": "(1)臺中教大",
-      "team_a_sets_won": "1",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "23",
-          "25"
-        ],
-        [
-          "25",
-          "17"
-        ],
-        [
-          "14",
-          "16"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-121"
-    },
-    {
-      "venue": "場地4",
-      "time": "13:30",
-      "group": "大專男組",
-      "match_code": "小組賽M16",
-      "team_a": "(12)明志科大",
-      "team_b": "(10)勤益科大",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-122"
-    },
-    {
-      "venue": "場地4",
-      "time": "14:30",
-      "group": "高男組",
-      "match_code": "小組賽M18",
-      "team_a": "(12)曾文農工",
-      "team_b": "(10)陽明交大附中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-123"
-    },
-    {
-      "venue": "場地4",
-      "time": "16:30",
-      "group": "大專男組",
-      "match_code": "淘汰賽M20",
-      "team_a": "(5)",
-      "team_b": "(12)",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-124"
-    },
-    {
-      "venue": "場地4",
-      "time": "8:30",
-      "group": "社會九人制組",
-      "match_code": "淘汰賽M19",
-      "team_a": "(5)興齡長照",
-      "team_b": "(4)白河一群農夫",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "21",
-          "23"
-        ],
-        [
-          "12",
-          "21"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-125"
-    },
-    {
-      "venue": "場地4",
-      "time": "9:30",
-      "group": "大專男組",
-      "match_code": "小組賽M10",
-      "team_a": "(11)國北教大",
-      "team_b": "(12)明志科大",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "20",
-          "25"
-        ],
-        [
-          "4",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-126"
-    },
-    {
-      "venue": "場地5",
-      "time": "10:30",
-      "group": "大專男組",
-      "match_code": "小組賽M11",
-      "team_a": "(14)明新科大",
-      "team_b": "(15)亞洲大學",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "12",
-          "25"
-        ],
-        [
-          "24",
-          "26"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-127"
-    },
-    {
-      "venue": "場地5",
-      "time": "11:30",
-      "group": "社會九人制組",
-      "match_code": "淘汰賽M21",
-      "team_a": "(1)崇友電梯",
-      "team_b": "(W19)白河一群農夫",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "18",
-          "21"
-        ],
-        [
-          "18",
-          "21"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-128"
-    },
-    {
-      "venue": "場地5",
-      "time": "12:30",
-      "group": "大專男組",
-      "match_code": "小組賽M14",
-      "team_a": "(6)台北科大",
-      "team_b": "(4)陽明交大",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-129"
-    },
-    {
-      "venue": "場地5",
-      "time": "13:30",
-      "group": "大專男組",
-      "match_code": "小組賽M17",
-      "team_a": "(15)亞洲大學",
-      "team_b": "(13)臺灣體大",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-130"
-    },
-    {
-      "venue": "場地5",
-      "time": "14:30",
-      "group": "高男組",
-      "match_code": "小組賽M13",
-      "team_a": "(13)麥寮高中",
-      "team_b": "(16)永慶高中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-131"
-    },
-    {
-      "venue": "場地5",
-      "time": "16:30",
-      "group": "大專男組",
-      "match_code": "淘汰賽M21",
-      "team_a": "(11)",
-      "team_b": "(6)",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-132"
-    },
-    {
-      "venue": "場地5",
-      "time": "8:30",
-      "group": "社會九人制組",
-      "match_code": "淘汰賽M20",
-      "team_a": "(3)排球壯年左隊",
-      "team_b": "(2E)永發停車",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "21",
-          "19"
-        ],
-        [
-          "21",
-          "14"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-133"
-    },
-    {
-      "venue": "場地5",
-      "time": "9:30",
-      "group": "大專男組",
-      "match_code": "小組賽M8",
-      "team_a": "(5)中興大學",
-      "team_b": "(6)台北科大",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "1",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "19"
-        ],
-        [
-          "22",
-          "25"
-        ],
-        [
-          "18",
-          "16"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-134"
-    },
-    {
-      "venue": "場地6",
-      "time": "10:30",
-      "group": "大專男組",
-      "match_code": "小組賽M12",
-      "team_a": "(17)高雄師大",
-      "team_b": "(18)僑光科大",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "20"
-        ],
-        [
-          "25",
-          "15"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-135"
-    },
-    {
-      "venue": "場地6",
-      "time": "11:30",
-      "group": "社會九人制組",
-      "match_code": "淘汰賽M22",
-      "team_a": "(W20)排球壯年左隊",
-      "team_b": "(2)東海校友A",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "1",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "21",
-          "19"
-        ],
-        [
-          "17",
-          "21"
-        ],
-        [
-          "21",
-          "15"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-136"
-    },
-    {
-      "venue": "場地6",
-      "time": "12:30",
-      "group": "大專男組",
-      "match_code": "小組賽M15",
-      "team_a": "(9)雲林科大",
-      "team_b": "(7)屏東大學",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-137"
-    },
-    {
-      "venue": "場地6",
-      "time": "13:30",
-      "group": "大專男組",
-      "match_code": "小組賽M18",
-      "team_a": "(18)僑光科大",
-      "team_b": "(16)靜宜大學",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-138"
-    },
-    {
-      "venue": "場地6",
-      "time": "14:30",
-      "group": "高男組",
-      "match_code": "小組賽M14",
-      "team_a": "(15)豐原高商",
-      "team_b": "(14)臺中家商",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-139"
-    },
-    {
-      "venue": "場地6",
-      "time": "16:30",
-      "group": "大專男組",
-      "match_code": "淘汰賽M22",
-      "team_a": "(7)",
-      "team_b": "(10)",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-140"
-    },
-    {
-      "venue": "場地6",
-      "time": "8:30",
-      "group": "大專男組",
-      "match_code": "小組賽M7",
-      "team_a": "(2)嘉義大學",
-      "team_b": "(3)虎尾科大",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "18",
-          "25"
-        ],
-        [
-          "21",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-141"
-    },
-    {
-      "venue": "場地6",
-      "time": "9:30",
-      "group": "大專男組",
-      "match_code": "小組賽M9",
-      "team_a": "(8)逢甲大學",
-      "team_b": "(9)雲林科大",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "20",
-          "25"
-        ],
-        [
-          "14",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-142"
-    },
-    {
-      "venue": "場地7",
-      "time": "10:30",
-      "group": "高女組",
-      "match_code": "小組賽M11",
-      "team_a": "(10)僑泰高中",
-      "team_b": "(13)臺中女中",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "7",
-          "25"
-        ],
-        [
-          "9",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-143"
-    },
-    {
-      "venue": "場地7",
-      "time": "11:30",
-      "group": "高女組",
-      "match_code": "小組賽M13",
-      "team_a": "(3)豐原高中",
-      "team_b": "(1)永慶高中",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "17",
-          "25"
-        ],
-        [
-          "15",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-144"
-    },
-    {
-      "venue": "場地7",
-      "time": "12:30",
-      "group": "社女組",
-      "match_code": "淘汰賽M17",
-      "team_a": "(W13)連義華排球屋",
-      "team_b": "(W14)中華景美",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "1",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "22",
-          "25"
-        ],
-        [
-          "25",
-          "9"
-        ],
-        [
-          "15",
-          "9"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-145"
-    },
-    {
-      "venue": "場地7",
-      "time": "13:30",
-      "group": "高女組",
-      "match_code": "小組賽M15",
-      "team_a": "(9)壽山高中",
-      "team_b": "(7)景美女中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-146"
-    },
-    {
-      "venue": "場地7",
-      "time": "14:30",
-      "group": "大專女組",
-      "match_code": "小組賽M7",
-      "team_a": "(8)臺中教大",
-      "team_b": "(9)嘉義大學",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-147"
-    },
-    {
-      "venue": "場地7",
-      "time": "15:30",
-      "group": "社女組",
-      "match_code": "淘汰賽M20",
-      "team_a": "(W17)連義華排球屋",
-      "team_b": "(W18)琮盈交通",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-148"
-    },
-    {
-      "venue": "場地7",
-      "time": "8:30",
-      "group": "社女組",
-      "match_code": "淘汰賽M13",
-      "team_a": "(1)連義華排球屋",
-      "team_b": "(8)縣立苑裡高中",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "12"
-        ],
-        [
-          "25",
-          "13"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-149"
-    },
-    {
-      "venue": "場地7",
-      "time": "9:30",
-      "group": "社女組",
-      "match_code": "淘汰賽M15",
-      "team_a": "(3)樂晴上岸",
-      "team_b": "(6)陽明交大",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "20"
-        ],
-        [
-          "25",
-          "23"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-150"
-    },
-    {
-      "venue": "場地8",
-      "time": "10:30",
-      "group": "高女組",
-      "match_code": "小組賽M12",
-      "team_a": "(12)東石高中",
-      "team_b": "(11)嘉義女中",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "18"
-        ],
-        [
-          "25",
-          "19"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-151"
-    },
-    {
-      "venue": "場地8",
-      "time": "11:30",
-      "group": "高女組",
-      "match_code": "小組賽M14",
-      "team_a": "(6)興大附農",
-      "team_b": "(4)枋寮高中",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "9",
-          "25"
-        ],
-        [
-          "12",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-152"
-    },
-    {
-      "venue": "場地8",
-      "time": "12:30",
-      "group": "社女組",
-      "match_code": "淘汰賽M18",
-      "team_a": "(W15)樂晴上岸",
-      "team_b": "(W16)琮盈交通",
-      "team_a_sets_won": "1",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "20",
-          "25"
-        ],
-        [
-          "25",
-          "20"
-        ],
-        [
-          "11",
-          "15"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-153"
-    },
-    {
-      "venue": "場地8",
-      "time": "13:30",
-      "group": "大專女組",
-      "match_code": "小組賽M5",
-      "team_a": "(2)弘光科大",
-      "team_b": "(3)中興大學",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-154"
-    },
-    {
-      "venue": "場地8",
-      "time": "14:30",
-      "group": "大專女組",
-      "match_code": "小組賽M6",
-      "team_a": "(5)靜宜大學",
-      "team_b": "(6)國防大學",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-155"
-    },
-    {
-      "venue": "場地8",
-      "time": "15:30",
-      "group": "社女組",
-      "match_code": "淘汰賽M19",
-      "team_a": "(L17)中華景美",
-      "team_b": "(L18)樂晴上岸",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-156"
-    },
-    {
-      "venue": "場地8",
-      "time": "16:30",
-      "group": "大專女組",
-      "match_code": "小組賽M8",
-      "team_a": "(11)臺體體育",
-      "team_b": "(12)高雄醫大",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-157"
-    },
-    {
-      "venue": "場地8",
-      "time": "8:30",
-      "group": "社女組",
-      "match_code": "淘汰賽M14",
-      "team_a": "(5)中華景美",
-      "team_b": "(4)噗巧",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "1",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "19"
-        ],
-        [
-          "24",
-          "26"
-        ],
-        [
-          "15",
-          "13"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-158"
-    },
-    {
-      "venue": "場地8",
-      "time": "9:30",
-      "group": "社女組",
-      "match_code": "淘汰賽M16",
-      "team_a": "(7)永慶高中",
-      "team_b": "(2)琮盈交通",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "12",
-          "25"
-        ],
-        [
-          "11",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-159"
-    },
-    {
-      "venue": "場地9",
-      "time": "10:30",
-      "group": "國女組",
-      "match_code": "小組賽M3",
-      "team_a": "(7)中市長億高中",
-      "team_b": "(8)屏縣至正國中",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "12",
-          "25"
-        ],
-        [
-          "11",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-160"
-    },
-    {
-      "venue": "場地9",
-      "time": "11:30",
-      "group": "國女組",
-      "match_code": "小組賽M4",
-      "team_a": "(10)苗縣苑裡高中",
-      "team_b": "(11)投縣草屯國中",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "0",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "25",
-          "7"
-        ],
-        [
-          "25",
-          "12"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-161"
-    },
-    {
-      "venue": "場地9",
-      "time": "12:30",
-      "group": "國女組",
-      "match_code": "小組賽M5",
-      "team_a": "(13)投縣同富國中",
-      "team_b": "(14)中市豐南國中",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "20",
-          "25"
-        ],
-        [
-          "19",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-162"
-    },
-    {
-      "venue": "場地9",
-      "time": "13:30",
-      "group": "國女組",
-      "match_code": "小組賽M7",
-      "team_a": "(19)中市恵文高中",
-      "team_b": "(20)南市中山國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-163"
-    },
-    {
-      "venue": "場地9",
-      "time": "14:30",
-      "group": "國女組",
-      "match_code": "小組賽M9",
-      "team_a": "(2)新北大觀國中",
-      "team_b": "(3)桃市八德國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-164"
-    },
-    {
-      "venue": "場地9",
-      "time": "15:30",
-      "group": "國女組",
-      "match_code": "小組賽M11",
-      "team_a": "(8)屏縣至正國中",
-      "team_b": "(9)新北三峽國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
-      "id": "live-1950-165"
-    },
-    {
-      "venue": "場地9",
-      "time": "8:30",
-      "group": "國女組",
-      "match_code": "小組賽M1",
-      "team_a": "(1)北市大安國中",
-      "team_b": "(2)新北大觀國中",
-      "team_a_sets_won": "0",
-      "team_b_sets_won": "2",
-      "winner": "team_b",
-      "set_scores": [
-        [
-          "19",
-          "25"
-        ],
-        [
-          "19",
-          "25"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-166"
-    },
-    {
-      "venue": "場地9",
-      "time": "9:30",
-      "group": "國女組",
-      "match_code": "小組賽M2",
-      "team_a": "(4)新北積穗國中",
-      "team_b": "(5)中市大雅國中",
-      "team_a_sets_won": "2",
-      "team_b_sets_won": "1",
-      "winner": "team_a",
-      "set_scores": [
-        [
-          "12",
-          "25"
-        ],
-        [
-          "25",
-          "20"
-        ],
-        [
-          "16",
-          "14"
-        ]
-      ],
-      "status": "finished",
-      "id": "live-1950-167"
-    },
     {
       "venue": "場地1",
       "time": "10:00",
@@ -3357,7 +27,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-168"
+      "id": "live-1950-0"
     },
     {
       "venue": "場地1",
@@ -3381,7 +51,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-169"
+      "id": "live-1950-1"
     },
     {
       "venue": "場地1",
@@ -3405,7 +75,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-170"
+      "id": "live-1950-2"
     },
     {
       "venue": "場地1",
@@ -3433,7 +103,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-171"
+      "id": "live-1950-3"
     },
     {
       "venue": "場地1",
@@ -3457,7 +127,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-172"
+      "id": "live-1950-4"
     },
     {
       "venue": "場地1",
@@ -3485,7 +155,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-173"
+      "id": "live-1950-5"
     },
     {
       "venue": "場地1",
@@ -3509,7 +179,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-174"
+      "id": "live-1950-6"
     },
     {
       "venue": "場地10",
@@ -3533,7 +203,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-175"
+      "id": "live-1950-7"
     },
     {
       "venue": "場地10",
@@ -3561,7 +231,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-176"
+      "id": "live-1950-8"
     },
     {
       "venue": "場地10",
@@ -3585,7 +255,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-177"
+      "id": "live-1950-9"
     },
     {
       "venue": "場地10",
@@ -3609,7 +279,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-178"
+      "id": "live-1950-10"
     },
     {
       "venue": "場地10",
@@ -3633,7 +303,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-179"
+      "id": "live-1950-11"
     },
     {
       "venue": "場地10",
@@ -3657,7 +327,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-180"
+      "id": "live-1950-12"
     },
     {
       "venue": "場地10",
@@ -3685,7 +355,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-181"
+      "id": "live-1950-13"
     },
     {
       "venue": "場地11",
@@ -3709,7 +379,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-182"
+      "id": "live-1950-14"
     },
     {
       "venue": "場地11",
@@ -3733,7 +403,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-183"
+      "id": "live-1950-15"
     },
     {
       "venue": "場地11",
@@ -3757,7 +427,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-184"
+      "id": "live-1950-16"
     },
     {
       "venue": "場地11",
@@ -3785,7 +455,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-185"
+      "id": "live-1950-17"
     },
     {
       "venue": "場地11",
@@ -3809,7 +479,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-186"
+      "id": "live-1950-18"
     },
     {
       "venue": "場地11",
@@ -3833,7 +503,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-187"
+      "id": "live-1950-19"
     },
     {
       "venue": "場地11",
@@ -3861,7 +531,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-188"
+      "id": "live-1950-20"
     },
     {
       "venue": "場地12",
@@ -3885,7 +555,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-189"
+      "id": "live-1950-21"
     },
     {
       "venue": "場地12",
@@ -3913,7 +583,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-190"
+      "id": "live-1950-22"
     },
     {
       "venue": "場地12",
@@ -3941,7 +611,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-191"
+      "id": "live-1950-23"
     },
     {
       "venue": "場地12",
@@ -3965,7 +635,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-192"
+      "id": "live-1950-24"
     },
     {
       "venue": "場地12",
@@ -3989,7 +659,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-193"
+      "id": "live-1950-25"
     },
     {
       "venue": "場地12",
@@ -4013,7 +683,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-194"
+      "id": "live-1950-26"
     },
     {
       "venue": "場地12",
@@ -4037,7 +707,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-195"
+      "id": "live-1950-27"
     },
     {
       "venue": "場地12",
@@ -4061,7 +731,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-196"
+      "id": "live-1950-28"
     },
     {
       "venue": "場地13",
@@ -4085,7 +755,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-197"
+      "id": "live-1950-29"
     },
     {
       "venue": "場地13",
@@ -4113,7 +783,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-198"
+      "id": "live-1950-30"
     },
     {
       "venue": "場地13",
@@ -4141,7 +811,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-199"
+      "id": "live-1950-31"
     },
     {
       "venue": "場地13",
@@ -4169,7 +839,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-200"
+      "id": "live-1950-32"
     },
     {
       "venue": "場地13",
@@ -4193,7 +863,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-201"
+      "id": "live-1950-33"
     },
     {
       "venue": "場地13",
@@ -4217,7 +887,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-202"
+      "id": "live-1950-34"
     },
     {
       "venue": "場地13",
@@ -4241,7 +911,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-203"
+      "id": "live-1950-35"
     },
     {
       "venue": "場地13",
@@ -4269,7 +939,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-204"
+      "id": "live-1950-36"
     },
     {
       "venue": "場地14",
@@ -4297,7 +967,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-205"
+      "id": "live-1950-37"
     },
     {
       "venue": "場地14",
@@ -4325,7 +995,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-206"
+      "id": "live-1950-38"
     },
     {
       "venue": "場地14",
@@ -4349,7 +1019,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-207"
+      "id": "live-1950-39"
     },
     {
       "venue": "場地14",
@@ -4373,7 +1043,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-208"
+      "id": "live-1950-40"
     },
     {
       "venue": "場地14",
@@ -4397,7 +1067,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-209"
+      "id": "live-1950-41"
     },
     {
       "venue": "場地14",
@@ -4425,7 +1095,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-210"
+      "id": "live-1950-42"
     },
     {
       "venue": "場地14",
@@ -4449,7 +1119,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-211"
+      "id": "live-1950-43"
     },
     {
       "venue": "場地14",
@@ -4473,7 +1143,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-212"
+      "id": "live-1950-44"
     },
     {
       "venue": "場地15",
@@ -4497,7 +1167,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-213"
+      "id": "live-1950-45"
     },
     {
       "venue": "場地15",
@@ -4521,7 +1191,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-214"
+      "id": "live-1950-46"
     },
     {
       "venue": "場地15",
@@ -4549,7 +1219,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-215"
+      "id": "live-1950-47"
     },
     {
       "venue": "場地15",
@@ -4577,7 +1247,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-216"
+      "id": "live-1950-48"
     },
     {
       "venue": "場地15",
@@ -4601,7 +1271,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-217"
+      "id": "live-1950-49"
     },
     {
       "venue": "場地15",
@@ -4625,7 +1295,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-218"
+      "id": "live-1950-50"
     },
     {
       "venue": "場地15",
@@ -4649,7 +1319,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-219"
+      "id": "live-1950-51"
     },
     {
       "venue": "場地15",
@@ -4673,7 +1343,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-220"
+      "id": "live-1950-52"
     },
     {
       "venue": "場地16",
@@ -4697,7 +1367,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-221"
+      "id": "live-1950-53"
     },
     {
       "venue": "場地16",
@@ -4721,7 +1391,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-222"
+      "id": "live-1950-54"
     },
     {
       "venue": "場地16",
@@ -4749,7 +1419,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-223"
+      "id": "live-1950-55"
     },
     {
       "venue": "場地16",
@@ -4773,7 +1443,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-224"
+      "id": "live-1950-56"
     },
     {
       "venue": "場地16",
@@ -4797,7 +1467,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-225"
+      "id": "live-1950-57"
     },
     {
       "venue": "場地16",
@@ -4821,7 +1491,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-226"
+      "id": "live-1950-58"
     },
     {
       "venue": "場地16",
@@ -4845,7 +1515,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-227"
+      "id": "live-1950-59"
     },
     {
       "venue": "場地16",
@@ -4869,7 +1539,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-228"
+      "id": "live-1950-60"
     },
     {
       "venue": "場地17",
@@ -4893,7 +1563,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-229"
+      "id": "live-1950-61"
     },
     {
       "venue": "場地17",
@@ -4917,7 +1587,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-230"
+      "id": "live-1950-62"
     },
     {
       "venue": "場地17",
@@ -4945,7 +1615,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-231"
+      "id": "live-1950-63"
     },
     {
       "venue": "場地17",
@@ -4969,7 +1639,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-232"
+      "id": "live-1950-64"
     },
     {
       "venue": "場地17",
@@ -4993,7 +1663,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-233"
+      "id": "live-1950-65"
     },
     {
       "venue": "場地17",
@@ -5021,7 +1691,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-234"
+      "id": "live-1950-66"
     },
     {
       "venue": "場地17",
@@ -5045,7 +1715,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-235"
+      "id": "live-1950-67"
     },
     {
       "venue": "場地17",
@@ -5069,7 +1739,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-236"
+      "id": "live-1950-68"
     },
     {
       "venue": "場地18",
@@ -5093,7 +1763,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-237"
+      "id": "live-1950-69"
     },
     {
       "venue": "場地18",
@@ -5117,7 +1787,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-238"
+      "id": "live-1950-70"
     },
     {
       "venue": "場地18",
@@ -5145,7 +1815,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-239"
+      "id": "live-1950-71"
     },
     {
       "venue": "場地18",
@@ -5169,7 +1839,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-240"
+      "id": "live-1950-72"
     },
     {
       "venue": "場地18",
@@ -5193,7 +1863,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-241"
+      "id": "live-1950-73"
     },
     {
       "venue": "場地18",
@@ -5217,7 +1887,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-242"
+      "id": "live-1950-74"
     },
     {
       "venue": "場地18",
@@ -5241,7 +1911,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-243"
+      "id": "live-1950-75"
     },
     {
       "venue": "場地18",
@@ -5265,7 +1935,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-244"
+      "id": "live-1950-76"
     },
     {
       "venue": "場地19",
@@ -5289,7 +1959,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-245"
+      "id": "live-1950-77"
     },
     {
       "venue": "場地19",
@@ -5313,7 +1983,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-246"
+      "id": "live-1950-78"
     },
     {
       "venue": "場地19",
@@ -5337,7 +2007,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-247"
+      "id": "live-1950-79"
     },
     {
       "venue": "場地19",
@@ -5361,7 +2031,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-248"
+      "id": "live-1950-80"
     },
     {
       "venue": "場地19",
@@ -5385,7 +2055,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-249"
+      "id": "live-1950-81"
     },
     {
       "venue": "場地19",
@@ -5413,7 +2083,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-250"
+      "id": "live-1950-82"
     },
     {
       "venue": "場地19",
@@ -5441,7 +2111,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-251"
+      "id": "live-1950-83"
     },
     {
       "venue": "場地19",
@@ -5469,7 +2139,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-252"
+      "id": "live-1950-84"
     },
     {
       "venue": "場地2",
@@ -5493,7 +2163,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-253"
+      "id": "live-1950-85"
     },
     {
       "venue": "場地2",
@@ -5517,7 +2187,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-254"
+      "id": "live-1950-86"
     },
     {
       "venue": "場地2",
@@ -5545,7 +2215,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-255"
+      "id": "live-1950-87"
     },
     {
       "venue": "場地2",
@@ -5573,7 +2243,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-256"
+      "id": "live-1950-88"
     },
     {
       "venue": "場地2",
@@ -5597,7 +2267,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-257"
+      "id": "live-1950-89"
     },
     {
       "venue": "場地2",
@@ -5625,7 +2295,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-258"
+      "id": "live-1950-90"
     },
     {
       "venue": "場地2",
@@ -5653,7 +2323,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-259"
+      "id": "live-1950-91"
     },
     {
       "venue": "場地3",
@@ -5681,7 +2351,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-260"
+      "id": "live-1950-92"
     },
     {
       "venue": "場地3",
@@ -5705,7 +2375,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-261"
+      "id": "live-1950-93"
     },
     {
       "venue": "場地3",
@@ -5729,7 +2399,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-262"
+      "id": "live-1950-94"
     },
     {
       "venue": "場地3",
@@ -5753,7 +2423,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-263"
+      "id": "live-1950-95"
     },
     {
       "venue": "場地3",
@@ -5777,7 +2447,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-264"
+      "id": "live-1950-96"
     },
     {
       "venue": "場地3",
@@ -5801,7 +2471,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-265"
+      "id": "live-1950-97"
     },
     {
       "venue": "場地4",
@@ -5825,7 +2495,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-266"
+      "id": "live-1950-98"
     },
     {
       "venue": "場地4",
@@ -5849,7 +2519,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-267"
+      "id": "live-1950-99"
     },
     {
       "venue": "場地4",
@@ -5877,7 +2547,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-268"
+      "id": "live-1950-100"
     },
     {
       "venue": "場地4",
@@ -5901,7 +2571,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-269"
+      "id": "live-1950-101"
     },
     {
       "venue": "場地4",
@@ -5925,7 +2595,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-270"
+      "id": "live-1950-102"
     },
     {
       "venue": "場地4",
@@ -5949,7 +2619,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-271"
+      "id": "live-1950-103"
     },
     {
       "venue": "場地5",
@@ -5973,7 +2643,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-272"
+      "id": "live-1950-104"
     },
     {
       "venue": "場地5",
@@ -5997,7 +2667,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-273"
+      "id": "live-1950-105"
     },
     {
       "venue": "場地5",
@@ -6021,7 +2691,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-274"
+      "id": "live-1950-106"
     },
     {
       "venue": "場地5",
@@ -6045,7 +2715,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-275"
+      "id": "live-1950-107"
     },
     {
       "venue": "場地5",
@@ -6069,7 +2739,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-276"
+      "id": "live-1950-108"
     },
     {
       "venue": "場地5",
@@ -6097,7 +2767,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-277"
+      "id": "live-1950-109"
     },
     {
       "venue": "場地6",
@@ -6121,7 +2791,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-278"
+      "id": "live-1950-110"
     },
     {
       "venue": "場地6",
@@ -6145,7 +2815,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-279"
+      "id": "live-1950-111"
     },
     {
       "venue": "場地6",
@@ -6169,7 +2839,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-280"
+      "id": "live-1950-112"
     },
     {
       "venue": "場地6",
@@ -6193,7 +2863,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-281"
+      "id": "live-1950-113"
     },
     {
       "venue": "場地6",
@@ -6217,7 +2887,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-282"
+      "id": "live-1950-114"
     },
     {
       "venue": "場地6",
@@ -6241,7 +2911,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-283"
+      "id": "live-1950-115"
     },
     {
       "venue": "場地7",
@@ -6265,7 +2935,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-284"
+      "id": "live-1950-116"
     },
     {
       "venue": "場地7",
@@ -6293,7 +2963,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-285"
+      "id": "live-1950-117"
     },
     {
       "venue": "場地7",
@@ -6317,7 +2987,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-286"
+      "id": "live-1950-118"
     },
     {
       "venue": "場地7",
@@ -6341,7 +3011,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-287"
+      "id": "live-1950-119"
     },
     {
       "venue": "場地7",
@@ -6365,7 +3035,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-288"
+      "id": "live-1950-120"
     },
     {
       "venue": "場地7",
@@ -6389,7 +3059,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-289"
+      "id": "live-1950-121"
     },
     {
       "venue": "場地7",
@@ -6413,7 +3083,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-290"
+      "id": "live-1950-122"
     },
     {
       "venue": "場地8",
@@ -6437,7 +3107,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-291"
+      "id": "live-1950-123"
     },
     {
       "venue": "場地8",
@@ -6461,7 +3131,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-292"
+      "id": "live-1950-124"
     },
     {
       "venue": "場地8",
@@ -6489,7 +3159,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-293"
+      "id": "live-1950-125"
     },
     {
       "venue": "場地8",
@@ -6513,7 +3183,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-294"
+      "id": "live-1950-126"
     },
     {
       "venue": "場地8",
@@ -6537,7 +3207,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-295"
+      "id": "live-1950-127"
     },
     {
       "venue": "場地8",
@@ -6561,7 +3231,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-296"
+      "id": "live-1950-128"
     },
     {
       "venue": "場地8",
@@ -6585,7 +3255,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-297"
+      "id": "live-1950-129"
     },
     {
       "venue": "場地9",
@@ -6609,7 +3279,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-298"
+      "id": "live-1950-130"
     },
     {
       "venue": "場地9",
@@ -6637,7 +3307,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-299"
+      "id": "live-1950-131"
     },
     {
       "venue": "場地9",
@@ -6665,7 +3335,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-300"
+      "id": "live-1950-132"
     },
     {
       "venue": "場地9",
@@ -6689,7 +3359,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-301"
+      "id": "live-1950-133"
     },
     {
       "venue": "場地9",
@@ -6713,7 +3383,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-302"
+      "id": "live-1950-134"
     },
     {
       "venue": "場地9",
@@ -6737,7 +3407,7 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
-      "id": "live-1950-303"
+      "id": "live-1950-135"
     },
     {
       "venue": "場地9",
@@ -6761,6 +3431,3646 @@
       ],
       "status": "finished",
       "date": "2026-09-19",
+      "id": "live-1950-136"
+    },
+    {
+      "venue": "場地1",
+      "time": "10:30",
+      "group": "社男組",
+      "match_code": "淘汰賽M24",
+      "team_a": "(1)摸魔茶",
+      "team_b": "(W22)晁德益",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "25",
+          "20"
+        ],
+        [
+          "21",
+          "25"
+        ],
+        [
+          "12",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-137"
+    },
+    {
+      "venue": "場地1",
+      "time": "11:30",
+      "group": "高男組",
+      "match_code": "小組賽M7",
+      "team_a": "(13)麥寮高中",
+      "team_b": "(15)豐原高商",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "12",
+          "25"
+        ],
+        [
+          "24",
+          "26"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-138"
+    },
+    {
+      "venue": "場地1",
+      "time": "12:30",
+      "group": "社男組",
+      "match_code": "淘汰賽M28",
+      "team_a": "(L24)摸魔茶",
+      "team_b": "(L25)清華大學",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "0"
+        ],
+        [
+          "25",
+          "0"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-139"
+    },
+    {
+      "venue": "場地1",
+      "time": "13:30",
+      "group": "社男組",
+      "match_code": "淘汰賽M30",
+      "team_a": "(W24)晁德益",
+      "team_b": "(W25)連義華排球屋",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "22"
+        ],
+        [
+          "25",
+          "21"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-140"
+    },
+    {
+      "venue": "場地1",
+      "time": "14:30",
+      "group": "社男組",
+      "match_code": "淘汰賽M32",
+      "team_a": "(W28)摸魔茶",
+      "team_b": "(W29)豐商明緯",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "0"
+        ],
+        [
+          "25",
+          "0"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-141"
+    },
+    {
+      "venue": "場地1",
+      "time": "16:30",
+      "group": "社男組",
+      "match_code": "淘汰賽M33",
+      "team_a": "(L30)",
+      "team_b": "(L31)",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-142"
+    },
+    {
+      "venue": "場地1",
+      "time": "8:30",
+      "group": "社男組",
+      "match_code": "淘汰賽M22",
+      "team_a": "(9)達億鐵材行",
+      "team_b": "(8)晁德益",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "21",
+          "25"
+        ],
+        [
+          "25",
+          "21"
+        ],
+        [
+          "8",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-143"
+    },
+    {
+      "venue": "場地1",
+      "time": "9:30",
+      "group": "高男組",
+      "match_code": "小組賽M10",
+      "team_a": "(5)縣苑裡高",
+      "team_b": "(6)豐原高中",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "6"
+        ],
+        [
+          "25",
+          "12"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-144"
+    },
+    {
+      "venue": "場地10",
+      "time": "10:30",
+      "group": "大專女組",
+      "match_code": "小組賽M3",
+      "team_a": "(7)聯合大學",
+      "team_b": "(8)臺中教大",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "12",
+          "25"
+        ],
+        [
+          "25",
+          "21"
+        ],
+        [
+          "15",
+          "11"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-145"
+    },
+    {
+      "venue": "場地10",
+      "time": "11:30",
+      "group": "大專女組",
+      "match_code": "小組賽M4",
+      "team_a": "(10)馬偕醫大",
+      "team_b": "(11)臺體體育",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "11",
+          "25"
+        ],
+        [
+          "8",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-146"
+    },
+    {
+      "venue": "場地10",
+      "time": "12:30",
+      "group": "國女組",
+      "match_code": "小組賽M6",
+      "team_a": "(16)新北聖心女中",
+      "team_b": "(17)屏縣內埔國中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "13",
+          "256"
+        ],
+        [
+          "14",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-147"
+    },
+    {
+      "venue": "場地10",
+      "time": "13:30",
+      "group": "國女組",
+      "match_code": "小組賽M8",
+      "team_a": "(22)新北鶯歌國中",
+      "team_b": "(23)中市潭秀國中",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-148"
+    },
+    {
+      "venue": "場地10",
+      "time": "14:30",
+      "group": "國女組",
+      "match_code": "小組賽M10",
+      "team_a": "(5)中市大雅國中",
+      "team_b": "(6)雲縣馬光國中",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-149"
+    },
+    {
+      "venue": "場地10",
+      "time": "15:30",
+      "group": "國女組",
+      "match_code": "小組賽M12",
+      "team_a": "(11)投縣草屯國中",
+      "team_b": "(12)高市三民國中",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-150"
+    },
+    {
+      "venue": "場地10",
+      "time": "16:30",
+      "group": "國女組",
+      "match_code": "小組賽M22",
+      "team_a": "(18)桃市建國國中",
+      "team_b": "(16)新北聖心女中",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-151"
+    },
+    {
+      "venue": "場地10",
+      "time": "8:30",
+      "group": "大專女組",
+      "match_code": "小組賽M1",
+      "team_a": "(1)國北教大",
+      "team_b": "(2)弘光科大",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "15",
+          "25"
+        ],
+        [
+          "25",
+          "20"
+        ],
+        [
+          "12",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-152"
+    },
+    {
+      "venue": "場地10",
+      "time": "9:30",
+      "group": "大專女組",
+      "match_code": "小組賽M2",
+      "team_a": "(4)高雄科大",
+      "team_b": "(5)靜宜大學",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "21",
+          "25"
+        ],
+        [
+          "26",
+          "28"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-153"
+    },
+    {
+      "venue": "場地11",
+      "time": "10:30",
+      "group": "國男組",
+      "match_code": "小組賽M5",
+      "team_a": "(13)東縣海端國中",
+      "team_b": "(14)北市誠正國中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "12",
+          "25"
+        ],
+        [
+          "8",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-154"
+    },
+    {
+      "venue": "場地11",
+      "time": "11:30",
+      "group": "國男組",
+      "match_code": "小組賽M7",
+      "team_a": "(19)桃市八德國中",
+      "team_b": "(20)雲縣麥寮高中",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "20",
+          "25"
+        ],
+        [
+          "28",
+          "26"
+        ],
+        [
+          "12",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-155"
+    },
+    {
+      "venue": "場地11",
+      "time": "12:30",
+      "group": "國男組",
+      "match_code": "小組賽M9",
+      "team_a": "(2)新北積穗國中",
+      "team_b": "(3)屏縣潮州國中",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "21"
+        ],
+        [
+          "24",
+          "26"
+        ],
+        [
+          "15",
+          "9"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-156"
+    },
+    {
+      "venue": "場地11",
+      "time": "13:30",
+      "group": "國男組",
+      "match_code": "小組賽M11",
+      "team_a": "(8)投縣同富國中",
+      "team_b": "(9)桃市建國國中",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-157"
+    },
+    {
+      "venue": "場地11",
+      "time": "14:30",
+      "group": "國男組",
+      "match_code": "小組賽M13",
+      "team_a": "(14)北市誠正國中",
+      "team_b": "(15)中市后里國中",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-158"
+    },
+    {
+      "venue": "場地11",
+      "time": "15:30",
+      "group": "國男組",
+      "match_code": "小組賽M15",
+      "team_a": "(20)雲縣麥寮高中",
+      "team_b": "(21)屏縣新園國中",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-159"
+    },
+    {
+      "venue": "場地11",
+      "time": "8:30",
+      "group": "國男組",
+      "match_code": "小組賽M1",
+      "team_a": "(1)苗縣建國國中",
+      "team_b": "(2)新北積穗國中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "11",
+          "25"
+        ],
+        [
+          "22",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-160"
+    },
+    {
+      "venue": "場地11",
+      "time": "9:30",
+      "group": "國男組",
+      "match_code": "小組賽M3",
+      "team_a": "(7)中市潭秀國中",
+      "team_b": "(8)投縣同富國中",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "15"
+        ],
+        [
+          "25",
+          "21"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-161"
+    },
+    {
+      "venue": "場地12",
+      "time": "10:30",
+      "group": "國男組",
+      "match_code": "小組賽M6",
+      "team_a": "(16)竹縣二重國中",
+      "team_b": "(17)苗縣苑裡高中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "11",
+          "25"
+        ],
+        [
+          "22",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-162"
+    },
+    {
+      "venue": "場地12",
+      "time": "11:30",
+      "group": "國男組",
+      "match_code": "小組賽M8",
+      "team_a": "(22)中市四張犁國中",
+      "team_b": "(23)新北鶯歌國中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "9",
+          "25"
+        ],
+        [
+          "19",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-163"
+    },
+    {
+      "venue": "場地12",
+      "time": "12:30",
+      "group": "國男組",
+      "match_code": "小組賽M10",
+      "team_a": "(5)高市三民國中",
+      "team_b": "(6)屏縣明正國中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "13",
+          "25"
+        ],
+        [
+          "9",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-164"
+    },
+    {
+      "venue": "場地12",
+      "time": "13:30",
+      "group": "國男組",
+      "match_code": "小組賽M12",
+      "team_a": "(11)雲縣馬光國中",
+      "team_b": "(12)中市居仁國中",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "14"
+        ],
+        [
+          "25",
+          "12"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-165"
+    },
+    {
+      "venue": "場地12",
+      "time": "14:30",
+      "group": "國男組",
+      "match_code": "小組賽M14",
+      "team_a": "(17)苗縣苑裡高中",
+      "team_b": "(18)屏縣內埔國中",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-166"
+    },
+    {
+      "venue": "場地12",
+      "time": "15:30",
+      "group": "國男組",
+      "match_code": "小組賽M16",
+      "team_a": "(23)新北鶯歌國中",
+      "team_b": "(24)嘉縣義竹國中",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-167"
+    },
+    {
+      "venue": "場地12",
+      "time": "8:30",
+      "group": "國男組",
+      "match_code": "小組賽M2",
+      "team_a": "(4)中市大雅國中",
+      "team_b": "(5)高市三民國中",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "2"
+        ],
+        [
+          "25",
+          "9"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-168"
+    },
+    {
+      "venue": "場地12",
+      "time": "9:30",
+      "group": "國男組",
+      "match_code": "小組賽M4",
+      "team_a": "(10)投縣草屯國中",
+      "team_b": "(11)雲縣馬光國中",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "21",
+          "25"
+        ],
+        [
+          "25",
+          "17"
+        ],
+        [
+          "15",
+          "12"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-169"
+    },
+    {
+      "venue": "場地13",
+      "time": "10:10",
+      "group": "五年級男童組",
+      "match_code": "小組賽M21",
+      "team_a": "(20)高市樂群國小",
+      "team_b": "(21)中市中山國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "19"
+        ],
+        [
+          "19",
+          "25"
+        ],
+        [
+          "15",
+          "7"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-170"
+    },
+    {
+      "venue": "場地13",
+      "time": "11:00",
+      "group": "五年級男童組",
+      "match_code": "小組賽M23",
+      "team_a": "(26)宜縣礁溪國小",
+      "team_b": "(27)桃市中山國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "22"
+        ],
+        [
+          "25",
+          "19"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-171"
+    },
+    {
+      "venue": "場地13",
+      "time": "11:50",
+      "group": "五年級男童組",
+      "match_code": "小組賽M25",
+      "team_a": "(31)雲縣橋頭國小",
+      "team_b": "(34)新北三峽國小",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "25",
+          "22"
+        ],
+        [
+          "17",
+          "25"
+        ],
+        [
+          "6",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-172"
+    },
+    {
+      "venue": "場地13",
+      "time": "12:40",
+      "group": "五年級男童組",
+      "match_code": "小組賽M27",
+      "team_a": "(3)南市安慶國小",
+      "team_b": "(1)中市東寶國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "22"
+        ],
+        [
+          "25",
+          "18"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-173"
+    },
+    {
+      "venue": "場地13",
+      "time": "13:30",
+      "group": "五年級男童組",
+      "match_code": "小組賽M29",
+      "team_a": "(9)屏縣霧臺國小",
+      "team_b": "(7)竹縣新豐國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-174"
+    },
+    {
+      "venue": "場地13",
+      "time": "14:20",
+      "group": "五年級男童組",
+      "match_code": "小組賽M31",
+      "team_a": "(15)中市惠文國小",
+      "team_b": "(13)南市六甲國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-175"
+    },
+    {
+      "venue": "場地13",
+      "time": "15:10",
+      "group": "五年級男童組",
+      "match_code": "小組賽M33",
+      "team_a": "(21)中市中山國小",
+      "team_b": "(19)新北文林國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-176"
+    },
+    {
+      "venue": "場地13",
+      "time": "16:00",
+      "group": "五年級男童組",
+      "match_code": "小組賽M35",
+      "team_a": "(27)桃市中山國小",
+      "team_b": "(25)新北積穗國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-177"
+    },
+    {
+      "venue": "場地13",
+      "time": "8:30",
+      "group": "五年級男童組",
+      "match_code": "小組賽M17",
+      "team_a": "(8)新北大觀國小",
+      "team_b": "(9)屏縣霧臺國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "8",
+          "25"
+        ],
+        [
+          "13",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-178"
+    },
+    {
+      "venue": "場地13",
+      "time": "9:20",
+      "group": "五年級男童組",
+      "match_code": "小組賽M19",
+      "team_a": "(14)北市三民國小",
+      "team_b": "(15)中市惠文國小",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "25",
+          "16"
+        ],
+        [
+          "20",
+          "25"
+        ],
+        [
+          "4",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-179"
+    },
+    {
+      "venue": "場地14",
+      "time": "10:10",
+      "group": "五年級男童組",
+      "match_code": "小組賽M22",
+      "team_a": "(23)中市大雅國小",
+      "team_b": "(24)新北重慶國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "6"
+        ],
+        [
+          "25",
+          "10"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-180"
+    },
+    {
+      "venue": "場地14",
+      "time": "11:00",
+      "group": "五年級男童組",
+      "match_code": "小組賽M24",
+      "team_a": "(29)雲縣北辰國小",
+      "team_b": "(30)中市力行國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "23"
+        ],
+        [
+          "25",
+          "9"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-181"
+    },
+    {
+      "venue": "場地14",
+      "time": "11:50",
+      "group": "五年級男童組",
+      "match_code": "小組賽M26",
+      "team_a": "(33)桃市大成國小",
+      "team_b": "(32)中市大元國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "12",
+          "25"
+        ],
+        [
+          "24",
+          "26"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-182"
+    },
+    {
+      "venue": "場地14",
+      "time": "12:40",
+      "group": "五年級男童組",
+      "match_code": "小組賽M28",
+      "team_a": "(6)新北頂溪國小",
+      "team_b": "(4)中市東勢國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "12",
+          "25"
+        ],
+        [
+          "25",
+          "27"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-183"
+    },
+    {
+      "venue": "場地14",
+      "time": "13:30",
+      "group": "五年級男童組",
+      "match_code": "小組賽M30",
+      "team_a": "(12)雲縣東勢國小",
+      "team_b": "(10)新北後埔國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "23",
+          "25"
+        ],
+        [
+          "23",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-184"
+    },
+    {
+      "venue": "場地14",
+      "time": "14:20",
+      "group": "五年級男童組",
+      "match_code": "小組賽M32",
+      "team_a": "(18)新北莒光國小",
+      "team_b": "(16)北市長春國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-185"
+    },
+    {
+      "venue": "場地14",
+      "time": "15:10",
+      "group": "五年級男童組",
+      "match_code": "小組賽M34",
+      "team_a": "(24)新北重慶國小",
+      "team_b": "(22)嘉縣朴子國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-186"
+    },
+    {
+      "venue": "場地14",
+      "time": "16:00",
+      "group": "五年級男童組",
+      "match_code": "小組賽M36",
+      "team_a": "(30)中市力行國小",
+      "team_b": "(28)高市中庄國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-187"
+    },
+    {
+      "venue": "場地14",
+      "time": "8:30",
+      "group": "五年級男童組",
+      "match_code": "小組賽M18",
+      "team_a": "(11)北市天母國小",
+      "team_b": "(12)雲縣東勢國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "2"
+        ],
+        [
+          "25",
+          "19"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-188"
+    },
+    {
+      "venue": "場地14",
+      "time": "9:20",
+      "group": "五年級男童組",
+      "match_code": "小組賽M20",
+      "team_a": "(17)雲縣麥寮國小",
+      "team_b": "(18)新北莒光國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "5"
+        ],
+        [
+          "25",
+          "17"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-189"
+    },
+    {
+      "venue": "場地15",
+      "time": "10:10",
+      "group": "五年級女童組",
+      "match_code": "小組賽M19",
+      "team_a": "(11)中市北屯國小",
+      "team_b": "(12)雲縣馬光國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "14"
+        ],
+        [
+          "25",
+          "12"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-190"
+    },
+    {
+      "venue": "場地15",
+      "time": "11:00",
+      "group": "五年級女童組",
+      "match_code": "小組賽M20",
+      "team_a": "(14)北市東新國小",
+      "team_b": "(15)竹縣六家國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "18",
+          "25"
+        ],
+        [
+          "20",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-191"
+    },
+    {
+      "venue": "場地15",
+      "time": "11:50",
+      "group": "五年級女童組",
+      "match_code": "小組賽M21",
+      "team_a": "(17)中市西屯國小",
+      "team_b": "(18)桃市中山國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "9",
+          "25"
+        ],
+        [
+          "8",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-192"
+    },
+    {
+      "venue": "場地15",
+      "time": "12:40",
+      "group": "五年級女童組",
+      "match_code": "小組賽M22",
+      "team_a": "(20)新北積穗國小",
+      "team_b": "(21)中市東寶國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "18"
+        ],
+        [
+          "25",
+          "22"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-193"
+    },
+    {
+      "venue": "場地15",
+      "time": "13:30",
+      "group": "五年級女童組",
+      "match_code": "小組賽M28",
+      "team_a": "(6)新北文林國小",
+      "team_b": "(4)中市大雅國小",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "11",
+          "25"
+        ],
+        [
+          "25",
+          "23"
+        ],
+        [
+          "11",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-194"
+    },
+    {
+      "venue": "場地15",
+      "time": "14:20",
+      "group": "五年級女童組",
+      "match_code": "小組賽M29",
+      "team_a": "(9)新北莒光國小",
+      "team_b": "(7)桃市大成國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-195"
+    },
+    {
+      "venue": "場地15",
+      "time": "15:10",
+      "group": "五年級女童組",
+      "match_code": "小組賽M30",
+      "team_a": "(12)雲縣馬光國小",
+      "team_b": "(10)新北後埔國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-196"
+    },
+    {
+      "venue": "場地15",
+      "time": "16:00",
+      "group": "五年級女童組",
+      "match_code": "小組賽M31",
+      "team_a": "(15)竹縣六家國小",
+      "team_b": "(13)中市神岡國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-197"
+    },
+    {
+      "venue": "場地15",
+      "time": "8:30",
+      "group": "五年級女童組",
+      "match_code": "小組賽M17",
+      "team_a": "(5)南市東興國小",
+      "team_b": "(6)新北文林國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "16"
+        ],
+        [
+          "25",
+          "8"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-198"
+    },
+    {
+      "venue": "場地15",
+      "time": "9:20",
+      "group": "五年級女童組",
+      "match_code": "小組賽M18",
+      "team_a": "(8)高市中庄國小",
+      "team_b": "(9)新北莒光國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "17"
+        ],
+        [
+          "25",
+          "19"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-199"
+    },
+    {
+      "venue": "場地16",
+      "time": "10:10",
+      "group": "六年級女童組",
+      "match_code": "小組賽M23",
+      "team_a": "(28)高市莊敬國小",
+      "team_b": "(31)中市西屯國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "17"
+        ],
+        [
+          "25",
+          "12"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-200"
+    },
+    {
+      "venue": "場地16",
+      "time": "11:00",
+      "group": "六年級女童組",
+      "match_code": "小組賽M25",
+      "team_a": "(3)中市北屯國小",
+      "team_b": "(1)屏縣內埔國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "29",
+          "27"
+        ],
+        [
+          "25",
+          "21"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-201"
+    },
+    {
+      "venue": "場地16",
+      "time": "11:50",
+      "group": "六年級女童組",
+      "match_code": "小組賽M27",
+      "team_a": "(9)中市惠文國小",
+      "team_b": "(7)北市天母國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "14",
+          "25"
+        ],
+        [
+          "23",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-202"
+    },
+    {
+      "venue": "場地16",
+      "time": "12:40",
+      "group": "六年級女童組",
+      "match_code": "小組賽M29",
+      "team_a": "(15)中市豐田國小",
+      "team_b": "(13)苗縣苑裡國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "12",
+          "25"
+        ],
+        [
+          "11",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-203"
+    },
+    {
+      "venue": "場地16",
+      "time": "13:30",
+      "group": "六年級女童組",
+      "match_code": "小組賽M31",
+      "team_a": "(21)新北大觀國小",
+      "team_b": "(19)苗縣卓蘭國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "19",
+          "25"
+        ],
+        [
+          "9",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-204"
+    },
+    {
+      "venue": "場地16",
+      "time": "14:20",
+      "group": "五年級女童組",
+      "match_code": "小組賽M27",
+      "team_a": "(3)雲縣橋頭國小",
+      "team_b": "(1)新北大觀國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-205"
+    },
+    {
+      "venue": "場地16",
+      "time": "15:10",
+      "group": "五年級女童組",
+      "match_code": "小組賽M23",
+      "team_a": "(22)苗縣苑裡國小",
+      "team_b": "(25)新北頂溪國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-206"
+    },
+    {
+      "venue": "場地16",
+      "time": "16:00",
+      "group": "五年級女童組",
+      "match_code": "小組賽M25",
+      "team_a": "(26)新北三峽國小",
+      "team_b": "(29)中市力行國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-207"
+    },
+    {
+      "venue": "場地16",
+      "time": "8:30",
+      "group": "六年級女童組",
+      "match_code": "小組賽M19",
+      "team_a": "(17)新北積穗國小",
+      "team_b": "(18)雲縣北辰國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "15",
+          "25"
+        ],
+        [
+          "13",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-208"
+    },
+    {
+      "venue": "場地16",
+      "time": "9:20",
+      "group": "六年級女童組",
+      "match_code": "小組賽M21",
+      "team_a": "(23)嘉縣朴子國小",
+      "team_b": "(24)中市新平國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "4"
+        ],
+        [
+          "25",
+          "14"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-209"
+    },
+    {
+      "venue": "場地17",
+      "time": "10:10",
+      "group": "六年級女童組",
+      "match_code": "小組賽M24",
+      "team_a": "(30)新北文林國小",
+      "team_b": "(29)北市五常國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "12",
+          "25"
+        ],
+        [
+          "13",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-210"
+    },
+    {
+      "venue": "場地17",
+      "time": "11:00",
+      "group": "六年級女童組",
+      "match_code": "小組賽M26",
+      "team_a": "(6)竹縣光明國小",
+      "team_b": "(4)中市大雅國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "20",
+          "25"
+        ],
+        [
+          "12",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-211"
+    },
+    {
+      "venue": "場地17",
+      "time": "11:50",
+      "group": "六年級女童組",
+      "match_code": "小組賽M28",
+      "team_a": "(12)中市東寶國小",
+      "team_b": "(10)北市三民國小",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "18",
+          "25"
+        ],
+        [
+          "25",
+          "23"
+        ],
+        [
+          "6",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-212"
+    },
+    {
+      "venue": "場地17",
+      "time": "12:40",
+      "group": "六年級女童組",
+      "match_code": "小組賽M30",
+      "team_a": "(18)雲縣北辰國小",
+      "team_b": "(16)中市神岡國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "15"
+        ],
+        [
+          "25",
+          "14"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-213"
+    },
+    {
+      "venue": "場地17",
+      "time": "13:30",
+      "group": "六年級女童組",
+      "match_code": "小組賽M32",
+      "team_a": "(24)中市新平國小",
+      "team_b": "(22)高市樂群國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "17",
+          "25"
+        ],
+        [
+          "24",
+          "26"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-214"
+    },
+    {
+      "venue": "場地17",
+      "time": "14:20",
+      "group": "六年級女童組",
+      "match_code": "小組賽M33",
+      "team_a": "(27)桃市大成國小",
+      "team_b": "(25)北市明湖國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-215"
+    },
+    {
+      "venue": "場地17",
+      "time": "15:10",
+      "group": "五年級女童組",
+      "match_code": "小組賽M24",
+      "team_a": "(24)竹縣光明國小",
+      "team_b": "(23)中市新平國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-216"
+    },
+    {
+      "venue": "場地17",
+      "time": "16:00",
+      "group": "五年級女童組",
+      "match_code": "小組賽M26",
+      "team_a": "(28)高市樂群國小",
+      "team_b": "(27)屏縣崇蘭國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-217"
+    },
+    {
+      "venue": "場地17",
+      "time": "8:30",
+      "group": "六年級女童組",
+      "match_code": "小組賽M20",
+      "team_a": "(20)中市力行國小",
+      "team_b": "(21)新北大觀國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "7"
+        ],
+        [
+          "25",
+          "6"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-218"
+    },
+    {
+      "venue": "場地17",
+      "time": "9:20",
+      "group": "六年級女童組",
+      "match_code": "小組賽M22",
+      "team_a": "(26)新北頂溪國小",
+      "team_b": "(27)桃市大成國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "17"
+        ],
+        [
+          "25",
+          "7"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-219"
+    },
+    {
+      "venue": "場地18",
+      "time": "10:10",
+      "group": "六年級男童組",
+      "match_code": "小組賽M19",
+      "team_a": "(17)嘉縣朴子國小",
+      "team_b": "(18)新北文林國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "21",
+          "25"
+        ],
+        [
+          "12",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-220"
+    },
+    {
+      "venue": "場地18",
+      "time": "11:00",
+      "group": "六年級男童組",
+      "match_code": "小組賽M21",
+      "team_a": "(23)北市三民國小",
+      "team_b": "(24)新北莒光國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "20"
+        ],
+        [
+          "26",
+          "24"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-221"
+    },
+    {
+      "venue": "場地18",
+      "time": "11:50",
+      "group": "六年級男童組",
+      "match_code": "小組賽M23",
+      "team_a": "(29)新北三峽國小",
+      "team_b": "(30)中市惠文國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "14",
+          "25"
+        ],
+        [
+          "16",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-222"
+    },
+    {
+      "venue": "場地18",
+      "time": "12:40",
+      "group": "六年級男童組",
+      "match_code": "小組賽M25",
+      "team_a": "(35)桃市大成國小",
+      "team_b": "(36)中市南陽國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "23",
+          "25"
+        ],
+        [
+          "25",
+          "15"
+        ],
+        [
+          "15",
+          "13"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-223"
+    },
+    {
+      "venue": "場地18",
+      "time": "13:30",
+      "group": "六年級男童組",
+      "match_code": "小組賽M27",
+      "team_a": "(3)高市樂群國小",
+      "team_b": "(1)苗縣苑裡國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-224"
+    },
+    {
+      "venue": "場地18",
+      "time": "14:20",
+      "group": "六年級男童組",
+      "match_code": "小組賽M29",
+      "team_a": "(9)雲縣北辰國小",
+      "team_b": "(7)中市四張犁國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-225"
+    },
+    {
+      "venue": "場地18",
+      "time": "15:10",
+      "group": "六年級男童組",
+      "match_code": "小組賽M31",
+      "team_a": "(15)雲縣大有國小",
+      "team_b": "(13)屏縣萬丹國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-226"
+    },
+    {
+      "venue": "場地18",
+      "time": "16:00",
+      "group": "六年級男童組",
+      "match_code": "小組賽M33",
+      "team_a": "(21)新北重慶國小",
+      "team_b": "(19)嘉市北園國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-227"
+    },
+    {
+      "venue": "場地18",
+      "time": "8:30",
+      "group": "六年級女童組",
+      "match_code": "小組賽M17",
+      "team_a": "(11)新北後埔國小",
+      "team_b": "(12)中市東寶國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "15",
+          "25"
+        ],
+        [
+          "25",
+          "17"
+        ],
+        [
+          "15",
+          "13"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-228"
+    },
+    {
+      "venue": "場地18",
+      "time": "9:20",
+      "group": "六年級男童組",
+      "match_code": "小組賽M17",
+      "team_a": "(11)北市天母國小",
+      "team_b": "(12)雲縣麥寮國小",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "12",
+          "25"
+        ],
+        [
+          "25",
+          "22"
+        ],
+        [
+          "7",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-229"
+    },
+    {
+      "venue": "場地19",
+      "time": "10:10",
+      "group": "六年級男童組",
+      "match_code": "小組賽M20",
+      "team_a": "(20)中市大雅國小",
+      "team_b": "(21)新北重慶國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "16"
+        ],
+        [
+          "25",
+          "20"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-230"
+    },
+    {
+      "venue": "場地19",
+      "time": "11:00",
+      "group": "六年級男童組",
+      "match_code": "小組賽M22",
+      "team_a": "(26)高市中庄國小",
+      "team_b": "(27)中市大元國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "18"
+        ],
+        [
+          "25",
+          "22"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-231"
+    },
+    {
+      "venue": "場地19",
+      "time": "11:50",
+      "group": "六年級男童組",
+      "match_code": "小組賽M24",
+      "team_a": "(32)中市力行國小",
+      "team_b": "(33)屏縣佳義國小",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "9",
+          "25"
+        ],
+        [
+          "15",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-232"
+    },
+    {
+      "venue": "場地19",
+      "time": "12:40",
+      "group": "六年級男童組",
+      "match_code": "小組賽M26",
+      "team_a": "(38)中市東寶國小",
+      "team_b": "(39)北市五常國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "12"
+        ],
+        [
+          "25",
+          "19"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-233"
+    },
+    {
+      "venue": "場地19",
+      "time": "13:30",
+      "group": "六年級男童組",
+      "match_code": "小組賽M28",
+      "team_a": "(6)新北大觀國小",
+      "team_b": "(4)屏縣霧臺國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-234"
+    },
+    {
+      "venue": "場地19",
+      "time": "14:20",
+      "group": "六年級男童組",
+      "match_code": "小組賽M30",
+      "team_a": "(12)雲縣麥寮國小",
+      "team_b": "(10)新北積穗國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-235"
+    },
+    {
+      "venue": "場地19",
+      "time": "15:10",
+      "group": "六年級男童組",
+      "match_code": "小組賽M32",
+      "team_a": "(18)新北文林國小",
+      "team_b": "(16)桃市中山國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-236"
+    },
+    {
+      "venue": "場地19",
+      "time": "16:00",
+      "group": "六年級男童組",
+      "match_code": "小組賽M34",
+      "team_a": "(24)新北莒光國小",
+      "team_b": "(22)南市開元國小",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-237"
+    },
+    {
+      "venue": "場地19",
+      "time": "8:30",
+      "group": "六年級女童組",
+      "match_code": "小組賽M18",
+      "team_a": "(14)高市中庄國小",
+      "team_b": "(15)中市豐田國小",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "12"
+        ],
+        [
+          "25",
+          "9"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-238"
+    },
+    {
+      "venue": "場地19",
+      "time": "9:20",
+      "group": "六年級男童組",
+      "match_code": "小組賽M18",
+      "team_a": "(14)北市福星國小",
+      "team_b": "(15)雲縣大有國小",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "21",
+          "25"
+        ],
+        [
+          "25",
+          "18"
+        ],
+        [
+          "11",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-239"
+    },
+    {
+      "venue": "場地2",
+      "time": "10:30",
+      "group": "社男組",
+      "match_code": "淘汰賽M27",
+      "team_a": "(W23)豐商明緯",
+      "team_b": "(2)青稻夫農產",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "20",
+          "25"
+        ],
+        [
+          "18",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-240"
+    },
+    {
+      "venue": "場地2",
+      "time": "11:30",
+      "group": "高男組",
+      "match_code": "小組賽M8",
+      "team_a": "(14)臺中家商",
+      "team_b": "(16)永慶高中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "10",
+          "25"
+        ],
+        [
+          "12",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-241"
+    },
+    {
+      "venue": "場地2",
+      "time": "12:30",
+      "group": "社男組",
+      "match_code": "淘汰賽M29",
+      "team_a": "(L26)靜宜大學B",
+      "team_b": "(L27)豐商明緯",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "25",
+          "23"
+        ],
+        [
+          "21",
+          "25"
+        ],
+        [
+          "12",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-242"
+    },
+    {
+      "venue": "場地2",
+      "time": "13:30",
+      "group": "社男組",
+      "match_code": "淘汰賽M31",
+      "team_a": "(W26)彰化師大",
+      "team_b": "(W27)青稻夫農產",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-243"
+    },
+    {
+      "venue": "場地2",
+      "time": "14:30",
+      "group": "社會九人制組",
+      "match_code": "淘汰賽M24",
+      "team_a": "(L21)崇友電梯",
+      "team_b": "(L22)東海校友A",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-244"
+    },
+    {
+      "venue": "場地2",
+      "time": "16:30",
+      "group": "社男組",
+      "match_code": "淘汰賽M34",
+      "team_a": "(W30)",
+      "team_b": "(W31)",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-245"
+    },
+    {
+      "venue": "場地2",
+      "time": "8:30",
+      "group": "社男組",
+      "match_code": "淘汰賽M23",
+      "team_a": "(7)龍津",
+      "team_b": "(10)豐商明緯",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "15",
+          "25"
+        ],
+        [
+          "25",
+          "17"
+        ],
+        [
+          "10",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-246"
+    },
+    {
+      "venue": "場地2",
+      "time": "9:30",
+      "group": "高男組",
+      "match_code": "小組賽M11",
+      "team_a": "(8)白河商工",
+      "team_b": "(9)龍津高中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "22",
+          "25"
+        ],
+        [
+          "18",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-247"
+    },
+    {
+      "venue": "場地3",
+      "time": "10:30",
+      "group": "社男組",
+      "match_code": "淘汰賽M25",
+      "team_a": "(5)清華大學",
+      "team_b": "(4)連義華排球屋",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "25",
+          "22"
+        ],
+        [
+          "29",
+          "27"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-248"
+    },
+    {
+      "venue": "場地3",
+      "time": "11:30",
+      "group": "高男組",
+      "match_code": "小組賽M15",
+      "team_a": "(3)潮州高中",
+      "team_b": "(1)興大附農",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "16"
+        ],
+        [
+          "25",
+          "23"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-249"
+    },
+    {
+      "venue": "場地3",
+      "time": "12:30",
+      "group": "高男組",
+      "match_code": "小組賽M16",
+      "team_a": "(6)豐原高中",
+      "team_b": "(4)壽山高中",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "24",
+          "26"
+        ],
+        [
+          "25",
+          "18"
+        ],
+        [
+          "15",
+          "8"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-250"
+    },
+    {
+      "venue": "場地3",
+      "time": "13:30",
+      "group": "高男組",
+      "match_code": "小組賽M17",
+      "team_a": "(9)龍津高中",
+      "team_b": "(7)武陵高中",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-251"
+    },
+    {
+      "venue": "場地3",
+      "time": "14:30",
+      "group": "社會九人制組",
+      "match_code": "淘汰賽M25",
+      "team_a": "(W21)白河一群農夫",
+      "team_b": "(W22)排球壯年左隊",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-252"
+    },
+    {
+      "venue": "場地3",
+      "time": "16:30",
+      "group": "大專男組",
+      "match_code": "淘汰賽M19",
+      "team_a": "(9)",
+      "team_b": "(8)",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-253"
+    },
+    {
+      "venue": "場地3",
+      "time": "8:30",
+      "group": "高男組",
+      "match_code": "小組賽M9",
+      "team_a": "(2)臺中一中",
+      "team_b": "(3)潮州高中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "19",
+          "25"
+        ],
+        [
+          "11",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-254"
+    },
+    {
+      "venue": "場地3",
+      "time": "9:30",
+      "group": "高男組",
+      "match_code": "小組賽M12",
+      "team_a": "(11)僑泰高中",
+      "team_b": "(12)曾文農工",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "11",
+          "25"
+        ],
+        [
+          "18",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-255"
+    },
+    {
+      "venue": "場地4",
+      "time": "10:30",
+      "group": "社男組",
+      "match_code": "淘汰賽M26",
+      "team_a": "(3)彰化師大",
+      "team_b": "(6)靜宜大學B",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "21"
+        ],
+        [
+          "25",
+          "14"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-256"
+    },
+    {
+      "venue": "場地4",
+      "time": "11:30",
+      "group": "社會九人制組",
+      "match_code": "淘汰賽M23",
+      "team_a": "(L19)興齡長照",
+      "team_b": "(L20)永發停車",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "21",
+          "0"
+        ],
+        [
+          "21",
+          "0"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-257"
+    },
+    {
+      "venue": "場地4",
+      "time": "12:30",
+      "group": "大專男組",
+      "match_code": "小組賽M13",
+      "team_a": "(3)虎尾科大",
+      "team_b": "(1)臺中教大",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "23",
+          "25"
+        ],
+        [
+          "25",
+          "17"
+        ],
+        [
+          "14",
+          "16"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-258"
+    },
+    {
+      "venue": "場地4",
+      "time": "13:30",
+      "group": "大專男組",
+      "match_code": "小組賽M16",
+      "team_a": "(12)明志科大",
+      "team_b": "(10)勤益科大",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "27",
+          "25"
+        ],
+        [
+          "25",
+          "22"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-259"
+    },
+    {
+      "venue": "場地4",
+      "time": "14:30",
+      "group": "高男組",
+      "match_code": "小組賽M18",
+      "team_a": "(12)曾文農工",
+      "team_b": "(10)陽明交大附中",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-260"
+    },
+    {
+      "venue": "場地4",
+      "time": "16:30",
+      "group": "大專男組",
+      "match_code": "淘汰賽M20",
+      "team_a": "(5)",
+      "team_b": "(12)",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-261"
+    },
+    {
+      "venue": "場地4",
+      "time": "8:30",
+      "group": "社會九人制組",
+      "match_code": "淘汰賽M19",
+      "team_a": "(5)興齡長照",
+      "team_b": "(4)白河一群農夫",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "21",
+          "23"
+        ],
+        [
+          "12",
+          "21"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-262"
+    },
+    {
+      "venue": "場地4",
+      "time": "9:30",
+      "group": "大專男組",
+      "match_code": "小組賽M10",
+      "team_a": "(11)國北教大",
+      "team_b": "(12)明志科大",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "20",
+          "25"
+        ],
+        [
+          "4",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-263"
+    },
+    {
+      "venue": "場地5",
+      "time": "10:30",
+      "group": "大專男組",
+      "match_code": "小組賽M11",
+      "team_a": "(14)明新科大",
+      "team_b": "(15)亞洲大學",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "12",
+          "25"
+        ],
+        [
+          "24",
+          "26"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-264"
+    },
+    {
+      "venue": "場地5",
+      "time": "11:30",
+      "group": "社會九人制組",
+      "match_code": "淘汰賽M21",
+      "team_a": "(1)崇友電梯",
+      "team_b": "(W19)白河一群農夫",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "18",
+          "21"
+        ],
+        [
+          "18",
+          "21"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-265"
+    },
+    {
+      "venue": "場地5",
+      "time": "12:30",
+      "group": "大專男組",
+      "match_code": "小組賽M14",
+      "team_a": "(6)台北科大",
+      "team_b": "(4)陽明交大",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "21",
+          "25"
+        ],
+        [
+          "25",
+          "17"
+        ],
+        [
+          "12",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-266"
+    },
+    {
+      "venue": "場地5",
+      "time": "13:30",
+      "group": "大專男組",
+      "match_code": "小組賽M17",
+      "team_a": "(15)亞洲大學",
+      "team_b": "(13)臺灣體大",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-267"
+    },
+    {
+      "venue": "場地5",
+      "time": "14:30",
+      "group": "高男組",
+      "match_code": "小組賽M13",
+      "team_a": "(13)麥寮高中",
+      "team_b": "(16)永慶高中",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-268"
+    },
+    {
+      "venue": "場地5",
+      "time": "16:30",
+      "group": "大專男組",
+      "match_code": "淘汰賽M21",
+      "team_a": "(11)",
+      "team_b": "(6)",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-269"
+    },
+    {
+      "venue": "場地5",
+      "time": "8:30",
+      "group": "社會九人制組",
+      "match_code": "淘汰賽M20",
+      "team_a": "(3)排球壯年左隊",
+      "team_b": "(2E)永發停車",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "21",
+          "19"
+        ],
+        [
+          "21",
+          "14"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-270"
+    },
+    {
+      "venue": "場地5",
+      "time": "9:30",
+      "group": "大專男組",
+      "match_code": "小組賽M8",
+      "team_a": "(5)中興大學",
+      "team_b": "(6)台北科大",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "19"
+        ],
+        [
+          "22",
+          "25"
+        ],
+        [
+          "18",
+          "16"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-271"
+    },
+    {
+      "venue": "場地6",
+      "time": "10:30",
+      "group": "大專男組",
+      "match_code": "小組賽M12",
+      "team_a": "(17)高雄師大",
+      "team_b": "(18)僑光科大",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "20"
+        ],
+        [
+          "25",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-272"
+    },
+    {
+      "venue": "場地6",
+      "time": "11:30",
+      "group": "社會九人制組",
+      "match_code": "淘汰賽M22",
+      "team_a": "(W20)排球壯年左隊",
+      "team_b": "(2)東海校友A",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "21",
+          "19"
+        ],
+        [
+          "17",
+          "21"
+        ],
+        [
+          "21",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-273"
+    },
+    {
+      "venue": "場地6",
+      "time": "12:30",
+      "group": "大專男組",
+      "match_code": "小組賽M15",
+      "team_a": "(9)雲林科大",
+      "team_b": "(7)屏東大學",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "23"
+        ],
+        [
+          "23",
+          "25"
+        ],
+        [
+          "15",
+          "13"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-274"
+    },
+    {
+      "venue": "場地6",
+      "time": "13:30",
+      "group": "大專男組",
+      "match_code": "小組賽M18",
+      "team_a": "(18)僑光科大",
+      "team_b": "(16)靜宜大學",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-275"
+    },
+    {
+      "venue": "場地6",
+      "time": "14:30",
+      "group": "高男組",
+      "match_code": "小組賽M14",
+      "team_a": "(15)豐原高商",
+      "team_b": "(14)臺中家商",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-276"
+    },
+    {
+      "venue": "場地6",
+      "time": "16:30",
+      "group": "大專男組",
+      "match_code": "淘汰賽M22",
+      "team_a": "(7)",
+      "team_b": "(10)",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-277"
+    },
+    {
+      "venue": "場地6",
+      "time": "8:30",
+      "group": "大專男組",
+      "match_code": "小組賽M7",
+      "team_a": "(2)嘉義大學",
+      "team_b": "(3)虎尾科大",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "18",
+          "25"
+        ],
+        [
+          "21",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-278"
+    },
+    {
+      "venue": "場地6",
+      "time": "9:30",
+      "group": "大專男組",
+      "match_code": "小組賽M9",
+      "team_a": "(8)逢甲大學",
+      "team_b": "(9)雲林科大",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "20",
+          "25"
+        ],
+        [
+          "14",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-279"
+    },
+    {
+      "venue": "場地7",
+      "time": "10:30",
+      "group": "高女組",
+      "match_code": "小組賽M11",
+      "team_a": "(10)僑泰高中",
+      "team_b": "(13)臺中女中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "7",
+          "25"
+        ],
+        [
+          "9",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-280"
+    },
+    {
+      "venue": "場地7",
+      "time": "11:30",
+      "group": "高女組",
+      "match_code": "小組賽M13",
+      "team_a": "(3)豐原高中",
+      "team_b": "(1)永慶高中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "17",
+          "25"
+        ],
+        [
+          "15",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-281"
+    },
+    {
+      "venue": "場地7",
+      "time": "12:30",
+      "group": "社女組",
+      "match_code": "淘汰賽M17",
+      "team_a": "(W13)連義華排球屋",
+      "team_b": "(W14)中華景美",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "22",
+          "25"
+        ],
+        [
+          "25",
+          "9"
+        ],
+        [
+          "15",
+          "9"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-282"
+    },
+    {
+      "venue": "場地7",
+      "time": "13:30",
+      "group": "高女組",
+      "match_code": "小組賽M15",
+      "team_a": "(9)壽山高中",
+      "team_b": "(7)景美女中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "10",
+          "25"
+        ],
+        [
+          "4",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-283"
+    },
+    {
+      "venue": "場地7",
+      "time": "14:30",
+      "group": "大專女組",
+      "match_code": "小組賽M7",
+      "team_a": "(8)臺中教大",
+      "team_b": "(9)嘉義大學",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-284"
+    },
+    {
+      "venue": "場地7",
+      "time": "15:30",
+      "group": "社女組",
+      "match_code": "淘汰賽M20",
+      "team_a": "(W17)連義華排球屋",
+      "team_b": "(W18)琮盈交通",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-285"
+    },
+    {
+      "venue": "場地7",
+      "time": "8:30",
+      "group": "社女組",
+      "match_code": "淘汰賽M13",
+      "team_a": "(1)連義華排球屋",
+      "team_b": "(8)縣立苑裡高中",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "12"
+        ],
+        [
+          "25",
+          "13"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-286"
+    },
+    {
+      "venue": "場地7",
+      "time": "9:30",
+      "group": "社女組",
+      "match_code": "淘汰賽M15",
+      "team_a": "(3)樂晴上岸",
+      "team_b": "(6)陽明交大",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "20"
+        ],
+        [
+          "25",
+          "23"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-287"
+    },
+    {
+      "venue": "場地8",
+      "time": "10:30",
+      "group": "高女組",
+      "match_code": "小組賽M12",
+      "team_a": "(12)東石高中",
+      "team_b": "(11)嘉義女中",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "18"
+        ],
+        [
+          "25",
+          "19"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-288"
+    },
+    {
+      "venue": "場地8",
+      "time": "11:30",
+      "group": "高女組",
+      "match_code": "小組賽M14",
+      "team_a": "(6)興大附農",
+      "team_b": "(4)枋寮高中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "9",
+          "25"
+        ],
+        [
+          "12",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-289"
+    },
+    {
+      "venue": "場地8",
+      "time": "12:30",
+      "group": "社女組",
+      "match_code": "淘汰賽M18",
+      "team_a": "(W15)樂晴上岸",
+      "team_b": "(W16)琮盈交通",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "20",
+          "25"
+        ],
+        [
+          "25",
+          "20"
+        ],
+        [
+          "11",
+          "15"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-290"
+    },
+    {
+      "venue": "場地8",
+      "time": "13:30",
+      "group": "大專女組",
+      "match_code": "小組賽M5",
+      "team_a": "(2)弘光科大",
+      "team_b": "(3)中興大學",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-291"
+    },
+    {
+      "venue": "場地8",
+      "time": "14:30",
+      "group": "大專女組",
+      "match_code": "小組賽M6",
+      "team_a": "(5)靜宜大學",
+      "team_b": "(6)國防大學",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-292"
+    },
+    {
+      "venue": "場地8",
+      "time": "15:30",
+      "group": "社女組",
+      "match_code": "淘汰賽M19",
+      "team_a": "(L17)中華景美",
+      "team_b": "(L18)樂晴上岸",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-293"
+    },
+    {
+      "venue": "場地8",
+      "time": "16:30",
+      "group": "大專女組",
+      "match_code": "小組賽M8",
+      "team_a": "(11)臺體體育",
+      "team_b": "(12)高雄醫大",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-294"
+    },
+    {
+      "venue": "場地8",
+      "time": "8:30",
+      "group": "社女組",
+      "match_code": "淘汰賽M14",
+      "team_a": "(5)中華景美",
+      "team_b": "(4)噗巧",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "19"
+        ],
+        [
+          "24",
+          "26"
+        ],
+        [
+          "15",
+          "13"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-295"
+    },
+    {
+      "venue": "場地8",
+      "time": "9:30",
+      "group": "社女組",
+      "match_code": "淘汰賽M16",
+      "team_a": "(7)永慶高中",
+      "team_b": "(2)琮盈交通",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "12",
+          "25"
+        ],
+        [
+          "11",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-296"
+    },
+    {
+      "venue": "場地9",
+      "time": "10:30",
+      "group": "國女組",
+      "match_code": "小組賽M3",
+      "team_a": "(7)中市長億高中",
+      "team_b": "(8)屏縣至正國中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "12",
+          "25"
+        ],
+        [
+          "11",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-297"
+    },
+    {
+      "venue": "場地9",
+      "time": "11:30",
+      "group": "國女組",
+      "match_code": "小組賽M4",
+      "team_a": "(10)苗縣苑裡高中",
+      "team_b": "(11)投縣草屯國中",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "7"
+        ],
+        [
+          "25",
+          "12"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-298"
+    },
+    {
+      "venue": "場地9",
+      "time": "12:30",
+      "group": "國女組",
+      "match_code": "小組賽M5",
+      "team_a": "(13)投縣同富國中",
+      "team_b": "(14)中市豐南國中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "20",
+          "25"
+        ],
+        [
+          "19",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-299"
+    },
+    {
+      "venue": "場地9",
+      "time": "13:30",
+      "group": "國女組",
+      "match_code": "小組賽M7",
+      "team_a": "(19)中市恵文高中",
+      "team_b": "(20)南市中山國中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "3",
+          "25"
+        ],
+        [
+          "6",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-300"
+    },
+    {
+      "venue": "場地9",
+      "time": "14:30",
+      "group": "國女組",
+      "match_code": "小組賽M9",
+      "team_a": "(2)新北大觀國中",
+      "team_b": "(3)桃市八德國中",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-301"
+    },
+    {
+      "venue": "場地9",
+      "time": "15:30",
+      "group": "國女組",
+      "match_code": "小組賽M11",
+      "team_a": "(8)屏縣至正國中",
+      "team_b": "(9)新北三峽國中",
+      "team_a_sets_won": null,
+      "team_b_sets_won": null,
+      "winner": null,
+      "set_scores": [],
+      "status": "upcoming",
+      "date": "2026-09-20",
+      "id": "live-1950-302"
+    },
+    {
+      "venue": "場地9",
+      "time": "8:30",
+      "group": "國女組",
+      "match_code": "小組賽M1",
+      "team_a": "(1)北市大安國中",
+      "team_b": "(2)新北大觀國中",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "19",
+          "25"
+        ],
+        [
+          "19",
+          "25"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
+      "id": "live-1950-303"
+    },
+    {
+      "venue": "場地9",
+      "time": "9:30",
+      "group": "國女組",
+      "match_code": "小組賽M2",
+      "team_a": "(4)新北積穗國中",
+      "team_b": "(5)中市大雅國中",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "12",
+          "25"
+        ],
+        [
+          "25",
+          "20"
+        ],
+        [
+          "16",
+          "14"
+        ]
+      ],
+      "status": "finished",
+      "date": "2026-09-20",
       "id": "live-1950-304"
     }
   ]
