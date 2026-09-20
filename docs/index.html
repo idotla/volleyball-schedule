@@ -136,6 +136,31 @@
   @media (prefers-color-scheme: dark){
     .live-status.in_progress{color:#e8c766;}
   }
+
+  /* 賽事列排版修正：隊名獨佔一行，比分移到下方，校名不會被切開 */
+  .match-row{
+    display:grid;
+    grid-template-columns:1fr auto;
+    column-gap:14px;
+    row-gap:6px;
+    align-items:center;
+  }
+  .match-row-left,
+  .match-row-main,
+  .match-row-score{display:contents;}
+
+  .match-time{grid-row:1;grid-column:1;}
+  .match-row-score > .live-status{grid-row:1;grid-column:2;justify-self:end;}
+
+  .match-teams{
+    grid-row:2;grid-column:1 / -1;
+    display:flex;flex-wrap:wrap;align-items:baseline;
+  }
+  .match-teams > span{white-space:nowrap;}
+
+  .match-row-meta{grid-row:3;grid-column:1;margin-top:0;min-width:0;}
+  .match-row-score-total{grid-row:3;grid-column:2;justify-self:end;}
+  .match-row-score-sets{grid-row:4;grid-column:1 / -1;justify-self:end;}
 </style>
 </head>
 <body>
