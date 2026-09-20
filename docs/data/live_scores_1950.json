@@ -3,7 +3,7 @@
   "event_name": "115年第53屆永信盃",
   "day": "2026-09-20",
   "source_url": "https://vbg.yungshingroup.com/tw/event/time?day=2026-09-20",
-  "updated_at": "2026/09/20 09:10",
+  "updated_at": "2026/09/20 09:38",
   "matches": [
     {
       "venue": "場地1",
@@ -236,11 +236,20 @@
       "match_code": "小組賽M9",
       "team_a": "(2)臺中一中",
       "team_b": "(3)潮州高中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "19",
+          "25"
+        ],
+        [
+          "11",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-16"
     },
     {
@@ -348,11 +357,20 @@
       "match_code": "淘汰賽M19",
       "team_a": "(5)興齡長照",
       "team_b": "(4)白河一群農夫",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "21",
+          "23"
+        ],
+        [
+          "12",
+          "21"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-24"
     },
     {
@@ -460,11 +478,20 @@
       "match_code": "淘汰賽M20",
       "team_a": "(3)排球壯年左隊",
       "team_b": "(2E)永發停車",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "21",
+          "19"
+        ],
+        [
+          "21",
+          "14"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-32"
     },
     {
@@ -572,11 +599,20 @@
       "match_code": "小組賽M7",
       "team_a": "(2)嘉義大學",
       "team_b": "(3)虎尾科大",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "18",
+          "25"
+        ],
+        [
+          "21",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-40"
     },
     {
@@ -684,11 +720,20 @@
       "match_code": "淘汰賽M13",
       "team_a": "(1)連義華排球屋",
       "team_b": "(8)縣立苑裡高中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "12"
+        ],
+        [
+          "25",
+          "13"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-48"
     },
     {
@@ -922,11 +967,20 @@
       "match_code": "小組賽M1",
       "team_a": "(1)北市大安國中",
       "team_b": "(2)新北大觀國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "19",
+          "25"
+        ],
+        [
+          "19",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-65"
     },
     {
@@ -1160,11 +1214,20 @@
       "match_code": "小組賽M1",
       "team_a": "(1)苗縣建國國中",
       "team_b": "(2)新北積穗國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "11",
+          "25"
+        ],
+        [
+          "22",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-82"
     },
     {
@@ -1393,11 +1456,20 @@
       "match_code": "小組賽M17",
       "team_a": "(8)新北大觀國小",
       "team_b": "(9)屏縣霧臺國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "8",
+          "25"
+        ],
+        [
+          "13",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-98"
     },
     {
@@ -1682,11 +1754,20 @@
       "match_code": "小組賽M17",
       "team_a": "(5)南市東興國小",
       "team_b": "(6)新北文林國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "16"
+        ],
+        [
+          "25",
+          "8"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-118"
     },
     {
@@ -1822,11 +1903,20 @@
       "match_code": "小組賽M19",
       "team_a": "(17)新北積穗國小",
       "team_b": "(18)雲縣北辰國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "15",
+          "25"
+        ],
+        [
+          "13",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-128"
     },
     {
@@ -1962,11 +2052,20 @@
       "match_code": "小組賽M20",
       "team_a": "(20)中市力行國小",
       "team_b": "(21)新北大觀國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "7"
+        ],
+        [
+          "25",
+          "6"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-138"
     },
     {
