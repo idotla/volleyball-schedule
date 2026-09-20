@@ -3,7 +3,7 @@
   "event_name": "115年第53屆永信盃",
   "day": "2026-09-20",
   "source_url": "https://vbg.yungshingroup.com/tw/event/time?day=2026-09-20",
-  "updated_at": "2026/09/20 11:10",
+  "updated_at": "2026/09/20 11:40",
   "matches": [
     {
       "venue": "場地1",
@@ -326,11 +326,20 @@
       "match_code": "淘汰賽M25",
       "team_a": "(5)清華大學",
       "team_b": "(4)連義華排球屋",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "25",
+          "22"
+        ],
+        [
+          "29",
+          "27"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-18"
     },
     {
@@ -456,11 +465,20 @@
       "match_code": "淘汰賽M26",
       "team_a": "(3)彰化師大",
       "team_b": "(6)靜宜大學B",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "21"
+        ],
+        [
+          "25",
+          "14"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-26"
     },
     {
@@ -850,11 +868,20 @@
       "match_code": "小組賽M11",
       "team_a": "(10)僑泰高中",
       "team_b": "(13)臺中女中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "7",
+          "25"
+        ],
+        [
+          "9",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-50"
     },
     {
@@ -1410,11 +1437,20 @@
       "match_code": "小組賽M5",
       "team_a": "(13)東縣海端國中",
       "team_b": "(14)北市誠正國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "12",
+          "25"
+        ],
+        [
+          "8",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-84"
     },
     {
@@ -1544,11 +1580,20 @@
       "match_code": "小組賽M6",
       "team_a": "(16)竹縣二重國中",
       "team_b": "(17)苗縣苑裡高中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "11",
+          "25"
+        ],
+        [
+          "22",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-92"
     },
     {
@@ -1678,11 +1723,24 @@
       "match_code": "小組賽M21",
       "team_a": "(20)高市樂群國小",
       "team_b": "(21)中市中山國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "19"
+        ],
+        [
+          "19",
+          "25"
+        ],
+        [
+          "15",
+          "7"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-100"
     },
     {
@@ -2665,11 +2723,20 @@
       "match_code": "小組賽M20",
       "team_a": "(20)中市大雅國小",
       "team_b": "(21)新北重慶國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "16"
+        ],
+        [
+          "25",
+          "20"
+        ]
+      ],
+      "status": "finished",
       "id": "live-1950-160"
     },
     {
