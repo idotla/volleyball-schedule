@@ -3,7 +3,7 @@
   "event_name": "115年第53屆永信盃",
   "day": "2026-09-20",
   "source_url": "https://vbg.yungshingroup.com/tw/event/time?day=2026-09-20",
-  "updated_at": "2026/09/20 15:38",
+  "updated_at": "2026/09/20 16:10",
   "matches": [
     {
       "venue": "場地1",
@@ -3735,11 +3735,20 @@
       "match_code": "小組賽M10",
       "team_a": "(5)中市大雅國中",
       "team_b": "(6)雲縣馬光國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "17"
+        ],
+        [
+          "25",
+          "19"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-20",
       "id": "live-1950-149"
     },
@@ -4333,11 +4342,24 @@
       "match_code": "小組賽M31",
       "team_a": "(15)中市惠文國小",
       "team_b": "(13)南市六甲國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "26",
+          "24"
+        ],
+        [
+          "25",
+          "27"
+        ],
+        [
+          "15",
+          "3"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-20",
       "id": "live-1950-175"
     },
@@ -5026,11 +5048,20 @@
       "match_code": "小組賽M23",
       "team_a": "(22)苗縣苑裡國小",
       "team_b": "(25)新北頂溪國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "10"
+        ],
+        [
+          "25",
+          "13"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-20",
       "id": "live-1950-206"
     },
@@ -5228,11 +5259,24 @@
       "match_code": "小組賽M33",
       "team_a": "(27)桃市大成國小",
       "team_b": "(25)北市明湖國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "18",
+          "25"
+        ],
+        [
+          "25",
+          "19"
+        ],
+        [
+          "15",
+          "11"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-20",
       "id": "live-1950-215"
     },
@@ -5445,11 +5489,20 @@
       "match_code": "小組賽M29",
       "team_a": "(9)雲縣北辰國小",
       "team_b": "(7)中市四張犁國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "19",
+          "25"
+        ],
+        [
+          "8",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-20",
       "id": "live-1950-225"
     },
@@ -5670,11 +5723,20 @@
       "match_code": "小組賽M30",
       "team_a": "(12)雲縣麥寮國小",
       "team_b": "(10)新北積穗國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "18",
+          "25"
+        ],
+        [
+          "7",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-20",
       "id": "live-1950-235"
     },
@@ -5867,11 +5929,20 @@
       "match_code": "淘汰賽M24",
       "team_a": "(L21)崇友電梯",
       "team_b": "(L22)東海校友A",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "21",
+          "13"
+        ],
+        [
+          "21",
+          "18"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-20",
       "id": "live-1950-244"
     },
@@ -6071,8 +6142,8 @@
       "time": "16:30",
       "group": "大專男組",
       "match_code": "淘汰賽M19",
-      "team_a": "(9)",
-      "team_b": "(8)",
+      "team_a": "(9)亞洲大學",
+      "team_b": "(8)逢甲大學",
       "team_a_sets_won": null,
       "team_b_sets_won": null,
       "winner": null,
@@ -6258,8 +6329,8 @@
       "time": "16:30",
       "group": "大專男組",
       "match_code": "淘汰賽M20",
-      "team_a": "(5)",
-      "team_b": "(12)",
+      "team_a": "(5)中興大學",
+      "team_b": "(12)勤益科大",
       "team_a_sets_won": null,
       "team_b_sets_won": null,
       "winner": null,
@@ -6423,11 +6494,24 @@
       "match_code": "小組賽M13",
       "team_a": "(13)麥寮高中",
       "team_b": "(16)永慶高中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "22",
+          "25"
+        ],
+        [
+          "25",
+          "19"
+        ],
+        [
+          "15",
+          "5"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-20",
       "id": "live-1950-268"
     },
@@ -6436,8 +6520,8 @@
       "time": "16:30",
       "group": "大專男組",
       "match_code": "淘汰賽M21",
-      "team_a": "(11)",
-      "team_b": "(6)",
+      "team_a": "(11)靜宜大學",
+      "team_b": "(6)雲林科大",
       "team_a_sets_won": null,
       "team_b_sets_won": null,
       "winner": null,
@@ -6626,8 +6710,8 @@
       "time": "16:30",
       "group": "大專男組",
       "match_code": "淘汰賽M22",
-      "team_a": "(7)",
-      "team_b": "(10)",
+      "team_a": "(7)虎尾科大",
+      "team_b": "(10)陽明交大",
       "team_a_sets_won": null,
       "team_b_sets_won": null,
       "winner": null,
@@ -6954,11 +7038,20 @@
       "match_code": "小組賽M5",
       "team_a": "(2)弘光科大",
       "team_b": "(3)中興大學",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "21",
+          "25"
+        ],
+        [
+          "19",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-20",
       "id": "live-1950-291"
     },
@@ -6969,11 +7062,20 @@
       "match_code": "小組賽M6",
       "team_a": "(5)靜宜大學",
       "team_b": "(6)國防大學",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "22"
+        ],
+        [
+          "25",
+          "21"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-20",
       "id": "live-1950-292"
     },
