@@ -3,7 +3,7 @@
   "event_name": "115年第53屆永信盃",
   "day": "2026-09-21",
   "source_url": "https://vbg.yungshingroup.com/tw/event/time?day=2026-09-21",
-  "updated_at": "2026/09/21 14:15",
+  "updated_at": "2026/09/21 14:45",
   "matches": [
     {
       "venue": "場地1",
@@ -7901,11 +7901,24 @@
       "match_code": "淘汰賽M40",
       "team_a": "(W36)苗縣苑裡國小",
       "team_b": "(2)中市力行國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "16"
+        ],
+        [
+          "21",
+          "25"
+        ],
+        [
+          "15",
+          "7"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-21",
       "id": "live-1950-316"
     },
@@ -8407,11 +8420,24 @@
       "match_code": "淘汰賽M44",
       "team_a": "(W40)高市樂群國小",
       "team_b": "(2)中市惠文國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "13"
+        ],
+        [
+          "19",
+          "25"
+        ],
+        [
+          "15",
+          "7"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-21",
       "id": "live-1950-339"
     },
@@ -8498,11 +8524,24 @@
       "match_code": "淘汰賽M38",
       "team_a": "(5)雲縣北辰國小",
       "team_b": "(4)中市大雅國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "1",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "27",
+          "25"
+        ],
+        [
+          "16",
+          "25"
+        ],
+        [
+          "15",
+          "9"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-21",
       "id": "live-1950-343"
     },
@@ -8680,11 +8719,20 @@
       "match_code": "淘汰賽M37",
       "team_a": "(1)新北頂溪國小",
       "team_b": "(W34)北市五常國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "27",
+          "25"
+        ],
+        [
+          "25",
+          "16"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-21",
       "id": "live-1950-351"
     },
