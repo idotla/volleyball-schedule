@@ -3,7 +3,7 @@
   "event_name": "115年第53屆永信盃",
   "day": "2026-09-22",
   "source_url": "https://vbg.yungshingroup.com/tw/event/time?day=2026-09-22",
-  "updated_at": "2026/09/22 12:40",
+  "updated_at": "2026/09/22 13:10",
   "matches": [
     {
       "venue": "場地1",
@@ -10478,11 +10478,20 @@
       "match_code": "小組賽M3",
       "team_a": "(3)屏縣賽嘉國小",
       "team_b": "(1)嘉市精忠國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "12"
+        ],
+        [
+          "25",
+          "10"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-423"
     },
