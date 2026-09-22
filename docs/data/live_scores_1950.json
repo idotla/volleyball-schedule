@@ -3,7 +3,7 @@
   "event_name": "115年第53屆永信盃",
   "day": "2026-09-22",
   "source_url": "https://vbg.yungshingroup.com/tw/event/time?day=2026-09-22",
-  "updated_at": "2026/09/22 15:11",
+  "updated_at": "2026/09/22 15:40",
   "matches": [
     {
       "venue": "場地1",
@@ -11764,11 +11764,24 @@
       "match_code": "淘汰賽M20",
       "team_a": "(W17)國北教大",
       "team_b": "(W18)中興大學",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "27",
+          "25"
+        ],
+        [
+          "20",
+          "25"
+        ],
+        [
+          "11",
+          "15"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-468"
     },
