@@ -3,7 +3,7 @@
   "event_name": "115年第53屆永信盃",
   "day": "2026-09-22",
   "source_url": "https://vbg.yungshingroup.com/tw/event/time?day=2026-09-22",
-  "updated_at": "2026/09/22 10:10",
+  "updated_at": "2026/09/22 10:40",
   "matches": [
     {
       "venue": "場地1",
@@ -9921,11 +9921,20 @@
       "match_code": "淘汰賽M25",
       "team_a": "(L21)白河商工",
       "team_b": "(L22)曾文農工",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "22"
+        ],
+        [
+          "25",
+          "22"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-397"
     },
@@ -9981,11 +9990,24 @@
       "match_code": "淘汰賽M41",
       "team_a": "(L37)屏縣崇蘭國小",
       "team_b": "(L38)竹縣光明國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "25",
+          "14"
+        ],
+        [
+          "13",
+          "25"
+        ],
+        [
+          "9",
+          "15"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-401"
     },
@@ -10041,11 +10063,20 @@
       "match_code": "淘汰賽M29",
       "team_a": "(L25)中市豐南國中",
       "team_b": "(L26)苗縣苑裡高中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "17",
+          "25"
+        ],
+        [
+          "9",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-405"
     },
@@ -10161,11 +10192,24 @@
       "match_code": "淘汰賽M45",
       "team_a": "(L41)中市大雅國小",
       "team_b": "(L42)北市長春國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "25",
+          "12"
+        ],
+        [
+          "21",
+          "25"
+        ],
+        [
+          "13",
+          "15"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-413"
     },
@@ -10221,11 +10265,20 @@
       "match_code": "淘汰賽M46",
       "team_a": "(L43)中市東勢國小",
       "team_b": "(L44)中市惠文國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "8",
+          "25"
+        ],
+        [
+          "18",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-417"
     },
@@ -10281,11 +10334,24 @@
       "match_code": "淘汰賽M42",
       "team_a": "(L39)苗縣苑裡國小",
       "team_b": "(L40)北市三民國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "1",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "16",
+          "25"
+        ],
+        [
+          "25",
+          "22"
+        ],
+        [
+          "12",
+          "15"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-421"
     },
@@ -10416,11 +10482,20 @@
       "match_code": "淘汰賽M42",
       "team_a": "(L39)北市天母國小",
       "team_b": "(L40)中市力行國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "14",
+          "25"
+        ],
+        [
+          "14",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-430"
     },
@@ -10476,11 +10551,20 @@
       "match_code": "淘汰賽M49",
       "team_a": "(L45)中市四張犁國小",
       "team_b": "(L46)屏縣佳義國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "21"
+        ],
+        [
+          "25",
+          "23"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-434"
     },
@@ -10536,11 +10620,20 @@
       "match_code": "淘汰賽M50",
       "team_a": "(L47)苗縣苑裡國小",
       "team_b": "(L48)屏縣萬丹國小",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "21"
+        ],
+        [
+          "25",
+          "21"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-438"
     },
@@ -10656,11 +10749,20 @@
       "match_code": "淘汰賽M27",
       "team_a": "(L23)逢甲大學",
       "team_b": "(L24)臺中教大",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "25",
+          "27"
+        ],
+        [
+          "13",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-446"
     },
@@ -10821,11 +10923,20 @@
       "match_code": "淘汰賽M30",
       "team_a": "(L27)新北積穗國中",
       "team_b": "(L28)投縣草屯國中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "18"
+        ],
+        [
+          "25",
+          "13"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-457"
     },
@@ -10881,11 +10992,20 @@
       "match_code": "淘汰賽M20",
       "team_a": "(L16)長億高中",
       "team_b": "(L17)東石高中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "10",
+          "25"
+        ],
+        [
+          "18",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-461"
     },
@@ -10941,11 +11061,20 @@
       "match_code": "淘汰賽M21",
       "team_a": "(L18)華江高中",
       "team_b": "(L19)景美女中",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "0",
+      "team_b_sets_won": "2",
+      "winner": "team_b",
+      "set_scores": [
+        [
+          "13",
+          "25"
+        ],
+        [
+          "16",
+          "25"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-465"
     },
@@ -11001,11 +11130,20 @@
       "match_code": "淘汰賽M17",
       "team_a": "(W13)國北教大",
       "team_b": "(W14)高雄醫大",
-      "team_a_sets_won": null,
-      "team_b_sets_won": null,
-      "winner": null,
-      "set_scores": [],
-      "status": "upcoming",
+      "team_a_sets_won": "2",
+      "team_b_sets_won": "0",
+      "winner": "team_a",
+      "set_scores": [
+        [
+          "25",
+          "23"
+        ],
+        [
+          "25",
+          "17"
+        ]
+      ],
+      "status": "finished",
       "date": "2026-09-22",
       "id": "live-1950-469"
     }
