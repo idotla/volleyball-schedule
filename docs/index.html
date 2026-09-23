@@ -448,6 +448,14 @@ function eventDistanceMs(ev, now) {
   return now - range.end;
 }
 
+function isEventOver(ev, now) {
+  // 2026-09-23 使用者要求：永信盃打完(9/22)之後，不要再出現在上面「找到
+  // 比賽」的查詢結果或「即將登場」清單裡，改成收進最下面的「過去賽事」。
+  const range = parseEventRange(ev);
+  if (!range) return false;
+  return now > range.end;
+}
+
 function statusLabel(ev, now) {
   const range = parseEventRange(ev);
   if (!range) return null;
@@ -516,17 +524,22 @@ function renderResults(query) {
   const q = query.trim().toLowerCase();
 
   if (!q) {
-    if (!ALL_EVENTS.length) {
+    const now = new Date();
+    const activeEvents = ALL_EVENTS.filter(ev => !isEventOver(ev, now));
+    const pastEvents = ALL_EVENTS.filter(ev => isEventOver(ev, now));
+
+    if (!activeEvents.length) {
       container.appendChild(el('div', {class: 'section-title', text: '目前追蹤的賽事'}));
-      container.appendChild(el('div', {class: 'empty', text: '目前沒有賽事資料'}));
+      container.appendChild(el('div', {class: 'empty', text: '目前沒有進行中或即將登場的賽事'}));
+      appendPastEvents(container, pastEvents, now);
       return;
     }
 
     // 只把「離現在最近」的一筆賽事完整顯示出來(進行中優先，其次是最快開打的，
     // 都沒有的話退而求其次挑最近剛結束的)，其餘賽事簡化成一行列表，標成
-    // Coming Soon，不用每筆都佔一大張卡片。
-    const now = new Date();
-    const ranked = ALL_EVENTS
+    // Coming Soon，不用每筆都佔一大張卡片。已經結束的賽事(isEventOver)不會
+    // 進入這裡的排序，一律收到最下面的「過去賽事」。
+    const ranked = activeEvents
       .map(ev => ({ev, dist: eventDistanceMs(ev, now)}))
       .sort((a, b) => a.dist - b.dist);
     const featured = ranked[0].ev;
@@ -536,11 +549,15 @@ function renderResults(query) {
     container.appendChild(renderEventOverviewCard(featured, {now}));
 
     appendComingSoon(container, rest, now);
+    appendPastEvents(container, pastEvents, now);
     return;
   }
 
+  const now = new Date();
+
   const hits = [];
   ALL_EVENTS.forEach(ev => {
+    if (isEventOver(ev, now)) return;
     (ev.matches || []).forEach(m => {
       const a = (m.team_a || '').toLowerCase();
       const b = (m.team_b || '').toLowerCase();
@@ -548,11 +565,10 @@ function renderResults(query) {
     });
   });
 
-  const now = new Date();
-
   if (!hits.length) {
     container.appendChild(el('div', {class: 'empty', text: `找不到「${query}」的比賽場次，可能是這個賽事的賽程還沒解析出來，或名稱寫法不同，可以換個關鍵字試試看。`}));
-    appendComingSoon(container, ALL_EVENTS, now);
+    appendComingSoon(container, ALL_EVENTS.filter(ev => !isEventOver(ev, now)), now);
+    appendPastEvents(container, ALL_EVENTS.filter(ev => isEventOver(ev, now)), now);
     return;
   }
 
@@ -595,10 +611,11 @@ function renderResults(query) {
   });
 
   // 其餘沒有找到這個關鍵字比賽的賽事，簡化成「即將登場」清單放在最下面，
-  // 讓使用者知道還有哪些盃賽在追蹤中。
+  // 讓使用者知道還有哪些盃賽在追蹤中。已結束的賽事收到「過去賽事」。
   const shownNames = new Set(groupedEvents.map(g => g.ev.name || ''));
-  const rest = ALL_EVENTS.filter(ev => !shownNames.has(ev.name || ''));
+  const rest = ALL_EVENTS.filter(ev => !shownNames.has(ev.name || '') && !isEventOver(ev, now));
   appendComingSoon(container, rest, now);
+  appendPastEvents(container, ALL_EVENTS.filter(ev => isEventOver(ev, now)), now);
 }
 
 function appendComingSoon(container, events, now) {
@@ -616,15 +633,38 @@ function appendComingSoon(container, events, now) {
   container.appendChild(list);
 }
 
+function appendPastEvents(container, events, now) {
+  // 2026-09-23 使用者要求：賽事結束後(isEventOver)改放到這裡，跟「即將
+  // 登場」共用同一套「標題+狀態」簡化列表樣式(renderComingSoonRow 的
+  // statusLabel 本來就支援「N天前結束」)，不重新列出每一場比賽，放在
+  // 「即將登場」清單後面。
+  const withDate = events.filter(ev => parseEventRange(ev) !== null);
+  if (!withDate.length) return;
+  const ranked = withDate.slice().sort((a, b) => parseEventRange(b).end - parseEventRange(a).end);
+  container.appendChild(el('div', {class: 'section-title', text: '過去賽事'}));
+  const list = el('div', {class: 'coming-soon-list'});
+  ranked.forEach(ev => list.appendChild(renderComingSoonRow(ev, now)));
+  container.appendChild(list);
+}
+
 document.getElementById('search').addEventListener('input', (e) => renderResults(e.target.value));
 
-fetch('data/events.json')
-  .then(r => {
+// 2026-09-23 使用者反饋：手動維護的盃賽日期(目前是北港媽祖盃、第70屆和家盃)
+// 之前是直接寫在 events.json 裡，但 events.json 是每日排程(daily-scrape.yml)
+// 整份重新產生、覆蓋掉的，導致這兩筆手動資料已經被排程覆蓋消失過不只一次。
+// 改成放在獨立的 manual_events.json(排程完全不會去動這個檔案)，這裡用
+// Promise.all 兩份資料都抓到後再合併進 ALL_EVENTS。manual_events.json 抓
+// 失敗(例如檔案還不存在)不應該讓整個查詢頁面掛掉，所以用 catch 讓它退回
+// 空陣列，不影響 events.json 那邊的正常賽程資料。
+Promise.all([
+  fetch('data/events.json').then(r => {
     if (!r.ok) throw new Error('HTTP ' + r.status);
     return r.json();
-  })
-  .then(data => {
-    ALL_EVENTS = data;
+  }),
+  fetch('data/manual_events.json').then(r => (r.ok ? r.json() : [])).catch(() => []),
+])
+  .then(([events, manualEvents]) => {
+    ALL_EVENTS = events.concat(manualEvents || []);
     renderResults(document.getElementById('search').value);
   })
   .catch(err => {
