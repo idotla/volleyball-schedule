@@ -78,6 +78,16 @@ DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 # 節約時間，全年固定，不需要用 zoneinfo 查時區資料庫)。
 TAIWAN_TZ = timezone(timedelta(hours=8))
 
+# 2026-09-26 使用者反饋：和家盃「115/2/7~2/10」這筆資料其實是上一個學年度
+# (114學年)已經打完的舊賽事，不是這個專案追蹤的115學年(2026/9/1~2027/6/30)
+# 比賽。協會網站上「115年」這個民國曆年標籤橫跨兩個學年度(114學年下學期在
+# 2026年初、115學年上學期在2026年下半年)，光靠標題上的年度字樣沒辦法正確
+# 分辨，pick_latest_year_events()/merge_events_by_tournament() 這兩層原本
+# 的「年度」判斷都是抓標題文字、跟這裡不是同一件事、解決不了這個問題。
+# 這裡改成直接用「比賽日期」本身跟學年起始日比較，比賽結束日期早於這個
+# 學年開始就直接排除，不管有沒有超過 --hide-past-days 門檻。
+ACADEMIC_YEAR_START = date(2026, 9, 1)
+
 # 預設只抓這幾個指定盃賽的資料（2026-09-10 使用者要求縮小範圍）。
 # 用「不含杯/盃字樣的關鍵字」去比對賽事標題的子字串，因為官網同一個盃賽
 # 在不同文章裡「杯」「盃」兩種寫法都會出現（例如「永信杯」vs 標題其他地方
@@ -1025,6 +1035,12 @@ def main():
 
         if not args.event_id and result.get("date_end"):
             comp_end = datetime.strptime(result["date_end"], "%Y-%m-%d").date()
+
+            if comp_end < ACADEMIC_YEAR_START:
+                print(f"  略過(比賽日期 {result['date_end']} 早於這個學年"
+                      f"({ACADEMIC_YEAR_START})開始，不是這學年的比賽)")
+                continue
+
             days_since_end = (date.today() - comp_end).days
             if days_since_end > args.hide_past_days:
                 print(f"  略過(比賽日期 {result['date_end']} 已結束，{days_since_end} "
