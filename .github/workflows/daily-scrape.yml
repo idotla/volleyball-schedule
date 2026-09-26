@@ -27,7 +27,13 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 執行爬蟲
-        run: python scraper/scrape_ctvba.py --out docs/data/events.json
+        # 2026-09-26 使用者反饋：查詢頁面的「過去賽事」區塊(2026-09-23新增)
+        # 空了，查出來是這裡沒有帶 --hide-past-days，預設0天代表比賽一結束
+        # scraper就會把整筆賽事從 events.json 拿掉，前端「過去賽事」邏輯
+        # 收不到這筆資料自然沒東西可以顯示。改成帶365天，讓已結束的賽事在
+        # events.json 裡繼續留一整年，改由前端(isEventOver/appendPastEvents)
+        # 負責分類顯示成「過去賽事」，不再由 scraper 這一層直接砍掉。
+        run: python scraper/scrape_ctvba.py --out docs/data/events.json --hide-past-days 365
 
       - name: 檢查資料檔是否有變化
         id: git-check
