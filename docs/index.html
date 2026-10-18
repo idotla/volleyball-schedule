@@ -718,26 +718,49 @@ fetch('data/last_updated.json')
 // 時間戳還是會更新)，讓使用者能實際看到即時比分確實有跟著時間更新；平常
 // 沒有即時比分資料的盃賽則不顯示這一行(維持 display:none)。
 
-fetch('data/live_scores_1950.json')
-  .then(r => (r.ok ? r.json() : null))
-  .then(data => {
+// 2026-10-17 華宗盃開打後新增這個賽事的即時比分來源(見
+// scraper/scrape_live_scores_huazong.py)，原本只抓永信盃一個檔案的fetch
+// 改成迴圈抓LIVE_SCORE_EVENT_IDS列表裡每一個event_id對應的
+// live_scores_{id}.json，某個來源不存在/抓失敗就用.catch(()=>null)當作
+// 沒有這個來源，不影響其他來源或主要賽程查詢功能。全部fetch完後只重新
+// render一次(避免每個來源各自觸發一次重繪)，「即時比分更新時間」那行顯示
+// 所有來源裡最新的updated_at(字串格式YYYY/MM/DD HH:MM本身就能直接用字串
+// 比較大小排出最新，不用特別轉成Date物件)。
+const LIVE_SCORE_EVENT_IDS = ['1950', '1981'];
+
+Promise.all(
+  LIVE_SCORE_EVENT_IDS.map(id =>
+    fetch(`data/live_scores_${id}.json`)
+      .then(r => (r.ok ? r.json() : null))
+      .catch(() => null)
+  )
+).then(results => {
+  let latestUpdatedAt = null;
+  let gotAny = false;
+  results.forEach(data => {
     if (data && data.event_id) {
       LIVE_DATA_BY_EVENT[data.event_id] = data;
-      // 即時比分是嵌在每一場比賽自己的row裡顯示的，如果這個 fetch 比
-      // events.json 晚回來，畫面已經先渲染過一次、還沒有即時比分，這裡要
-      // 重新呼叫 renderResults() 補上，用目前搜尋欄位的值重繪一次。
-      renderResults(document.getElementById('search').value);
+      gotAny = true;
     }
-    if (data && data.updated_at) {
-      const line = document.getElementById('live-updated-line');
-      const span = document.getElementById('live-updated-at');
-      if (line && span) {
-        span.textContent = data.updated_at;
-        line.style.display = '';
-      }
+    if (data && data.updated_at && (!latestUpdatedAt || data.updated_at > latestUpdatedAt)) {
+      latestUpdatedAt = data.updated_at;
     }
-  })
-  .catch(() => {});
+  });
+  if (gotAny) {
+    // 即時比分是嵌在每一場比賽自己的row裡顯示的，如果這些 fetch 比
+    // events.json 晚回來，畫面已經先渲染過一次、還沒有即時比分，這裡要
+    // 重新呼叫 renderResults() 補上，用目前搜尋欄位的值重繪一次。
+    renderResults(document.getElementById('search').value);
+  }
+  if (latestUpdatedAt) {
+    const line = document.getElementById('live-updated-line');
+    const span = document.getElementById('live-updated-at');
+    if (line && span) {
+      span.textContent = latestUpdatedAt;
+      line.style.display = '';
+    }
+  }
+});
 </script>
 </body>
 </html>
