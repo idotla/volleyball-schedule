@@ -1,0 +1,73 @@
+name: 華宗盃即時比分定時更新
+
+# 2026-10-17 使用者傳來華宗盃即時比分來源(Google試算表，短網址
+# https://reurl.cc/zOGGMV 展開後是
+# https://docs.google.com/spreadsheets/d/1YFRGH2AnnrqzQkSpig5y9N-LW2Ng6jslBUSMb5Xm2MQ)，
+# 比照永信盃(live-scores.yml)的做法另外開一個獨立排程，資料來源、輸出檔案
+# (docs/data/live_scores_1981.json)都跟主賽程爬蟲(daily-scrape.yml)完全
+# 分開、互不影響。
+#
+# 跟永信盃那份排程最大的不同：這份Google試算表本身就把5天(10/17~10/21)的
+# 比分都放在同一份表裡、不會隨著換日清掉前面幾天的資料，所以
+# scrape_live_scores_huazong.py每次都是重新抓整份試算表、整份覆蓋輸出檔案，
+# 不需要像永信盃的scrape_live_scores.py那樣額外帶--day參數、也不需要
+# merge_matches()累加邏輯，執行時不用指定要抓哪一天。
+#
+# 華宗盃只有10/17~10/21這5天比賽，這個排程過了這幾天就沒有意義了——賽事結束
+# 後記得回來disable或刪除這個workflow(cron的month/day-of-month欄位沒有
+# 「年」，明年10/17~10/21還是會照樣觸發，要留意，比照專案文件「已知限制」
+# 段落裡永信盃live-scores.yml的提醒)。
+
+on:
+  schedule:
+    # UTC 0:00~10:30(每30分鐘一次) = 台灣時間(UTC+8) 08:00~18:30，
+    # 再加下面第二條 UTC 11:00 = 台灣時間19:00 這一次，總共涵蓋
+    # 台灣時間08:00~19:00、每30分鐘一次，比照永信盃排程的涵蓋時段。
+    # day-of-month限定17~21、month限定10，對應華宗盃比賽日期。
+    - cron: "0,30 0-10 17-21 10 *"
+    - cron: "0 11 17-21 10 *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-live-scores:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 設定 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安裝套件
+        run: pip install -r requirements.txt
+
+      - name: 執行即時比分爬蟲
+        run: python scraper/scrape_live_scores_huazong.py --event-id 1981 --out docs/data/live_scores_1981.json
+
+      - name: 檢查資料檔是否有變化
+        id: git-check
+        run: |
+          git config user.name "huazong-live-score-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data/live_scores_1981.json
+          git diff --cached --quiet && echo "changed=false" >> "$GITHUB_OUTPUT" || echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit 並推送更新
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git commit -m "更新華宗盃即時比分 $(TZ=Asia/Taipei date +%Y-%m-%d\ %H:%M)"
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "推送成功(第 $i 次嘗試)"
+              exit 0
+            fi
+            echo "推送失敗，5秒後重試(第 $i 次嘗試)..."
+            sleep 5
+          done
+          echo "推送重試 5 次都失敗"
+          exit 1
