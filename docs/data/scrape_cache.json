@@ -1,8 +1,8 @@
 {
   "1996": {
     "id": "1996",
-    "name": "115年第15屆全國北港媽祖盃排球錦標賽競賽規程(10/26更新總賽程表及分組賽制圖)",
-    "url": "https://www.ctvba.org.tw/article/1996/115年第15屆全國北港媽祖盃排球錦標賽競賽規程-10-26更新總賽程表及分組賽制圖-",
+    "name": "115年第15屆全國北港媽祖盃排球錦標賽競賽規程(10/26更新總賽程表及分組賽制圖及不合格名單)",
+    "url": "https://www.ctvba.org.tw/article/1996/115年第15屆全國北港媽祖盃排球錦標賽競賽規程-10-26更新總賽程表及分組賽制圖及不合格名單-",
     "date_start": "2026-11-06",
     "date_end": "2026-11-06",
     "date_note": "自 115 年 11 月 6 日(五) 13:00開賽 ~ 11 月 11 日(三)計 5 天半。",
@@ -19,18 +19,23 @@
         "local_path": null
       },
       {
-        "name": "115_15th北港媽祖盃分組賽制圖.pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20261026103410_3bwbGitEc5.pdf",
+        "name": "115_15th北港媽祖盃賽務系統 - 原總賽程表1027.pdf",
+        "url": "https://www.ctvba.org.tw/files/articleAttr/20261027181846_u9aCTBvZ9t.pdf",
         "local_path": null
       },
       {
-        "name": "115_15th北港媽祖盃賽總賽程表1025.pdf",
-        "url": "https://www.ctvba.org.tw/files/articleAttr/20261026103410_gu3bDcfHPJ.pdf",
+        "name": "115_15th北港媽祖盃分組賽制圖1027.pdf",
+        "url": "https://www.ctvba.org.tw/files/articleAttr/20261027181847_VUfUtfwL6f.pdf",
+        "local_path": null
+      },
+      {
+        "name": "不符合球員名單(2).pdf",
+        "url": "https://ctvba.org.tw/files/articleAttr/20261027163452_XVpzX82qLI.pdf",
         "local_path": null
       }
     ],
-    "raw_text_excerpt": "115年第15屆全國北港媽祖盃排球錦標賽競賽規程(10/26更新總賽程表及分組賽制圖)\n報名時間：即日起至 115 年 10 月 15 日(星期四)下午 5 時止，逾時不受理。\n本賽事採線上報名，請至本會網頁「\nhttp://www.ctvba.org.tw\n」國內賽事項目，或連結報名系統「\nhttps://reurl.cc/qav9aE\n」登錄提交報名資料。\n比賽日期：自 115 年 11 月 6 日(五) 13:00開賽 ~ 11 月 11 日(三)計 5 天半。\n比賽地點：國立北港高中、國立北港農工、建國國中、北辰國小、南陽國小。\n報名截止\n115 年 10 月 15 日(四)下午 5 時\n小組賽抽籤\n115 年 10 月 22 日(四)上午 10 時\n技術會議\n115 年 11 月 6 日(五)上午 10 時\n裁判會議\n115 年 11 月 6 日(五)上午 11 時\n115年10⽉26⽇(⼀)起，本會將第⼆次開放報名系統，供已報名成功隊伍可修改隊員號碼、隊員姓名錯別字、更換職員、更換隊⻑(新隊⻑需是秩序冊18⼈名單中隊員)，但不得更換隊員。請點擊Google系統寄送的「Goo",
-    "last_modified": "2026-10-26",
+    "raw_text_excerpt": "115年第15屆全國北港媽祖盃排球錦標賽競賽規程(10/26更新總賽程表及分組賽制圖及不合格名單)\n報名時間：即日起至 115 年 10 月 15 日(星期四)下午 5 時止，逾時不受理。\n本賽事採線上報名，請至本會網頁「\nhttp://www.ctvba.org.tw\n」國內賽事項目，或連結報名系統「\nhttps://reurl.cc/qav9aE\n」登錄提交報名資料。\n比賽日期：自 115 年 11 月 6 日(五) 13:00開賽 ~ 11 月 11 日(三)計 5 天半。\n比賽地點：國立北港高中、國立北港農工、建國國中、北辰國小、南陽國小。\n報名截止\n115 年 10 月 15 日(四)下午 5 時\n小組賽抽籤\n115 年 10 月 22 日(四)上午 10 時\n技術會議\n115 年 11 月 6 日(五)上午 10 時\n裁判會議\n115 年 11 月 6 日(五)上午 11 時\n115年10⽉26⽇(⼀)起，本會將第⼆次開放報名系統，供已報名成功隊伍可修改隊員號碼、隊員姓名錯別字、更換職員、更換隊⻑(新隊⻑需是秩序冊18⼈名單中隊員)，但不得更換隊員。請點擊Google系統寄",
+    "last_modified": "2026-10-27",
     "matches": [
       {
         "day": 1,
@@ -92,10 +97,10 @@
         "date": "2026-11-06",
         "venue": "場地 06\n建國國中體育館2",
         "time": "13:00",
-        "group": "國男甲小組賽B",
-        "match_no": "M2",
-        "team_a": "中市向上國中",
-        "team_b": "南市六甲國中",
+        "group": "國女甲小組賽E",
+        "match_no": "M1",
+        "team_a": "屏縣內埔國中",
+        "team_b": "桃市建國國中",
         "source_page": 1
       },
       {
@@ -103,10 +108,10 @@
         "date": "2026-11-06",
         "venue": "場地 07\n北辰國小體育館1",
         "time": "13:00",
-        "group": "國男甲小組賽C",
-        "match_no": "M3",
-        "team_a": "雲縣麥寮高中",
-        "team_b": "新北積穗國中",
+        "group": "國男甲小組賽B",
+        "match_no": "M2",
+        "team_a": "中市向上國中",
+        "team_b": "南市六甲國中",
         "source_page": 1
       },
       {
@@ -202,10 +207,10 @@
         "date": "2026-11-06",
         "venue": "場地 05\n建國國中體育館1",
         "time": "14:00",
-        "group": "國男甲小組賽D",
-        "match_no": "M4",
-        "team_a": "北市明湖國中",
-        "team_b": "屏縣潮州國中",
+        "group": "國男甲小組賽C",
+        "match_no": "M3",
+        "team_a": "雲縣麥寮高中",
+        "team_b": "新北積穗國中",
         "source_page": 1
       },
       {
@@ -213,10 +218,10 @@
         "date": "2026-11-06",
         "venue": "場地 06\n建國國中體育館2",
         "time": "14:00",
-        "group": "國男甲小組賽E",
-        "match_no": "M5",
-        "team_a": "宜縣礁溪國中",
-        "team_b": "雲縣馬光國中",
+        "group": "國女甲小組賽E",
+        "match_no": "M2",
+        "team_a": "新北鶯歌國中",
+        "team_b": "苗縣苑裡高中",
         "source_page": 1
       },
       {
@@ -323,10 +328,10 @@
         "date": "2026-11-06",
         "venue": "場地 05\n建國國中體育館1",
         "time": "15:00",
-        "group": "國男甲小組賽F",
-        "match_no": "M6",
-        "team_a": "新北板橋國中",
-        "team_b": "屏縣明正國中",
+        "group": "國男甲小組賽D",
+        "match_no": "M4",
+        "team_a": "北市明湖國中",
+        "team_b": "屏縣潮州國中",
         "source_page": 1
       },
       {
@@ -334,10 +339,10 @@
         "date": "2026-11-06",
         "venue": "場地 06\n建國國中體育館2",
         "time": "15:00",
-        "group": "國男甲小組賽G",
-        "match_no": "M7",
-        "team_a": "桃市八德國中",
-        "team_b": "屏縣新園國中",
+        "group": "國女甲小組賽A",
+        "match_no": "M3",
+        "team_a": "中市雙十國中",
+        "team_b": "高市前鎮國中",
         "source_page": 1
       },
       {
@@ -444,10 +449,10 @@
         "date": "2026-11-06",
         "venue": "場地 05\n建國國中體育館1",
         "time": "16:00",
-        "group": "國男甲小組賽A",
-        "match_no": "M8",
-        "team_a": "新北鶯歌國中",
-        "team_b": "雲縣建國國中",
+        "group": "國男甲小組賽E",
+        "match_no": "M5",
+        "team_a": "宜縣礁溪國中",
+        "team_b": "雲縣馬光國中",
         "source_page": 1
       },
       {
@@ -455,10 +460,10 @@
         "date": "2026-11-06",
         "venue": "場地 06\n建國國中體育館2",
         "time": "16:00",
-        "group": "國男甲小組賽B",
-        "match_no": "M9",
-        "team_a": "南市六甲國中",
-        "team_b": "苗縣苑裡高中",
+        "group": "國女甲小組賽B",
+        "match_no": "M4",
+        "team_a": "北市明湖國中",
+        "team_b": "新北大觀國中",
         "source_page": 1
       },
       {
@@ -554,10 +559,10 @@
         "date": "2026-11-06",
         "venue": "場地 04\n北港高中風雨球場2",
         "time": "17:00",
-        "group": "高男 小組賽B",
-        "match_no": "M13",
-        "team_a": "瑞祥高中",
-        "team_b": "臺中一中",
+        "group": "高男 小組賽E",
+        "match_no": "M16",
+        "team_a": "新營高中",
+        "team_b": "竹林高中",
         "source_page": 1
       },
       {
@@ -565,10 +570,10 @@
         "date": "2026-11-06",
         "venue": "場地 05\n建國國中體育館1",
         "time": "17:00",
-        "group": "國男甲小組賽D",
-        "match_no": "M11",
-        "team_a": "屏縣潮州國中",
-        "team_b": "高市福誠高中",
+        "group": "國男甲小組賽F",
+        "match_no": "M6",
+        "team_a": "新北板橋國中",
+        "team_b": "屏縣明正國中",
         "source_page": 1
       },
       {
@@ -576,10 +581,10 @@
         "date": "2026-11-06",
         "venue": "場地 06\n建國國中體育館2",
         "time": "17:00",
-        "group": "國男甲小組賽E",
-        "match_no": "M12",
-        "team_a": "雲縣馬光國中",
-        "team_b": "屏縣內埔國中",
+        "group": "國女甲小組賽C",
+        "match_no": "M5",
+        "team_a": "雲縣建國國中",
+        "team_b": "北市大安國中",
         "source_page": 1
       },
       {
@@ -587,10 +592,10 @@
         "date": "2026-11-06",
         "venue": "場地 07\n北辰國小體育館1",
         "time": "17:00",
-        "group": "國男甲小組賽C",
-        "match_no": "M10",
-        "team_a": "新北積穗國中",
-        "team_b": "北市誠正國中",
+        "group": "高男 小組賽B",
+        "match_no": "M13",
+        "team_a": "瑞祥高中",
+        "team_b": "臺中一中",
         "source_page": 1
       },
       {
@@ -686,10 +691,10 @@
         "date": "2026-11-06",
         "venue": "場地 05\n建國國中體育館1",
         "time": "18:00",
-        "group": "國男甲小組賽F",
-        "match_no": "M13",
-        "team_a": "屏縣明正國中",
-        "team_b": "北市北安國中",
+        "group": "國男甲小組賽G",
+        "match_no": "M7",
+        "team_a": "桃市八德國中",
+        "team_b": "屏縣新園國中",
         "source_page": 1
       },
       {
@@ -697,10 +702,10 @@
         "date": "2026-11-06",
         "venue": "場地 06\n建國國中體育館2",
         "time": "18:00",
-        "group": "國男甲小組賽G",
-        "match_no": "M14",
-        "team_a": "屏縣新園國中",
-        "team_b": "新北明德高中",
+        "group": "國女甲小組賽D",
+        "match_no": "M6",
+        "team_a": "新北積穗國中",
+        "team_b": "屏縣至正國中",
         "source_page": 1
       },
       {
@@ -712,17 +717,6 @@
         "match_no": "M18",
         "team_a": "臺中高工",
         "team_b": "羅東高商",
-        "source_page": 1
-      },
-      {
-        "day": 1,
-        "date": "2026-11-06",
-        "venue": "場地 08\n北辰國小體育館2",
-        "time": "18:00",
-        "group": "高男 小組賽E",
-        "match_no": "M16",
-        "team_a": "新營高中",
-        "team_b": "竹林高中",
         "source_page": 1
       },
       {
@@ -757,6 +751,39 @@
         "team_a": "員林高中",
         "team_b": "臺東高商",
         "source_page": 1
+      },
+      {
+        "day": 2,
+        "date": "2026-11-07",
+        "venue": "場地 09\n南陽國小體育館",
+        "time": "08:30",
+        "group": "五男 小組賽B",
+        "match_no": "M2",
+        "team_a": "宜縣礁溪國小",
+        "team_b": "新北後埔國小",
+        "source_page": 2
+      },
+      {
+        "day": 2,
+        "date": "2026-11-07",
+        "venue": "場地 10\n南陽國小風雨球場1",
+        "time": "08:30",
+        "group": "五男 小組賽C",
+        "match_no": "M3",
+        "team_a": "北市三民國小",
+        "team_b": "中市東寶國小",
+        "source_page": 2
+      },
+      {
+        "day": 2,
+        "date": "2026-11-07",
+        "venue": "場地 13\n北港農工風雨球場",
+        "time": "08:30",
+        "group": "五男 小組賽D",
+        "match_no": "M4",
+        "team_a": "南市六甲國小",
+        "team_b": "雲縣東勢國小",
+        "source_page": 2
       },
       {
         "day": 2,
@@ -808,9 +835,9 @@
         "venue": "場地 05\n建國國中體育館1",
         "time": "10:00",
         "group": "國男甲小組賽A",
-        "match_no": "M15",
-        "team_a": "雲縣建國國中",
-        "team_b": "中市潭秀國中",
+        "match_no": "M8",
+        "team_a": "新北鶯歌國中",
+        "team_b": "雲縣建國國中",
         "source_page": 2
       },
       {
@@ -819,9 +846,9 @@
         "venue": "場地 06\n建國國中體育館2",
         "time": "10:00",
         "group": "國女甲小組賽E",
-        "match_no": "M1",
-        "team_a": "屏縣內埔國中",
-        "team_b": "桃市建國國中",
+        "match_no": "M7",
+        "team_a": "桃市建國國中",
+        "team_b": "苗縣苑裡高中",
         "source_page": 2
       },
       {
@@ -840,10 +867,10 @@
         "date": "2026-11-07",
         "venue": "場地 08\n北辰國小體育館2",
         "time": "10:00",
-        "group": "高男 小組賽J",
-        "match_no": "M10",
-        "team_a": "新北清水",
-        "team_b": "斗六高中",
+        "group": "高男 小組賽D",
+        "match_no": "M15",
+        "team_a": "成大南工",
+        "team_b": "彰化高中",
         "source_page": 2
       },
       {
@@ -951,9 +978,9 @@
         "venue": "場地 05\n建國國中體育館1",
         "time": "11:00",
         "group": "國男甲小組賽B",
-        "match_no": "M16",
-        "team_a": "苗縣苑裡高中",
-        "team_b": "中市向上國中",
+        "match_no": "M9",
+        "team_a": "南市六甲國中",
+        "team_b": "苗縣苑裡高中",
         "source_page": 2
       },
       {
@@ -962,9 +989,9 @@
         "venue": "場地 06\n建國國中體育館2",
         "time": "11:00",
         "group": "國女甲小組賽E",
-        "match_no": "M2",
-        "team_a": "新北鶯歌國中",
-        "team_b": "苗縣苑裡高中",
+        "match_no": "M8",
+        "team_a": "屏縣內埔國中",
+        "team_b": "新北鶯歌國中",
         "source_page": 2
       },
       {
@@ -1060,10 +1087,10 @@
         "date": "2026-11-07",
         "venue": "場地 02\n北港高中體育館2",
         "time": "12:00",
-        "group": "高女 小組賽F",
-        "match_no": "M20",
-        "team_a": "慈心華德福",
-        "team_b": "員林高中",
+        "group": "高女 小組賽H",
+        "match_no": "M14",
+        "team_a": "臺東高商",
+        "team_b": "斗六高中",
         "source_page": 2
       },
       {
@@ -1094,9 +1121,9 @@
         "venue": "場地 05\n建國國中體育館1",
         "time": "12:00",
         "group": "國男甲小組賽C",
-        "match_no": "M17",
-        "team_a": "北市誠正國中",
-        "team_b": "雲縣麥寮高中",
+        "match_no": "M10",
+        "team_a": "新北積穗國中",
+        "team_b": "北市誠正國中",
         "source_page": 2
       },
       {
@@ -1105,9 +1132,9 @@
         "venue": "場地 06\n建國國中體育館2",
         "time": "12:00",
         "group": "國女甲小組賽A",
-        "match_no": "M3",
-        "team_a": "中市雙十國中",
-        "team_b": "高市前鎮國中",
+        "match_no": "M9",
+        "team_a": "高市前鎮國中",
+        "team_b": "桃市八德國中",
         "source_page": 2
       },
       {
@@ -1237,9 +1264,9 @@
         "venue": "場地 05\n建國國中體育館1",
         "time": "13:00",
         "group": "國男甲小組賽D",
-        "match_no": "M18",
-        "team_a": "高市福誠高中",
-        "team_b": "北市明湖國中",
+        "match_no": "M11",
+        "team_a": "屏縣潮州國中",
+        "team_b": "高市福誠高中",
         "source_page": 2
       },
       {
@@ -1248,9 +1275,9 @@
         "venue": "場地 06\n建國國中體育館2",
         "time": "13:00",
         "group": "國女甲小組賽B",
-        "match_no": "M4",
-        "team_a": "北市明湖國中",
-        "team_b": "新北大觀國中",
+        "match_no": "M10",
+        "team_a": "新北大觀國中",
+        "team_b": "高市大寮國中",
         "source_page": 2
       },
       {
@@ -1380,9 +1407,9 @@
         "venue": "場地 05\n建國國中體育館1",
         "time": "14:00",
         "group": "國男甲小組賽E",
-        "match_no": "M19",
-        "team_a": "屏縣內埔國中",
-        "team_b": "宜縣礁溪國中",
+        "match_no": "M12",
+        "team_a": "雲縣馬光國中",
+        "team_b": "屏縣內埔國中",
         "source_page": 2
       },
       {
@@ -1391,9 +1418,9 @@
         "venue": "場地 06\n建國國中體育館2",
         "time": "14:00",
         "group": "國女甲小組賽C",
-        "match_no": "M5",
-        "team_a": "雲縣建國國中",
-        "team_b": "北市大安國中",
+        "match_no": "M11",
+        "team_a": "北市大安國中",
+        "team_b": "屏縣新園國中",
         "source_page": 2
       },
       {
@@ -1489,10 +1516,10 @@
         "date": "2026-11-07",
         "venue": "場地 02\n北港高中體育館2",
         "time": "15:00",
-        "group": "高女 小組賽H",
-        "match_no": "M14",
-        "team_a": "臺東高商",
-        "team_b": "斗六高中",
+        "group": "高女 小組賽F",
+        "match_no": "M20",
+        "team_a": "慈心華德福",
+        "team_b": "員林高中",
         "source_page": 2
       },
       {
@@ -1523,9 +1550,9 @@
         "venue": "場地 05\n建國國中體育館1",
         "time": "15:00",
         "group": "國男甲小組賽F",
-        "match_no": "M20",
-        "team_a": "北市北安國中",
-        "team_b": "新北板橋國中",
+        "match_no": "M13",
+        "team_a": "屏縣明正國中",
+        "team_b": "北市北安國中",
         "source_page": 2
       },
       {
@@ -1534,9 +1561,9 @@
         "venue": "場地 06\n建國國中體育館2",
         "time": "15:00",
         "group": "國女甲小組賽D",
-        "match_no": "M6",
-        "team_a": "新北積穗國中",
-        "team_b": "屏縣至正國中",
+        "match_no": "M12",
+        "team_a": "屏縣至正國中",
+        "team_b": "南市中山國中",
         "source_page": 2
       },
       {
@@ -1666,9 +1693,9 @@
         "venue": "場地 05\n建國國中體育館1",
         "time": "16:00",
         "group": "國男甲小組賽G",
-        "match_no": "M21",
-        "team_a": "新北明德高中",
-        "team_b": "桃市八德國中",
+        "match_no": "M14",
+        "team_a": "屏縣新園國中",
+        "team_b": "新北明德高中",
         "source_page": 2
       },
       {
@@ -1676,10 +1703,10 @@
         "date": "2026-11-07",
         "venue": "場地 06\n建國國中體育館2",
         "time": "16:00",
-        "group": "高男 小組賽D",
-        "match_no": "M15",
-        "team_a": "成大南工",
-        "team_b": "彰化高中",
+        "group": "高男 小組賽J",
+        "match_no": "M10",
+        "team_a": "新北清水",
+        "team_b": "斗六高中",
         "source_page": 2
       },
       {
@@ -2094,10 +2121,10 @@
         "date": "2026-11-08",
         "venue": "場地 05\n建國國中體育館1",
         "time": "08:30",
-        "group": "國女甲小組賽E",
-        "match_no": "M7",
-        "team_a": "桃市建國國中",
-        "team_b": "苗縣苑裡高中",
+        "group": "國男甲小組賽A",
+        "match_no": "M15",
+        "team_a": "雲縣建國國中",
+        "team_b": "中市潭秀國中",
         "source_page": 3
       },
       {
@@ -2105,10 +2132,10 @@
         "date": "2026-11-08",
         "venue": "場地 06\n建國國中體育館2",
         "time": "08:30",
-        "group": "國女甲小組賽E",
-        "match_no": "M8",
-        "team_a": "屏縣內埔國中",
-        "team_b": "新北鶯歌國中",
+        "group": "國男甲小組賽B",
+        "match_no": "M16",
+        "team_a": "苗縣苑裡高中",
+        "team_b": "中市向上國中",
         "source_page": 3
       },
       {
@@ -2237,10 +2264,10 @@
         "date": "2026-11-08",
         "venue": "場地 05\n建國國中體育館1",
         "time": "09:30",
-        "group": "國女甲小組賽A",
-        "match_no": "M9",
-        "team_a": "高市前鎮國中",
-        "team_b": "桃市八德國中",
+        "group": "國男甲小組賽C",
+        "match_no": "M17",
+        "team_a": "北市誠正國中",
+        "team_b": "雲縣麥寮高中",
         "source_page": 3
       },
       {
@@ -2248,10 +2275,10 @@
         "date": "2026-11-08",
         "venue": "場地 06\n建國國中體育館2",
         "time": "09:30",
-        "group": "國女甲小組賽B",
-        "match_no": "M10",
-        "team_a": "新北大觀國中",
-        "team_b": "高市大寮國中",
+        "group": "國男甲小組賽D",
+        "match_no": "M18",
+        "team_a": "高市福誠高中",
+        "team_b": "北市明湖國中",
         "source_page": 3
       },
       {
@@ -2369,10 +2396,10 @@
         "date": "2026-11-08",
         "venue": "場地 04\n北港高中風雨球場2",
         "time": "10:30",
-        "group": "五男 小組賽G",
-        "match_no": "M21",
-        "team_a": "嘉市北園國小",
-        "team_b": "北市天母國小",
+        "group": "大專男小組賽A",
+        "match_no": "M1",
+        "team_a": "嘉義大學",
+        "team_b": "國立體大",
         "source_page": 3
       },
       {
@@ -2380,10 +2407,10 @@
         "date": "2026-11-08",
         "venue": "場地 05\n建國國中體育館1",
         "time": "10:30",
-        "group": "國女甲小組賽C",
-        "match_no": "M11",
-        "team_a": "北市大安國中",
-        "team_b": "屏縣新園國中",
+        "group": "國男甲小組賽E",
+        "match_no": "M19",
+        "team_a": "屏縣內埔國中",
+        "team_b": "宜縣礁溪國中",
         "source_page": 3
       },
       {
@@ -2391,10 +2418,10 @@
         "date": "2026-11-08",
         "venue": "場地 06\n建國國中體育館2",
         "time": "10:30",
-        "group": "國女甲小組賽D",
-        "match_no": "M12",
-        "team_a": "屏縣至正國中",
-        "team_b": "南市中山國中",
+        "group": "國男甲小組賽F",
+        "match_no": "M20",
+        "team_a": "北市北安國中",
+        "team_b": "新北板橋國中",
         "source_page": 3
       },
       {
@@ -2512,10 +2539,10 @@
         "date": "2026-11-08",
         "venue": "場地 04\n北港高中風雨球場2",
         "time": "11:30",
-        "group": "大專男小組賽A",
-        "match_no": "M1",
-        "team_a": "嘉義大學",
-        "team_b": "國立體大",
+        "group": "大專男小組賽B",
+        "match_no": "M2",
+        "team_a": "中山大學",
+        "team_b": "臺北護大",
         "source_page": 3
       },
       {
@@ -2534,10 +2561,10 @@
         "date": "2026-11-08",
         "venue": "場地 06\n建國國中體育館2",
         "time": "11:30",
-        "group": "國女甲小組賽E",
-        "match_no": "M14",
-        "team_a": "苗縣苑裡高中",
-        "team_b": "屏縣內埔國中",
+        "group": "國男甲小組賽G",
+        "match_no": "M21",
+        "team_a": "新北明德高中",
+        "team_b": "桃市八德國中",
         "source_page": 3
       },
       {
@@ -2578,10 +2605,10 @@
         "date": "2026-11-08",
         "venue": "場地 09\n南陽國小體育館",
         "time": "11:30",
-        "group": "五男 小組賽H",
-        "match_no": "M22",
-        "team_a": "雲縣橋頭國小",
-        "team_b": "嘉縣朴子國小",
+        "group": "五男 小組賽G",
+        "match_no": "M21",
+        "team_a": "嘉市北園國小",
+        "team_b": "北市天母國小",
         "source_page": 3
       },
       {
@@ -2655,10 +2682,10 @@
         "date": "2026-11-08",
         "venue": "場地 04\n北港高中風雨球場2",
         "time": "12:30",
-        "group": "大專男小組賽B",
-        "match_no": "M2",
-        "team_a": "中山大學",
-        "team_b": "臺北護大",
+        "group": "大專男小組賽C",
+        "match_no": "M3",
+        "team_a": "元智大學",
+        "team_b": "彰化師大",
         "source_page": 3
       },
       {
@@ -2677,10 +2704,10 @@
         "date": "2026-11-08",
         "venue": "場地 06\n建國國中體育館2",
         "time": "12:30",
-        "group": "國女甲小組賽B",
-        "match_no": "M16",
-        "team_a": "高市大寮國中",
-        "team_b": "北市明湖國中",
+        "group": "國女甲小組賽E",
+        "match_no": "M14",
+        "team_a": "苗縣苑裡高中",
+        "team_b": "屏縣內埔國中",
         "source_page": 3
       },
       {
@@ -2721,10 +2748,10 @@
         "date": "2026-11-08",
         "venue": "場地 09\n南陽國小體育館",
         "time": "12:30",
-        "group": "五男 小組賽I",
-        "match_no": "M23",
-        "team_a": "新北頂溪國小",
-        "team_b": "桃市大成國小",
+        "group": "五男 小組賽H",
+        "match_no": "M22",
+        "team_a": "雲縣橋頭國小",
+        "team_b": "嘉縣朴子國小",
         "source_page": 3
       },
       {
@@ -2798,10 +2825,10 @@
         "date": "2026-11-08",
         "venue": "場地 04\n北港高中風雨球場2",
         "time": "13:30",
-        "group": "大專男小組賽C",
-        "match_no": "M3",
-        "team_a": "元智大學",
-        "team_b": "彰化師大",
+        "group": "大專男小組賽D",
+        "match_no": "M4",
+        "team_a": "空軍官校",
+        "team_b": "雲林科大",
         "source_page": 3
       },
       {
@@ -2820,10 +2847,10 @@
         "date": "2026-11-08",
         "venue": "場地 06\n建國國中體育館2",
         "time": "13:30",
-        "group": "國女甲小組賽D",
-        "match_no": "M18",
-        "team_a": "南市中山國中",
-        "team_b": "新北積穗國中",
+        "group": "國女甲小組賽B",
+        "match_no": "M16",
+        "team_a": "高市大寮國中",
+        "team_b": "北市明湖國中",
         "source_page": 3
       },
       {
@@ -2853,10 +2880,10 @@
         "date": "2026-11-08",
         "venue": "場地 09\n南陽國小體育館",
         "time": "13:30",
-        "group": "五男 小組賽J",
-        "match_no": "M24",
-        "team_a": "新北鶯歌國小",
-        "team_b": "苗縣苑裡國小",
+        "group": "五男 小組賽I",
+        "match_no": "M23",
+        "team_a": "新北頂溪國小",
+        "team_b": "桃市大成國小",
         "source_page": 3
       },
       {
@@ -2930,10 +2957,10 @@
         "date": "2026-11-08",
         "venue": "場地 04\n北港高中風雨球場2",
         "time": "14:30",
-        "group": "大專男小組賽D",
-        "match_no": "M4",
-        "team_a": "空軍官校",
-        "team_b": "雲林科大",
+        "group": "大專男小組賽E",
+        "match_no": "M5",
+        "team_a": "明志科大",
+        "team_b": "輔英科大",
         "source_page": 3
       },
       {
@@ -2941,10 +2968,10 @@
         "date": "2026-11-08",
         "venue": "場地 05\n建國國中體育館1",
         "time": "14:30",
-        "group": "國男甲 附加賽",
-        "match_no": "M23",
-        "team_a": "5",
-        "team_b": "12",
+        "group": "社女 八強賽",
+        "match_no": "M20",
+        "team_a": "3",
+        "team_b": "6",
         "source_page": 3
       },
       {
@@ -2952,10 +2979,10 @@
         "date": "2026-11-08",
         "venue": "場地 06\n建國國中體育館2",
         "time": "14:30",
-        "group": "國男甲 附加賽",
-        "match_no": "M22",
-        "team_a": "9",
-        "team_b": "8",
+        "group": "國女甲小組賽D",
+        "match_no": "M18",
+        "team_a": "南市中山國中",
+        "team_b": "新北積穗國中",
         "source_page": 3
       },
       {
@@ -2996,10 +3023,10 @@
         "date": "2026-11-08",
         "venue": "場地 09\n南陽國小體育館",
         "time": "14:30",
-        "group": "五男 小組賽K",
-        "match_no": "M25",
-        "team_a": "新北莒光國小",
-        "team_b": "北市長春國小",
+        "group": "五男 小組賽J",
+        "match_no": "M24",
+        "team_a": "新北鶯歌國小",
+        "team_b": "苗縣苑裡國小",
         "source_page": 3
       },
       {
@@ -3073,10 +3100,10 @@
         "date": "2026-11-08",
         "venue": "場地 04\n北港高中風雨球場2",
         "time": "15:30",
-        "group": "大專男小組賽E",
-        "match_no": "M5",
-        "team_a": "明志科大",
-        "team_b": "輔英科大",
+        "group": "大專男小組賽F",
+        "match_no": "M6",
+        "team_a": "海洋大學",
+        "team_b": "陸軍官校",
         "source_page": 3
       },
       {
@@ -3085,9 +3112,9 @@
         "venue": "場地 05\n建國國中體育館1",
         "time": "15:30",
         "group": "國男甲 附加賽",
-        "match_no": "M24",
-        "team_a": "13",
-        "team_b": "4",
+        "match_no": "M23",
+        "team_a": "5",
+        "team_b": "12",
         "source_page": 3
       },
       {
@@ -3096,9 +3123,9 @@
         "venue": "場地 06\n建國國中體育館2",
         "time": "15:30",
         "group": "國男甲 附加賽",
-        "match_no": "M25",
-        "team_a": "3",
-        "team_b": "14",
+        "match_no": "M22",
+        "team_a": "9",
+        "team_b": "8",
         "source_page": 3
       },
       {
@@ -3139,10 +3166,10 @@
         "date": "2026-11-08",
         "venue": "場地 09\n南陽國小體育館",
         "time": "15:30",
-        "group": "五男 小組賽L",
-        "match_no": "M26",
-        "team_a": "北市大安國小",
-        "team_b": "新北大觀國小",
+        "group": "五男 小組賽K",
+        "match_no": "M25",
+        "team_a": "新北莒光國小",
+        "team_b": "北市長春國小",
         "source_page": 3
       },
       {
@@ -3216,10 +3243,10 @@
         "date": "2026-11-08",
         "venue": "場地 04\n北港高中風雨球場2",
         "time": "16:30",
-        "group": "大專男小組賽F",
-        "match_no": "M6",
-        "team_a": "海洋大學",
-        "team_b": "陸軍官校",
+        "group": "高男 附加賽",
+        "match_no": "M34",
+        "team_a": "9",
+        "team_b": "8",
         "source_page": 3
       },
       {
@@ -3228,9 +3255,9 @@
         "venue": "場地 05\n建國國中體育館1",
         "time": "16:30",
         "group": "國男甲 附加賽",
-        "match_no": "M26",
-        "team_a": "11",
-        "team_b": "6",
+        "match_no": "M24",
+        "team_a": "13",
+        "team_b": "4",
         "source_page": 3
       },
       {
@@ -3239,9 +3266,9 @@
         "venue": "場地 06\n建國國中體育館2",
         "time": "16:30",
         "group": "國男甲 附加賽",
-        "match_no": "M27",
-        "team_a": "7",
-        "team_b": "10",
+        "match_no": "M25",
+        "team_a": "3",
+        "team_b": "14",
         "source_page": 3
       },
       {
@@ -3282,10 +3309,10 @@
         "date": "2026-11-08",
         "venue": "場地 09\n南陽國小體育館",
         "time": "16:30",
-        "group": "五男 小組賽M",
-        "match_no": "M27",
-        "team_a": "中市中山國小",
-        "team_b": "雲縣拯民國小",
+        "group": "五男 小組賽L",
+        "match_no": "M26",
+        "team_a": "北市大安國小",
+        "team_b": "新北大觀國小",
         "source_page": 3
       },
       {
@@ -3349,9 +3376,9 @@
         "venue": "場地 03\n北港高中風雨球場1",
         "time": "17:30",
         "group": "高男 附加賽",
-        "match_no": "M36",
-        "team_a": "7",
-        "team_b": "10",
+        "match_no": "M35",
+        "team_a": "11",
+        "team_b": "6",
         "source_page": 3
       },
       {
@@ -3360,9 +3387,9 @@
         "venue": "場地 04\n北港高中風雨球場2",
         "time": "17:30",
         "group": "高男 附加賽",
-        "match_no": "M34",
-        "team_a": "9",
-        "team_b": "8",
+        "match_no": "M36",
+        "team_a": "7",
+        "team_b": "10",
         "source_page": 3
       },
       {
@@ -3370,9 +3397,9 @@
         "date": "2026-11-08",
         "venue": "場地 05\n建國國中體育館1",
         "time": "17:30",
-        "group": "社女 八強賽",
-        "match_no": "M20",
-        "team_a": "3",
+        "group": "國男甲 附加賽",
+        "match_no": "M26",
+        "team_a": "11",
         "team_b": "6",
         "source_page": 3
       },
@@ -3381,10 +3408,10 @@
         "date": "2026-11-08",
         "venue": "場地 06\n建國國中體育館2",
         "time": "17:30",
-        "group": "高男 附加賽",
-        "match_no": "M35",
-        "team_a": "11",
-        "team_b": "6",
+        "group": "國男甲 附加賽",
+        "match_no": "M27",
+        "team_a": "7",
+        "team_b": "10",
         "source_page": 3
       },
       {
@@ -3425,10 +3452,10 @@
         "date": "2026-11-08",
         "venue": "場地 09\n南陽國小體育館",
         "time": "17:30",
-        "group": "五男 小組賽N",
-        "match_no": "M28",
-        "team_a": "中市力行國小",
-        "team_b": "新北重慶國小",
+        "group": "五男 小組賽M",
+        "match_no": "M27",
+        "team_a": "中市中山國小",
+        "team_b": "雲縣拯民國小",
         "source_page": 3
       },
       {
@@ -4449,9 +4476,9 @@
         "venue": "場地 11\n南陽國小風雨球場2",
         "time": "14:30",
         "group": "五男 小組賽B",
-        "match_no": "M2",
-        "team_a": "宜縣礁溪國小",
-        "team_b": "新北後埔國小",
+        "match_no": "M30",
+        "team_a": "中市大元國小",
+        "team_b": "宜縣礁溪國小",
         "source_page": 4
       },
       {
@@ -4569,10 +4596,10 @@
         "date": "2026-11-09",
         "venue": "場地 09\n南陽國小體育館",
         "time": "15:30",
-        "group": "五男 小組賽C",
-        "match_no": "M3",
-        "team_a": "北市三民國小",
-        "team_b": "中市東寶國小",
+        "group": "五女 小組賽A",
+        "match_no": "M31",
+        "team_a": "中市北屯國小",
+        "team_b": "桃市中山國小",
         "source_page": 4
       },
       {
@@ -4591,10 +4618,10 @@
         "date": "2026-11-09",
         "venue": "場地 11\n南陽國小風雨球場2",
         "time": "15:30",
-        "group": "五男 小組賽D",
-        "match_no": "M4",
-        "team_a": "南市六甲國小",
-        "team_b": "雲縣東勢國小",
+        "group": "六女 小組賽I",
+        "match_no": "M29",
+        "team_a": "北市三民國小",
+        "team_b": "嘉縣朴子國小",
         "source_page": 4
       },
       {
@@ -4710,12 +4737,23 @@
       {
         "day": 4,
         "date": "2026-11-09",
+        "venue": "場地 09\n南陽國小體育館",
+        "time": "16:30",
+        "group": "五男 附加賽",
+        "match_no": "M43",
+        "team_a": "1",
+        "team_b": "16",
+        "source_page": 4
+      },
+      {
+        "day": 4,
+        "date": "2026-11-09",
         "venue": "場地 10\n南陽國小風雨球場1",
         "time": "16:30",
-        "group": "六女 小組賽I",
-        "match_no": "M29",
-        "team_a": "北市三民國小",
-        "team_b": "嘉縣朴子國小",
+        "group": "六女 小組賽J",
+        "match_no": "M30",
+        "team_a": "新北鶯歌國小",
+        "team_b": "北市大安國小",
         "source_page": 4
       },
       {
@@ -4734,10 +4772,10 @@
         "date": "2026-11-09",
         "venue": "場地 12\n北港農工體育館",
         "time": "16:30",
-        "group": "五女 小組賽A",
-        "match_no": "M31",
-        "team_a": "中市北屯國小",
-        "team_b": "桃市中山國小",
+        "group": "五女 小組賽B",
+        "match_no": "M32",
+        "team_a": "新北積穗國小",
+        "team_b": "竹縣光明國小",
         "source_page": 4
       },
       {
@@ -4845,20 +4883,9 @@
         "venue": "場地 09\n南陽國小體育館",
         "time": "17:30",
         "group": "五男 附加賽",
-        "match_no": "M43",
-        "team_a": "1",
-        "team_b": "16",
-        "source_page": 4
-      },
-      {
-        "day": 4,
-        "date": "2026-11-09",
-        "venue": "場地 10\n南陽國小風雨球場1",
-        "time": "17:30",
-        "group": "六女 小組賽J",
-        "match_no": "M30",
-        "team_a": "新北鶯歌國小",
-        "team_b": "北市大安國小",
+        "match_no": "M44",
+        "team_a": "9",
+        "team_b": "8",
         "source_page": 4
       },
       {
@@ -4866,10 +4893,10 @@
         "date": "2026-11-09",
         "venue": "場地 12\n北港農工體育館",
         "time": "17:30",
-        "group": "五女 小組賽B",
-        "match_no": "M32",
-        "team_a": "新北積穗國小",
-        "team_b": "竹縣光明國小",
+        "group": "五女 小組賽C",
+        "match_no": "M33",
+        "team_a": "新北後埔國小",
+        "team_b": "南市東興國小",
         "source_page": 4
       },
       {
@@ -5119,10 +5146,10 @@
         "date": "2026-11-10",
         "venue": "場地 10\n南陽國小風雨球場1",
         "time": "09:30",
-        "group": "高女 5-8名",
-        "match_no": "M37",
-        "team_a": "L33",
-        "team_b": "L34",
+        "group": "高女 四強賽",
+        "match_no": "M39",
+        "team_a": "W33",
+        "team_b": "W34",
         "source_page": 5
       },
       {
@@ -5260,17 +5287,6 @@
       {
         "day": 5,
         "date": "2026-11-10",
-        "venue": "場地 10\n南陽國小風雨球場1",
-        "time": "10:30",
-        "group": "高女 四強賽",
-        "match_no": "M39",
-        "team_a": "W33",
-        "team_b": "W34",
-        "source_page": 5
-      },
-      {
-        "day": 5,
-        "date": "2026-11-10",
         "venue": "場地 11\n南陽國小風雨球場2",
         "time": "10:30",
         "group": "五男 附加賽",
@@ -5282,12 +5298,23 @@
       {
         "day": 5,
         "date": "2026-11-10",
-        "venue": "場地 13\n北港農工風雨球場",
+        "venue": "場地 12\n北港農工體育館",
         "time": "10:30",
         "group": "五女 附加賽",
         "match_no": "M38",
         "team_a": "7",
         "team_b": "10",
+        "source_page": 5
+      },
+      {
+        "day": 5,
+        "date": "2026-11-10",
+        "venue": "場地 13\n北港農工風雨球場",
+        "time": "10:30",
+        "group": "高女 5-8名",
+        "match_no": "M37",
+        "team_a": "L33",
+        "team_b": "L34",
         "source_page": 5
       },
       {
@@ -5394,10 +5421,10 @@
         "date": "2026-11-10",
         "venue": "場地 10\n南陽國小風雨球場1",
         "time": "11:30",
-        "group": "高女 5-8名",
-        "match_no": "M38",
-        "team_a": "L35",
-        "team_b": "L36",
+        "group": "高女 四強賽",
+        "match_no": "M40",
+        "team_a": "W35",
+        "team_b": "W36",
         "source_page": 5
       },
       {
@@ -5420,6 +5447,17 @@
         "match_no": "M39",
         "team_a": "1",
         "team_b": "W34",
+        "source_page": 5
+      },
+      {
+        "day": 5,
+        "date": "2026-11-10",
+        "venue": "場地 13\n北港農工風雨球場",
+        "time": "11:30",
+        "group": "高女 5-8名",
+        "match_no": "M38",
+        "team_a": "L35",
+        "team_b": "L36",
         "source_page": 5
       },
       {
@@ -5526,10 +5564,10 @@
         "date": "2026-11-10",
         "venue": "場地 10\n南陽國小風雨球場1",
         "time": "12:30",
-        "group": "高女 四強賽",
-        "match_no": "M40",
-        "team_a": "W35",
-        "team_b": "W36",
+        "group": "國女 四強賽",
+        "match_no": "M35",
+        "team_a": "W29",
+        "team_b": "W30",
         "source_page": 5
       },
       {
@@ -5552,17 +5590,6 @@
         "match_no": "M40",
         "team_a": "W35",
         "team_b": "W36",
-        "source_page": 5
-      },
-      {
-        "day": 5,
-        "date": "2026-11-10",
-        "venue": "場地 13\n北港農工風雨球場",
-        "time": "12:30",
-        "group": "五女 八強賽",
-        "match_no": "M41",
-        "team_a": "3",
-        "team_b": "W37",
         "source_page": 5
       },
       {
@@ -5670,9 +5697,9 @@
         "venue": "場地 10\n南陽國小風雨球場1",
         "time": "13:30",
         "group": "國女 四強賽",
-        "match_no": "M35",
-        "team_a": "W29",
-        "team_b": "W30",
+        "match_no": "M36",
+        "team_a": "W31",
+        "team_b": "W32",
         "source_page": 5
       },
       {
@@ -5689,12 +5716,12 @@
       {
         "day": 5,
         "date": "2026-11-10",
-        "venue": "場地 13\n北港農工風雨球場",
+        "venue": "場地 12\n北港農工體育館",
         "time": "13:30",
         "group": "五女 八強賽",
-        "match_no": "M42",
-        "team_a": "W38",
-        "team_b": "2",
+        "match_no": "M41",
+        "team_a": "3",
+        "team_b": "W37",
         "source_page": 5
       },
       {
@@ -5801,16 +5828,38 @@
         "date": "2026-11-10",
         "venue": "場地 10\n南陽國小風雨球場1",
         "time": "14:30",
-        "group": "國女 四強賽",
-        "match_no": "M36",
-        "team_a": "W31",
-        "team_b": "W32",
+        "group": "高女 冠軍賽",
+        "match_no": "M44",
+        "team_a": "W39",
+        "team_b": "W40",
         "source_page": 5
       },
       {
         "day": 5,
         "date": "2026-11-10",
         "venue": "場地 11\n南陽國小風雨球場2",
+        "time": "14:30",
+        "group": "高女 季軍賽",
+        "match_no": "M43",
+        "team_a": "L39",
+        "team_b": "L40",
+        "source_page": 5
+      },
+      {
+        "day": 5,
+        "date": "2026-11-10",
+        "venue": "場地 12\n北港農工體育館",
+        "time": "14:30",
+        "group": "五女 八強賽",
+        "match_no": "M42",
+        "team_a": "W38",
+        "team_b": "2",
+        "source_page": 5
+      },
+      {
+        "day": 5,
+        "date": "2026-11-10",
+        "venue": "場地 13\n北港農工風雨球場",
         "time": "14:30",
         "group": "高女 第七名",
         "match_no": "M41",
@@ -5909,18 +5958,7 @@
       {
         "day": 5,
         "date": "2026-11-10",
-        "venue": "場地 10\n南陽國小風雨球場1",
-        "time": "15:30",
-        "group": "高女 季軍賽",
-        "match_no": "M43",
-        "team_a": "L39",
-        "team_b": "L40",
-        "source_page": 5
-      },
-      {
-        "day": 5,
-        "date": "2026-11-10",
-        "venue": "場地 11\n南陽國小風雨球場2",
+        "venue": "場地 13\n北港農工風雨球場",
         "time": "15:30",
         "group": "高女 第五名",
         "match_no": "M42",
@@ -6025,17 +6063,6 @@
         "match_no": "M56",
         "team_a": "L53",
         "team_b": "L54",
-        "source_page": 5
-      },
-      {
-        "day": 5,
-        "date": "2026-11-10",
-        "venue": "場地 10\n南陽國小風雨球場1",
-        "time": "16:30",
-        "group": "高女 冠軍賽",
-        "match_no": "M44",
-        "team_a": "W39",
-        "team_b": "W40",
         "source_page": 5
       },
       {
