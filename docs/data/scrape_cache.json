@@ -1,4 +1,41 @@
 {
+  "2003": {
+    "id": "2003",
+    "name": "115年全國第十五屆北港媽祖盃排球錦標賽住宿公告",
+    "url": "https://www.ctvba.org.tw/article/2003/115年全國第十五屆北港媽祖盃排球錦標賽住宿公告",
+    "date_start": null,
+    "date_end": null,
+    "date_note": null,
+    "venue": null,
+    "registration_deadline": null,
+    "registration_fee": null,
+    "organizer": null,
+    "contact_phone": [],
+    "contact_email": null,
+    "attachments": [
+      {
+        "name": "115媽祖盃住宿(高中男子組)(公告版).pdf",
+        "url": "https://ctvba.org.tw/files/articleAttr/20261102095752_DLYWZrhITN.pdf",
+        "local_path": null
+      },
+      {
+        "name": "115年媽祖盃住宿表(公告版).pdf",
+        "url": "https://ctvba.org.tw/files/articleAttr/20261102095752_IP2qQtuIPC.pdf",
+        "local_path": null
+      },
+      {
+        "name": "住宿公告注意事項.pdf",
+        "url": "https://ctvba.org.tw/files/articleAttr/20261102095751_ZQRLQgpHFA.pdf",
+        "local_path": null
+      }
+    ],
+    "raw_text_excerpt": "115年全國第十五屆北港媽祖盃排球錦標賽住宿公告\n115媽祖盃住宿(高中男子組)(公告版).pdf\n115年媽祖盃住宿表(公告版).pdf\n住宿公告注意事項.pdf\n修改日期：2026/11/02 09:59",
+    "last_modified": "2026-11-02",
+    "matches": [],
+    "parse_warnings": [
+      "附件裡找不到「總賽程表」"
+    ]
+  },
   "1996": {
     "id": "1996",
     "name": "115年第15屆全國北港媽祖盃排球錦標賽競賽規程(10/29更新總賽程表及分組賽制圖及不合格名單)",
